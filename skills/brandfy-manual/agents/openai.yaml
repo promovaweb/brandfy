@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compilar Manual da Marca"
+  short_description: "Compila regras verbais, visuais e de governança"
+  default_prompt: "Use $brandfy-manual para compilar o manual completo da marca."

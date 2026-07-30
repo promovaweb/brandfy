@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auditar Marca"
+  short_description: "Valida consistência, acessibilidade e arquivos"
+  default_prompt: "Use $brandfy-auditoria para auditar todos os artefatos da marca."

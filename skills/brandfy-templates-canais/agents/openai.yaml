@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Templates de Canais"
+  short_description: "Gera templates visuais para canais da marca"
+  default_prompt: "Use $brandfy-templates-canais para criar templates visuais padronizados por canal."

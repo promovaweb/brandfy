@@ -1,0 +1,4 @@
+interface:
+  display_name: "Exportar Ativos de Logo"
+  short_description: "Gera variações SVG, PNG, ícones e favicons"
+  default_prompt: "Use $brandfy-ativos-logo para exportar todas as variações do logo."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Logo"
+  short_description: "Conceitua e cria um sistema de logo original"
+  default_prompt: "Use $brandfy-logo para conceituar e criar o sistema de logo da marca."

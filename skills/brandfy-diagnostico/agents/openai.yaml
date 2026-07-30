@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnosticar Marca"
+  short_description: "Audita os insumos e lacunas da marca"
+  default_prompt: "Use $brandfy-diagnostico para diagnosticar os materiais atuais da marca."

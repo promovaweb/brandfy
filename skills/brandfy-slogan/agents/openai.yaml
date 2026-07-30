@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Slogan"
+  short_description: "Desenvolve e testa slogans coerentes"
+  default_prompt: "Use $brandfy-slogan para desenvolver slogans coerentes com a marca."

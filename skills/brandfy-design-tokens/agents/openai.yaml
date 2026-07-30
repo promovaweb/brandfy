@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gerar Design Tokens"
+  short_description: "Gera paletas acessíveis e tokens de interface"
+  default_prompt: "Use $brandfy-design-tokens para gerar os tokens visuais da marca."

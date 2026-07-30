@@ -1,0 +1,35 @@
+---
+name: brandfy-estrategia
+description: Define a base estratégica e comportamental da marca. Use para criar ou revisar propósito, missão, visão, valores e personalidade.
+---
+
+# Definir a estratégia da marca
+
+## Protocolo operacional
+
+- **Plano e progresso:** planejar descoberta, síntese, teste e aprovação.
+- **Fontes de verdade:** ler o briefing, entrevistas, evidências comerciais e
+  [strategy-framework.md](references/strategy-framework.md).
+- **Escopo e idempotência:** preservar afirmações aprovadas e não inventar
+  pesquisa de público.
+- **Validação:** testar cada afirmação contra exemplos de comportamento e
+  escolhas reais da empresa.
+- **Resumo final:** informar o que foi definido, a evidência usada e as lacunas.
+
+## Fluxo
+
+1. Descrever a origem, o trabalho atual, o público atendido e a transformação
+   observável que a empresa busca produzir.
+2. Formular propósito, missão e visão com linguagem própria e limites claros.
+3. Selecionar valores que possam ser reconhecidos em comportamento. Para cada
+   valor, escrever uma prática esperada e uma conduta incompatível.
+4. Definir princípios, personalidade, atributos, promessa central e provas
+   disponíveis.
+5. Registrar públicos prioritários, necessidades, alternativas e motivos de
+   escolha sem criar estatísticas.
+6. Salvar a versão aprovada em `brand/strategy.md` e a evolução do trabalho em
+   `.brandfy/strategy.md`.
+
+Ao revisar `brand/strategy.md`, procure um exemplo de comportamento para cada
+valor e uma evidência para a missão. Uma frase que não orienta uma escolha da
+empresa precisa de revisão, mesmo quando soa adequada em uma apresentação.

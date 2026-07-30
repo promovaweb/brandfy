@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Nome de Marca"
+  short_description: "Pesquisa e seleciona nomes de marca"
+  default_prompt: "Use $brandfy-naming para pesquisar e selecionar um nome de marca."

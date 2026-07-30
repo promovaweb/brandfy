@@ -1,0 +1,4 @@
+interface:
+  display_name: "Definir Voz da Marca"
+  short_description: "Documenta voz, tom e linguagem da marca"
+  default_prompt: "Use $brandfy-voz para definir a voz e os tons da marca."

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Exemplo geométrico de fonte vetorial</title>
+  <rect width="512" height="512" rx="112" fill="#172554"/>
+  <path d="M142 126h116c74 0 118 36 118 96 0 34-16 60-46 76 40 14 60 44 60 86 0 66-48 102-132 102H142V126zm96 62v82h20c34 0 52-14 52-42 0-26-18-40-52-40h-20zm0 142v94h26c40 0 60-16 60-48 0-30-20-46-60-46h-26z" fill="#F8FAFC"/>
+  <path d="M94 126h54v360H94z" fill="#60A5FA"/>
+</svg>

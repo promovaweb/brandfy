@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Aplicações da Marca"
+  short_description: "Planeja aplicações digitais, impressas e sociais"
+  default_prompt: "Use $brandfy-aplicacoes para criar as aplicações prioritárias da marca."

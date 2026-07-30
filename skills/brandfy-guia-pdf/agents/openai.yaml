@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compilar Guia em PDF"
+  short_description: "Compila o manual editável da marca em PDF"
+  default_prompt: "Use $brandfy-guia-pdf para compilar o manual Markdown da marca em PDF."

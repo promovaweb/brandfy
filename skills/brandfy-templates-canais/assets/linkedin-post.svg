@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#020617"/>
+  <rect x="84" y="84" width="1032" height="1032" rx="48" fill="#172554"/>
+  <rect x="140" y="150" width="140" height="12" fill="#60A5FA"/>
+  <text x="140" y="290" font-family="Inter, sans-serif" font-size="34" font-weight="700" fill="#93C5FD">{{EDITORIA}}</text>
+  <text x="140" y="440" font-family="Inter, sans-serif" font-size="88" font-weight="800" fill="#F8FAFC">
+    <tspan x="140" dy="0">{{TITULO_1}}</tspan>
+    <tspan x="140" dy="104">{{TITULO_2}}</tspan>
+    <tspan x="140" dy="104">{{TITULO_3}}</tspan>
+  </text>
+  <text x="140" y="930" font-family="Inter, sans-serif" font-size="36" fill="#E2E8F0">{{APOIO}}</text>
+  <text x="140" y="1035" font-family="Inter, sans-serif" font-size="30" font-weight="700" fill="#F8FAFC">{{MARCA}}</text>
+  <g id="guides" fill="none" stroke="#F43F5E" stroke-width="2" stroke-dasharray="12 12" opacity="0.5">
+    <rect x="84" y="84" width="1032" height="1032"/>
+  </g>
+</svg>

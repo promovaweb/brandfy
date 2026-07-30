@@ -1,0 +1,4 @@
+interface:
+  display_name: "Definir Estratégia de Marca"
+  short_description: "Define propósito, missão, visão e valores"
+  default_prompt: "Use $brandfy-estrategia para definir a estratégia central da marca."

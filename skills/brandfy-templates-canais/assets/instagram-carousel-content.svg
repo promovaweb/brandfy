@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+  <rect width="1080" height="28" fill="#2563EB"/>
+  <text x="96" y="150" font-family="Inter, sans-serif" font-size="32" font-weight="700" fill="#1D4ED8">{{SECAO}}</text>
+  <text x="96" y="285" font-family="Inter, sans-serif" font-size="74" font-weight="800" fill="#020617">
+    <tspan x="96" dy="0">{{TITULO_LINHA_1}}</tspan>
+    <tspan x="96" dy="84">{{TITULO_LINHA_2}}</tspan>
+  </text>
+  <rect x="96" y="485" width="888" height="500" rx="32" fill="#F1F5F9"/>
+  <text x="150" y="620" font-family="Inter, sans-serif" font-size="40" fill="#334155">
+    <tspan x="150" dy="0">{{CORPO_LINHA_1}}</tspan>
+    <tspan x="150" dy="62">{{CORPO_LINHA_2}}</tspan>
+    <tspan x="150" dy="62">{{CORPO_LINHA_3}}</tspan>
+  </text>
+  <text x="96" y="1248" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#020617">{{MARCA}}</text>
+  <text x="930" y="1248" text-anchor="end" font-family="Inter, sans-serif" font-size="28" fill="#334155">{{PAGINA}}</text>
+  <g id="guides" fill="none" stroke="#E11D48" stroke-width="2" stroke-dasharray="12 12" opacity="0.5">
+    <rect x="96" y="96" width="888" height="1158"/>
+  </g>
+</svg>

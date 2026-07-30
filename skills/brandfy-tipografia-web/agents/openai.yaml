@@ -1,0 +1,4 @@
+interface:
+  display_name: "Preparar Tipografia Web"
+  short_description: "Baixa webfonts licenciadas e gera o CSS tipográfico"
+  default_prompt: "Use $brandfy-tipografia-web para preparar as fontes e o CSS tipográfico da marca."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Definir Identidade Visual"
+  short_description: "Define direção visual, cores, tipos e imagens"
+  default_prompt: "Use $brandfy-identidade-visual para definir a identidade visual da marca."

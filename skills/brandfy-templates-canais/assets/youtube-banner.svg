@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <rect width="2560" height="1440" fill="#020617"/>
+  <circle cx="340" cy="220" r="320" fill="#172554"/>
+  <circle cx="2240" cy="1220" r="430" fill="#2563EB"/>
+  <rect x="507" y="508" width="1546" height="423" rx="48" fill="#172554"/>
+  <text x="640" y="665" font-family="Inter, sans-serif" font-size="74" font-weight="900" fill="#F8FAFC">{{NOME_DO_CANAL}}</text>
+  <text x="640" y="760" font-family="Inter, sans-serif" font-size="38" fill="#E2E8F0">{{DESCRICAO_CURTA}}</text>
+  <text x="640" y="850" font-family="Inter, sans-serif" font-size="30" font-weight="700" fill="#93C5FD">{{FREQUENCIA_OU_SERIES}}</text>
+  <g id="guides" fill="none" stroke="#F43F5E" stroke-width="4" stroke-dasharray="20 20" opacity="0.65">
+    <rect x="507" y="508" width="1546" height="423"/>
+  </g>
+</svg>

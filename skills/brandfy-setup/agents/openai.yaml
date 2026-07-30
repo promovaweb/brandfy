@@ -1,0 +1,4 @@
+interface:
+  display_name: "Configurar Brandfy"
+  short_description: "Prepara .brandfy e integra as instruções do projeto"
+  default_prompt: "Use $brandfy-setup para configurar o Brandfy neste projeto."

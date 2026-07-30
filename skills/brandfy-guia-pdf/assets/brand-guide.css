@@ -1,0 +1,112 @@
+/*
+ * Tema de impressão do guia da marca.
+ *
+ * O CSS controla página, tipografia, cores, tabelas e recursos incorporados
+ * durante a compilação do Markdown com Pandoc e WeasyPrint.
+ */
+
+@page {
+  size: A4;
+  margin: 22mm 18mm 24mm;
+  @bottom-center {
+    content: counter(page);
+    color: #475569;
+    font-size: 9pt;
+  }
+}
+
+html {
+  color: #0f172a;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+
+body {
+  margin: 0;
+}
+
+header#title-block-header {
+  align-items: flex-start;
+  break-after: page;
+  display: flex;
+  min-height: 210mm;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header#title-block-header .title {
+  border-left: 8px solid #2563eb;
+  padding-left: 8mm;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #020617;
+  font-family: Manrope, Inter, Arial, sans-serif;
+  break-after: avoid;
+}
+
+h1 {
+  font-size: 30pt;
+  line-height: 1.1;
+  margin: 0 0 18mm;
+}
+
+h2 {
+  border-bottom: 2px solid #2563eb;
+  font-size: 20pt;
+  margin-top: 12mm;
+  padding-bottom: 3mm;
+}
+
+h3 {
+  font-size: 14pt;
+  margin-top: 8mm;
+}
+
+p,
+li {
+  orphans: 3;
+  widows: 3;
+}
+
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 9pt;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #cbd5e1;
+  padding: 2.5mm;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f1f5f9;
+}
+
+code {
+  background: #f1f5f9;
+  border-radius: 2px;
+  padding: 0.4mm 1mm;
+}
+
+a {
+  color: #1d4ed8;
+}
+
+#TOC {
+  break-after: page;
+}

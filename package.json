@@ -1,0 +1,14 @@
+{
+  "name": "@promovaweb/brandfy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs && node scripts/validate.mjs",
+    "validate": "node scripts/validate.mjs",
+    "setup:example": "node skills/brandfy-setup/scripts/setup.mjs --project example"
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <rect width="1200" height="400" fill="#F8FAFC"/>
+  <path d="M760 0h440v400H560z" fill="#172554"/>
+  <circle cx="990" cy="145" r="110" fill="#2563EB"/>
+  <text x="72" y="95" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#1D4ED8">{{MARCA}}</text>
+  <text x="72" y="190" font-family="Inter, sans-serif" font-size="58" font-weight="800" fill="#020617">{{TITULO}}</text>
+  <text x="72" y="255" font-family="Inter, sans-serif" font-size="30" fill="#334155">{{APOIO}}</text>
+  <g id="guides" fill="none" stroke="#E11D48" stroke-width="2" stroke-dasharray="12 12" opacity="0.5">
+    <rect x="48" y="48" width="1104" height="304"/>
+  </g>
+</svg>

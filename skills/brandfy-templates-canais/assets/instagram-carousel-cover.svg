@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#F8FAFC"/>
+  <path d="M0 0h1080v330L0 700z" fill="#172554"/>
+  <circle cx="870" cy="230" r="170" fill="#2563EB"/>
+  <rect x="96" y="575" width="888" height="4" fill="#2563EB"/>
+  <text x="96" y="690" font-family="Inter, sans-serif" font-size="42" font-weight="700" fill="#1D4ED8">{{EDITORIA}}</text>
+  <text x="96" y="790" font-family="Inter, sans-serif" font-size="92" font-weight="800" fill="#020617">
+    <tspan x="96" dy="0">{{TITULO_LINHA_1}}</tspan>
+    <tspan x="96" dy="104">{{TITULO_LINHA_2}}</tspan>
+  </text>
+  <text x="96" y="1100" font-family="Inter, sans-serif" font-size="36" fill="#334155">{{APOIO}}</text>
+  <text x="96" y="1248" font-family="Inter, sans-serif" font-size="30" font-weight="700" fill="#020617">{{MARCA}}</text>
+  <g id="guides" fill="none" stroke="#E11D48" stroke-width="2" stroke-dasharray="12 12" opacity="0.5">
+    <rect x="96" y="96" width="888" height="1158"/>
+  </g>
+</svg>
