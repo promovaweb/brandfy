@@ -43,9 +43,11 @@ revisão. As skills especializadas também funcionam de forma direta:
 | `brandfy-logo` | Conduz conceitos originais e a criação do sistema de logo. |
 | `brandfy-ativos-logo` | Exporta SVG, PNG, favicons, avatares e manifestos. |
 | `brandfy-design-tokens` | Produz tokens CSS e JSON com combinações acessíveis. |
+| `brandfy-tipografia-web` | Documenta a hierarquia, baixa webfontes licenciadas e gera o CSS. |
 | `brandfy-aplicacoes` | Planeja e cria peças digitais, sociais, impressas e institucionais. |
 | `brandfy-templates-canais` | Fornece modelos editáveis para Instagram, LinkedIn, email e YouTube. |
 | `brandfy-manual` | Compila o manual verbal, visual, técnico e de governança. |
+| `brandfy-guia-pdf` | Compila o manual editável em Markdown para PDF. |
 | `brandfy-auditoria` | Confere estrutura, arquivos, acessibilidade e coerência. |
 
 ## Artefatos
