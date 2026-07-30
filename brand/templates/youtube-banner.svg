@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <rect width="2560" height="1440" fill="#000A0E"/>
+  <circle cx="340" cy="220" r="320" fill="#00161E"/>
+  <circle cx="2240" cy="1220" r="430" fill="#FC5C7A"/>
+  <rect x="507" y="508" width="1546" height="423" rx="48" fill="#00161E"/>
+  <text x="640" y="665" font-family="Manrope, Inter, sans-serif" font-size="74" font-weight="900" fill="#F2F8F9">{{NOME_DO_CANAL}}</text>
+  <text x="640" y="760" font-family="Manrope, Inter, sans-serif" font-size="38" fill="#B2C6CE">{{DESCRICAO_CURTA}}</text>
+  <text x="640" y="850" font-family="Manrope, Inter, sans-serif" font-size="30" font-weight="700" fill="#FDA4B7">{{FREQUENCIA_OU_SERIES}}</text>
+  <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+w41jb25lIGRvIEJyYW5kZnkgcGFyYSBmdW5kbyBlc2N1cm88L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5MZXRyYSBCIG1vZHVsYXIgZW0gYnJhbmNvLCB0dXJxdWVzYSBlIGNvcmFsIGNsYXJvLjwvZGVzYz4KICA8cGF0aCBkPSJNMTc0IDc2aC03OHY3OE0zMzggNzZoNzh2NzhNMTc0IDQzNmgtNzh2LTc4TTMzOCA0MzZoNzh2LTc4IiBmaWxsPSJub25lIiBzdHJva2U9IiMyQUQ1QkUiIHN0cm9rZS13aWR0aD0iMjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xOTAgMTE0aDk4YzYxIDAgMTAyIDM0IDEwMiA4NiAwIDMxLTE2IDU2LTQ0IDcwIDM0IDEzIDU0IDQyIDU0IDc4IDAgNTktNDUgOTItMTEyIDkyaC05OFYxMTR6bTU2IDUwdjgyaDM5YzMxIDAgNDktMTUgNDktNDEgMC0yNi0xOC00MS00OS00MWgtMzl6bTAgMTMydjk0aDQ0YzM0IDAgNTMtMTcgNTMtNDdzLTE5LTQ3LTUzLTQ3aC00NHoiIGZpbGw9IiNGMkY4RjkiLz4KICA8cmVjdCB4PSIxNzQiIHk9IjE5OCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMTAiIGZpbGw9IiNGREE0QjciLz4KPC9zdmc+Cg==" x="1835" y="620" width="180" height="180"/>
+  <g id="guides" fill="none" stroke="#FC5C7A" stroke-width="4" stroke-dasharray="20 20" opacity="0.65">
+    <rect x="507" y="508" width="1546" height="423"/>
+  </g>
+</svg>

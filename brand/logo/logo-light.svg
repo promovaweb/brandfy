@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Logo do Brandfy para fundo claro</title>
+  <desc id="desc">Ícone modular e nome Brandfy em assinatura horizontal.</desc>
+  <g transform="translate(24 24) scale(.53125)">
+    <path d="M174 76h-78v78M338 76h78v78M174 436h-78v-78M338 436h78v-78" fill="none" stroke="#15626A" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M190 114h98c61 0 102 34 102 86 0 31-16 56-44 70 34 13 54 42 54 78 0 59-45 92-112 92h-98V114zm56 50v82h39c31 0 49-15 49-41 0-26-18-41-49-41h-39zm0 132v94h44c34 0 53-17 53-47s-19-47-53-47h-44z" fill="#00161E"/>
+    <rect x="174" y="198" width="38" height="38" rx="10" fill="#9F1E41"/>
+  </g>
+  <text x="350" y="213" fill="#00161E" font-family="Manrope, Inter, Arial, sans-serif" font-size="150" font-weight="750" letter-spacing="-5">Brandfy</text>
+</svg>

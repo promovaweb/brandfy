@@ -53,6 +53,10 @@ test("gerador produz CSS, JSON, Tailwind e relatório", async () => {
     assert.equal(result.status, 0, result.stderr);
     await access(path.join(project, "brand/global.css"));
     await access(path.join(project, "brand/tokens.json"));
+    const css = await readFile(path.join(project, "brand/global.css"), "utf8");
+    assert.match(css, /Edite palette\.json/);
+    assert.match(css, /prefers-color-scheme: dark/);
+    assert.match(css, /data-theme="dark"/);
     const tailwind = await readFile(path.join(project, "brand/tailwind-theme.js"), "utf8");
     assert.match(tailwind, /background/);
   } finally {

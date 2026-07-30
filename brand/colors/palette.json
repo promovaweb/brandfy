@@ -1,0 +1,70 @@
+{
+  "name": "Brandfy",
+  "families": {
+    "primary": {
+      "50": "#ECFDFB",
+      "100": "#CCFBF6",
+      "200": "#99F5ED",
+      "300": "#5EEDE1",
+      "400": "#37E1D0",
+      "500": "#2AD5BE",
+      "600": "#23AFA2",
+      "700": "#1C8986",
+      "800": "#15626A",
+      "900": "#021C26",
+      "950": "#00161E"
+    },
+    "accent": {
+      "50": "#FFF1F4",
+      "100": "#FFE4E9",
+      "200": "#FECDD6",
+      "300": "#FDA4B7",
+      "400": "#FB718D",
+      "500": "#FC5C7A",
+      "600": "#E63E61",
+      "700": "#BE2349",
+      "800": "#9F1E41",
+      "900": "#881B3B",
+      "950": "#4C071C"
+    },
+    "neutral": {
+      "50": "#F2F8F9",
+      "100": "#E4EBEE",
+      "200": "#C9D6DC",
+      "300": "#B2C6CE",
+      "400": "#869EA8",
+      "500": "#5F7D8C",
+      "600": "#2D4C58",
+      "700": "#0C2E3A",
+      "800": "#03212A",
+      "900": "#001117",
+      "950": "#000A0E"
+    }
+  },
+  "light": {
+    "background": "#FFFFFF",
+    "surface": "#F2F8F9",
+    "text": "#001117",
+    "textMuted": "#2D4C58",
+    "border": "#C9D6DC",
+    "accent": "#9F1E41",
+    "focus": "#15626A",
+    "success": "#047857",
+    "warning": "#92400E",
+    "error": "#B91C1C",
+    "info": "#1D4ED8"
+  },
+  "dark": {
+    "background": "#000A0E",
+    "surface": "#001117",
+    "text": "#F2F8F9",
+    "textMuted": "#B2C6CE",
+    "border": "#2D4C58",
+    "accent": "#FDA4B7",
+    "focus": "#5EEDE1",
+    "success": "#6EE7B7",
+    "warning": "#FCD34D",
+    "error": "#FCA5A5",
+    "info": "#93C5FD"
+  }
+}

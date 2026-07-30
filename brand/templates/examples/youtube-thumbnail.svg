@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#000A0E"/>
+  <path d="M0 0h1280v210L0 620z" fill="#00161E"/>
+  <rect x="64" y="64" width="190" height="48" rx="24" fill="#FC5C7A"/>
+  <text x="159" y="97" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">BRANDFY</text>
+  <text x="64" y="255" font-family="Manrope, Inter, sans-serif" font-size="82" font-weight="900" fill="#F2F8F9">
+    <tspan x="64" dy="0">MARCA</tspan>
+    <tspan x="64" dy="92">PRONTA PARA</tspan>
+    <tspan x="64" dy="92">AGENTES</tspan>
+  </text>
+  <rect x="885" y="90" width="315" height="500" rx="42" fill="#2AD5BE"/>
+  <text x="1042" y="350" text-anchor="middle" font-family="Manrope, Inter, sans-serif" font-size="30" fill="#00161E">ÍCONE OU FOTO</text>
+  <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDMyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPkxvZ28gZG8gQnJhbmRmeSBwYXJhIGZ1bmRvIGVzY3VybzwvdGl0bGU+CiAgPGRlc2MgaWQ9ImRlc2MiPsONY29uZSBtb2R1bGFyIGUgbm9tZSBCcmFuZGZ5IGVtIGFzc2luYXR1cmEgaG9yaXpvbnRhbCBjbGFyYS48L2Rlc2M+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjQgMjQpIHNjYWxlKC41MzEyNSkiPgogICAgPHBhdGggZD0iTTE3NCA3NmgtNzh2NzhNMzM4IDc2aDc4djc4TTE3NCA0MzZoLTc4di03OE0zMzggNDM2aDc4di03OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMkFENUJFIiBzdHJva2Utd2lkdGg9IjI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxwYXRoIGQ9Ik0xOTAgMTE0aDk4YzYxIDAgMTAyIDM0IDEwMiA4NiAwIDMxLTE2IDU2LTQ0IDcwIDM0IDEzIDU0IDQyIDU0IDc4IDAgNTktNDUgOTItMTEyIDkyaC05OFYxMTR6bTU2IDUwdjgyaDM5YzMxIDAgNDktMTUgNDktNDEgMC0yNi0xOC00MS00OS00MWgtMzl6bTAgMTMydjk0aDQ0YzM0IDAgNTMtMTcgNTMtNDdzLTE5LTQ3LTUzLTQ3aC00NHoiIGZpbGw9IiNGMkY4RjkiLz4KICAgIDxyZWN0IHg9IjE3NCIgeT0iMTk4IiB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIHJ4PSIxMCIgZmlsbD0iI0ZEQTRCNyIvPgogIDwvZz4KICA8dGV4dCB4PSIzNTAiIHk9IjIxMyIgZmlsbD0iI0YyRjhGOSIgZm9udC1mYW1pbHk9Ik1hbnJvcGUsIEludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNTAiIGZvbnQtd2VpZ2h0PSI3NTAiIGxldHRlci1zcGFjaW5nPSItNSI+QnJhbmRmeTwvdGV4dD4KPC9zdmc+Cg==" x="64" y="580" width="290" height="76"/>
+</svg>

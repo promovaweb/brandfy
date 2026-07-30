@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Ícone do Brandfy</title>
+  <desc id="desc">Letra B modular dentro de uma moldura de enquadramento.</desc>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="#00161E"/>
+  <path d="M174 116h-58v58M338 116h58v58M174 396h-58v-58M338 396h58v-58" fill="none" stroke="#2AD5BE" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190 154h98c61 0 102 34 102 86 0 31-16 56-44 70 34 13 54 42 54 78 0 59-45 92-112 92h-98V154zm56 50v82h39c31 0 49-15 49-41 0-26-18-41-49-41h-39zm0 132v94h44c34 0 53-17 53-47s-19-47-53-47h-44z" fill="#2AD5BE"/>
+  <rect x="174" y="238" width="38" height="38" rx="10" fill="#FC5C7A"/>
+</svg>

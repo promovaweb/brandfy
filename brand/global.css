@@ -1,0 +1,86 @@
+/**
+ * Design tokens gerados pelo Brandfy.
+ *
+ * Edite brand/colors/palette.json e execute novamente o gerador. Alterações feitas somente
+ * neste arquivo serão substituídas na próxima compilação.
+ */
+
+@import "./fonts/fonts.css";
+
+:root {
+  --color-primary-50: #ECFDFB;
+  --color-primary-100: #CCFBF6;
+  --color-primary-200: #99F5ED;
+  --color-primary-300: #5EEDE1;
+  --color-primary-400: #37E1D0;
+  --color-primary-500: #2AD5BE;
+  --color-primary-600: #23AFA2;
+  --color-primary-700: #1C8986;
+  --color-primary-800: #15626A;
+  --color-primary-900: #021C26;
+  --color-primary-950: #00161E;
+  --color-accent-50: #FFF1F4;
+  --color-accent-100: #FFE4E9;
+  --color-accent-200: #FECDD6;
+  --color-accent-300: #FDA4B7;
+  --color-accent-400: #FB718D;
+  --color-accent-500: #FC5C7A;
+  --color-accent-600: #E63E61;
+  --color-accent-700: #BE2349;
+  --color-accent-800: #9F1E41;
+  --color-accent-900: #881B3B;
+  --color-accent-950: #4C071C;
+  --color-neutral-50: #F2F8F9;
+  --color-neutral-100: #E4EBEE;
+  --color-neutral-200: #C9D6DC;
+  --color-neutral-300: #B2C6CE;
+  --color-neutral-400: #869EA8;
+  --color-neutral-500: #5F7D8C;
+  --color-neutral-600: #2D4C58;
+  --color-neutral-700: #0C2E3A;
+  --color-neutral-800: #03212A;
+  --color-neutral-900: #001117;
+  --color-neutral-950: #000A0E;
+  --color-background: #FFFFFF;
+  --color-surface: #F2F8F9;
+  --color-text: #001117;
+  --color-text-muted: #2D4C58;
+  --color-border: #C9D6DC;
+  --color-accent: #9F1E41;
+  --color-focus: #15626A;
+  --color-success: #047857;
+  --color-warning: #92400E;
+  --color-error: #B91C1C;
+  --color-info: #1D4ED8;
+}
+
+.dark,
+:root[data-theme="dark"] {
+  --color-background: #000A0E;
+  --color-surface: #001117;
+  --color-text: #F2F8F9;
+  --color-text-muted: #B2C6CE;
+  --color-border: #2D4C58;
+  --color-accent: #FDA4B7;
+  --color-focus: #5EEDE1;
+  --color-success: #6EE7B7;
+  --color-warning: #FCD34D;
+  --color-error: #FCA5A5;
+  --color-info: #93C5FD;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --color-background: #000A0E;
+  --color-surface: #001117;
+  --color-text: #F2F8F9;
+  --color-text-muted: #B2C6CE;
+  --color-border: #2D4C58;
+  --color-accent: #FDA4B7;
+  --color-focus: #5EEDE1;
+  --color-success: #6EE7B7;
+  --color-warning: #FCD34D;
+  --color-error: #FCA5A5;
+  --color-info: #93C5FD;
+  }
+}

@@ -52,7 +52,7 @@ function kebab(value) {
   return value.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 }
 
-function renderCss(palette) {
+function renderCss(palette, sourceLabel) {
   const familyLines = Object.entries(palette.families)
     .flatMap(([family, scale]) =>
       Object.entries(scale).map(
@@ -61,16 +61,19 @@ function renderCss(palette) {
     )
     .join("\n");
 
-  const semantic = (mode) =>
+  const semantic = (mode, indentation = "  ") =>
     Object.entries(palette[mode])
-      .map(([name, value]) => `  --color-${kebab(name)}: ${value};`)
+      .map(
+        ([name, value]) =>
+          `${indentation}--color-${kebab(name)}: ${value};`,
+      )
       .join("\n");
 
   return `/**
  * Design tokens gerados pelo Brandfy.
  *
- * Edite .brandfy/palette.json e execute novamente o gerador. Alterações feitas
- * somente neste arquivo serão substituídas na próxima compilação.
+ * Edite ${sourceLabel} e execute novamente o gerador. Alterações feitas somente
+ * neste arquivo serão substituídas na próxima compilação.
  */
 
 @import "./fonts/fonts.css";
@@ -80,13 +83,20 @@ ${familyLines}
 ${semantic("light")}
 }
 
-.dark {
+.dark,
+:root[data-theme="dark"] {
 ${semantic("dark")}
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+${semantic("dark", "    ")}
+  }
 }
 `;
 }
 
-function renderTailwind(palette) {
+function renderTailwind(palette, sourceLabel) {
   const families = Object.fromEntries(
     Object.entries(palette.families).map(([family, scale]) => [
       family,
@@ -108,6 +118,7 @@ function renderTailwind(palette) {
   return `/**
  * Tema Tailwind gerado pelo Brandfy.
  *
+ * Fonte editável: ${sourceLabel}.
  * Importe colors em theme.extend.colors no Tailwind CSS 3 ou use os mesmos
  * tokens em @theme quando o projeto adotar Tailwind CSS 4.
  */
@@ -157,7 +168,7 @@ function buildChecks(palette) {
   return checks;
 }
 
-function renderAccessibility(checks) {
+function renderAccessibility(checks, sourceLabel) {
   const rows = checks
     .map(
       (check) =>
@@ -167,9 +178,9 @@ function renderAccessibility(checks) {
 
   return `# Acessibilidade das cores
 
-Este relatório foi calculado pelo Brandfy a partir da paleta editável. Uma
-aprovação numérica não substitui o teste do componente, dos estados e do
-arquivo rasterizado.
+Este relatório foi calculado pelo Brandfy a partir de
+\`${sourceLabel}\`. Uma aprovação numérica não substitui o teste do
+componente, dos estados e do arquivo rasterizado.
 
 | Modo | Uso | Primeiro plano | Fundo | Proporção | Mínimo | Resultado |
 | --- | --- | --- | --- | ---: | ---: | --- |
@@ -181,6 +192,7 @@ async function main() {
   const options = parseArguments(process.argv.slice(2));
   const input = path.resolve(options.input);
   const output = path.resolve(options.output);
+  const sourceLabel = path.relative(process.cwd(), input) || path.basename(input);
   const source = JSON.parse(await readFile(input, "utf8"));
 
   for (const [family, scale] of Object.entries(source.families ?? {})) {
@@ -207,7 +219,11 @@ async function main() {
 
   await mkdir(output, { recursive: true });
   await Promise.all([
-    writeFile(path.join(output, "global.css"), renderCss(source), "utf8"),
+    writeFile(
+      path.join(output, "global.css"),
+      renderCss(source, sourceLabel),
+      "utf8",
+    ),
     writeFile(
       path.join(output, "tokens.json"),
       `${JSON.stringify(source, null, 2)}\n`,
@@ -215,12 +231,12 @@ async function main() {
     ),
     writeFile(
       path.join(output, "tailwind-theme.js"),
-      renderTailwind(source),
+      renderTailwind(source, sourceLabel),
       "utf8",
     ),
     writeFile(
       path.join(output, "accessibility.md"),
-      renderAccessibility(checks),
+      renderAccessibility(checks, sourceLabel),
       "utf8",
     ),
   ]);

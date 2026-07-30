@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-30T20:44:10.590Z",
+  "assets": [
+    {
+      "path": "logo/svg/icon-dark.svg",
+      "format": "svg",
+      "role": "icon-dark",
+      "sha256": "e0a2c13817dcab0bb5e0324a12f45f9d5ff38ae21309d23aac5116b3f5cbc3b8"
+    },
+    {
+      "path": "logo/svg/icon-light.svg",
+      "format": "svg",
+      "role": "icon-light",
+      "sha256": "212bc0881d1fe8b68d05cb1d0b3d716274908d1f7746d1743617c3c5a250e041"
+    },
+    {
+      "path": "logo/svg/icon.svg",
+      "format": "svg",
+      "role": "icon",
+      "sha256": "1530d0d248ff7b137a2a7cf8e1f94c1e1c001b3c35fa7f5a04f64564d9782a8e"
+    },
+    {
+      "path": "logo/svg/logo-dark.svg",
+      "format": "svg",
+      "role": "logo-dark",
+      "sha256": "fac36d807924f114471f645216731cfc830cc0763dcf0258dfe5ee876d1ad726"
+    },
+    {
+      "path": "logo/svg/logo-light.svg",
+      "format": "svg",
+      "role": "logo-light",
+      "sha256": "d9e8f05363eb6b29df793afd1ab6a3ed627cf2971be1fe851c2f9efff0061189"
+    },
+    {
+      "path": "logo/png/icon-512w.png",
+      "format": "png",
+      "role": "icon",
+      "width": 512,
+      "sha256": "bec5a4a675c1dd8a3ab2d353712c217035f57d4c79b4e4b93cf380a55989fd05"
+    },
+    {
+      "path": "logo/png/icon-dark-512w.png",
+      "format": "png",
+      "role": "icon-dark",
+      "width": 512,
+      "sha256": "aebf0a88d51903631a2cfe42756c75e87dfbce47c24a982d41042d66c906832c"
+    },
+    {
+      "path": "logo/png/icon-light-512w.png",
+      "format": "png",
+      "role": "icon-light",
+      "width": 512,
+      "sha256": "8f6f0eaeb5b89c52e4e783e876f3e52183fda829e8eaa7ef9275d5b65cac2609"
+    },
+    {
+      "path": "logo/png/logo-dark-512w.png",
+      "format": "png",
+      "role": "logo-dark",
+      "width": 512,
+      "sha256": "5b8e01f70a1445856619e5f136721535805659304938a125323ff30550d0e6e8"
+    },
+    {
+      "path": "logo/png/logo-light-512w.png",
+      "format": "png",
+      "role": "logo-light",
+      "width": 512,
+      "sha256": "9f1bc117fc05251f3857b96d5577c4653b9286dbec3cdeb8ab5f388604fc0770"
+    }
+  ]
+}

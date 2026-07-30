@@ -1,0 +1,122 @@
+/*
+ * Tema de impressão do manual Brandfy.
+ * Recompile com a skill brandfy-guia-pdf após qualquer alteração.
+ */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  src: url("fonts/inter-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500 800;
+  src: url("fonts/manrope-latin.woff2") format("woff2");
+}
+
+@page {
+  size: A4;
+  margin: 22mm 18mm 24mm;
+
+  @bottom-center {
+    color: #5f7d8c;
+    content: counter(page);
+    font: 9pt "Inter", sans-serif;
+  }
+}
+
+html {
+  color: #021c26;
+  font: 10.5pt/1.55 "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header#title-block-header {
+  align-items: flex-start;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 210mm;
+}
+
+header#title-block-header .title {
+  border-left: 8px solid #fc5c7a;
+  padding-left: 8mm;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  break-after: avoid;
+  color: #00161e;
+  font-family: "Manrope", sans-serif;
+}
+
+h1 {
+  font-size: 30pt;
+  line-height: 1.1;
+  margin: 0 0 18mm;
+}
+
+h2 {
+  border-bottom: 2px solid #fc5c7a;
+  font-size: 20pt;
+  margin-top: 12mm;
+  padding-bottom: 3mm;
+}
+
+h3 {
+  font-size: 14pt;
+  margin-top: 8mm;
+}
+
+p,
+li {
+  orphans: 3;
+  widows: 3;
+}
+
+img,
+svg {
+  height: auto;
+  max-width: 54mm;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 9pt;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #c9d6dc;
+  padding: 2.5mm;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #ecfdfb;
+}
+
+code {
+  background: #e4ebee;
+  border-radius: 2px;
+  padding: 0.4mm 1mm;
+}
+
+a {
+  color: #9f1e41;
+}
+
+#TOC {
+  break-after: page;
+}

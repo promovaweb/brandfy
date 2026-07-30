@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+  <rect width="1080" height="28" fill="#FC5C7A"/>
+  <text x="96" y="150" font-family="Manrope, Inter, sans-serif" font-size="32" font-weight="700" fill="#9F1E41">PRINCÍPIO 01</text>
+  <text x="96" y="285" font-family="Manrope, Inter, sans-serif" font-size="74" font-weight="800" fill="#000A0E">
+    <tspan x="96" dy="0">Use tokens,</tspan>
+    <tspan x="96" dy="84">não improvisos</tspan>
+  </text>
+  <rect x="96" y="485" width="888" height="500" rx="32" fill="#E4EBEE"/>
+  <text x="150" y="620" font-family="Manrope, Inter, sans-serif" font-size="40" fill="#2D4C58">
+    <tspan x="150" dy="0">Cores semânticas mantêm</tspan>
+    <tspan x="150" dy="62">interfaces coerentes nos</tspan>
+    <tspan x="150" dy="62">modos claro e escuro.</tspan>
+  </text>
+  <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDMyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPkxvZ28gZG8gQnJhbmRmeSBwYXJhIGZ1bmRvIGNsYXJvPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+w41jb25lIG1vZHVsYXIgZSBub21lIEJyYW5kZnkgZW0gYXNzaW5hdHVyYSBob3Jpem9udGFsLjwvZGVzYz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNCAyNCkgc2NhbGUoLjUzMTI1KSI+CiAgICA8cGF0aCBkPSJNMTc0IDc2aC03OHY3OE0zMzggNzZoNzh2NzhNMTc0IDQzNmgtNzh2LTc4TTMzOCA0MzZoNzh2LTc4IiBmaWxsPSJub25lIiBzdHJva2U9IiMxNTYyNkEiIHN0cm9rZS13aWR0aD0iMjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTE5MCAxMTRoOThjNjEgMCAxMDIgMzQgMTAyIDg2IDAgMzEtMTYgNTYtNDQgNzAgMzQgMTMgNTQgNDIgNTQgNzggMCA1OS00NSA5Mi0xMTIgOTJoLTk4VjExNHptNTYgNTB2ODJoMzljMzEgMCA0OS0xNSA0OS00MSAwLTI2LTE4LTQxLTQ5LTQxaC0zOXptMCAxMzJ2OTRoNDRjMzQgMCA1My0xNyA1My00N3MtMTktNDctNTMtNDdoLTQ0eiIgZmlsbD0iIzAwMTYxRSIvPgogICAgPHJlY3QgeD0iMTc0IiB5PSIxOTgiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjEwIiBmaWxsPSIjOUYxRTQxIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjM1MCIgeT0iMjEzIiBmaWxsPSIjMDAxNjFFIiBmb250LWZhbWlseT0iTWFucm9wZSwgSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE1MCIgZm9udC13ZWlnaHQ9Ijc1MCIgbGV0dGVyLXNwYWNpbmc9Ii01Ij5CcmFuZGZ5PC90ZXh0Pgo8L3N2Zz4K" x="96" y="1178" width="290" height="74"/>
+  <text x="930" y="1248" text-anchor="end" font-family="Manrope, Inter, sans-serif" font-size="28" fill="#2D4C58">02 — 07</text>
+</svg>

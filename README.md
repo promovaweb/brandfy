@@ -53,6 +53,13 @@ também funcionam de forma direta:
 | `brandfy-guia-pdf` | Compila o manual editável em Markdown para PDF. |
 | `brandfy-auditoria` | Confere estrutura, arquivos, acessibilidade e coerência. |
 
+## Identidade do projeto
+
+A própria marca Brandfy vive em [`brand/`](brand/). A pasta contém o logo
+modular, as variantes light/dark, a paleta derivada da Promovaweb, webfontes
+locais, tokens CSS/JSON/Tailwind, manual recompilável e templates de canais.
+Ela também funciona como implementação de referência para as skills.
+
 ## Artefatos
 
 O Brandfy usa `brand/` como destino padrão. O conjunto mínimo reproduz a
