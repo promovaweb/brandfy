@@ -1,0 +1,16 @@
+---
+title: "Brandfy — Documentação completa"
+subtitle: "Guia do usuário e referência técnica"
+author:
+  - "Brandfy"
+publisher: "Promovaweb"
+lang: "pt-BR"
+rights: "Documentação oficial do projeto Brandfy"
+description: "Edição portátil dos guias de uso e desenvolvimento do Brandfy."
+subject:
+  - "branding"
+  - "sistema de marca"
+  - "design tokens"
+  - "agentes de IA"
+identifier: "https://github.com/promovaweb/brandfy"
+---

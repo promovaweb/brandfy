@@ -105,6 +105,28 @@ titular. Quando o agente preparar um recorte sem fundo, ele preserva o original
 e abre a exportação para conferir rosto, proporção e bordas. Uma imagem gerada
 não substitui o retrato oficial de uma pessoa.
 
+## Documentação
+
+A documentação oficial separa o uso da biblioteca e a manutenção do
+repositório:
+
+- [`docs/user/`](docs/user/) acompanha instalação, descoberta, construção,
+  ativos, manual, auditoria e uso por agentes.
+- [`docs/develop/`](docs/develop/) descreve arquitetura, contratos, geradores,
+  testes e contribuição.
+
+Os dois percursos são compilados em um PDF e um EPUB dentro de
+[`ebooks/`](ebooks/). O manual de uma marca cliente continua separado: sua
+fonte vive em `brand/README.md` no projeto consumidor e a saída fica em
+`brand/brand-guide.pdf`.
+
+Gere e confira a edição portátil do Brandfy:
+
+```bash
+npm run ebook
+npm run ebook:verify
+```
+
 ## Método de trabalho
 
 As skills atuam como especialistas de branding. Cada etapa separa fato,
@@ -153,7 +175,7 @@ requisitos aplicáveis de contraste.
 ## Desenvolvimento
 
 Use Node.js 22 ou posterior. O comando abaixo executa os testes do setup e dos
-geradores, depois confere a estrutura das skills:
+geradores, depois confere a estrutura das skills e da documentação:
 
 ```bash
 npm test

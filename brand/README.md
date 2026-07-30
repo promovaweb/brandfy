@@ -86,6 +86,10 @@ Toda alteração em paleta deve partir de `colors/palette.json` e recompilar os
 tokens. Toda alteração de logo deve atualizar os SVGs, PNGs, templates e
 `manifest.json`. Depois, recompile `brand-guide.pdf` e execute a auditoria.
 
+Este `brand-guide.pdf` documenta a identidade do próprio Brandfy e demonstra a
+saída criada pela skill em um projeto consumidor. O guia de uso do produto é
+outro artefato, compilado de `docs/user/` e publicado em `ebooks/`.
+
 ## Regras para agentes
 
 1. Use somente os arquivos desta pasta como fonte de marca.

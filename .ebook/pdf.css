@@ -1,0 +1,269 @@
+/**
+ * Diagrama o PDF do guia do usuário com a identidade oficial do Brandfy.
+ *
+ * As fontes são carregadas do diretório canônico da marca. O arquivo HTML
+ * gerado pelo Pandoc incorpora esta folha antes de seguir para o WeasyPrint.
+ */
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../brand/fonts/manrope-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../brand/fonts/inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --brand-petroleum: #00161e;
+  --brand-teal: #15626a;
+  --brand-coral: #9f1e41;
+  --brand-coral-soft: #fda4b7;
+  --paper: #ffffff;
+  --mist: #f2f8f9;
+  --ink-muted: #2d4c58;
+  --border: #bed3d7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@page {
+  size: A4;
+  margin: 22mm 18mm 20mm;
+
+  @bottom-center {
+    content: "Brandfy — Documentação  ·  " counter(page) " / " counter(pages);
+    color: var(--ink-muted);
+    font-family: "Inter", sans-serif;
+    font-size: 8pt;
+  }
+}
+
+@page cover {
+  margin: 0;
+
+  @bottom-center {
+    content: none;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--brand-petroleum);
+  font-family: "Inter", sans-serif;
+  font-size: 10.4pt;
+  line-height: 1.58;
+}
+
+#title-block-header {
+  position: relative;
+  page: cover;
+  page-break-after: always;
+  width: 210mm;
+  height: 297mm;
+  margin: 0;
+  padding: 54mm 24mm 28mm;
+  background: var(--brand-petroleum);
+  color: var(--paper);
+}
+
+#title-block-header::after {
+  position: absolute;
+  top: 28mm;
+  right: 24mm;
+  width: 28mm;
+  height: 28mm;
+  border-radius: 50%;
+  background: var(--brand-coral-soft);
+  content: "";
+}
+
+#title-block-header::before {
+  display: block;
+  width: 18mm;
+  height: 18mm;
+  margin-bottom: 34mm;
+  border: 3px solid #5eede1;
+  border-radius: 4mm;
+  color: var(--brand-coral-soft);
+  content: "B";
+  font-family: "Manrope", sans-serif;
+  font-size: 30pt;
+  font-weight: 800;
+  line-height: 18mm;
+  text-align: center;
+}
+
+#title-block-header h1 {
+  max-width: 145mm;
+  margin: 0 0 10mm;
+  padding: 0;
+  border: 0;
+  color: var(--paper);
+  font-family: "Manrope", sans-serif;
+  font-size: 37pt;
+  line-height: 1.06;
+}
+
+#title-block-header .subtitle {
+  max-width: 120mm;
+  color: #b2c6ce;
+  font-size: 15pt;
+}
+
+#title-block-header .author,
+#title-block-header .date {
+  color: #b2c6ce;
+  font-size: 10pt;
+}
+
+#TOC {
+  page-break-after: always;
+}
+
+#TOC::before {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--brand-coral);
+  content: "Sumário";
+  font-family: "Manrope", sans-serif;
+  font-size: 22pt;
+  font-weight: 700;
+}
+
+#TOC ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#TOC ul ul {
+  padding-left: 16px;
+}
+
+#TOC li {
+  margin: 5px 0;
+}
+
+#TOC a {
+  color: var(--brand-petroleum);
+  text-decoration: none;
+}
+
+main > h1 {
+  page-break-before: always;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--brand-petroleum);
+  font-family: "Manrope", sans-serif;
+  page-break-after: avoid;
+}
+
+h1 {
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--brand-coral);
+  font-size: 22pt;
+  line-height: 1.18;
+}
+
+h2 {
+  margin: 24px 0 9px;
+  color: var(--brand-teal);
+  font-size: 15pt;
+}
+
+h3 {
+  margin: 19px 0 7px;
+  font-size: 12pt;
+}
+
+p {
+  margin: 0 0 10px;
+  orphans: 3;
+  widows: 3;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+a {
+  color: var(--brand-coral);
+}
+
+code,
+pre {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+
+code {
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: var(--mist);
+  font-size: 0.88em;
+}
+
+pre {
+  padding: 11px 13px;
+  border-left: 4px solid var(--brand-teal);
+  background: var(--mist);
+  page-break-inside: avoid;
+  white-space: pre-wrap;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+blockquote {
+  margin: 14px 0;
+  padding: 5px 0 5px 14px;
+  border-left: 4px solid var(--brand-coral);
+}
+
+table {
+  width: 100%;
+  margin: 12px 0 18px;
+  border-collapse: collapse;
+  font-size: 9.1pt;
+}
+
+th,
+td {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+th {
+  background: var(--mist);
+  color: var(--brand-teal);
+  font-family: "Manrope", sans-serif;
+}
+
+tr,
+img,
+figure {
+  page-break-inside: avoid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

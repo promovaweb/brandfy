@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "edition": "v1.0.0",
+  "generated_at": "2026-07-30T22:43:34.261908Z",
+  "source_sha256": "64be648e00f7bd00c10f7bcddd468329b03a489cbb2b675d0a72e35541d66df6",
+  "sources": [
+    ".ebook/build-ebook.sh",
+    ".ebook/epub.css",
+    ".ebook/external-links.lua",
+    ".ebook/metadata.yaml",
+    ".ebook/pdf.css",
+    "brand/fonts/inter-latin.woff2",
+    "brand/fonts/manrope-latin.woff2",
+    "brand/logo/icon.png",
+    "docs/README.md",
+    "docs/develop/README.md",
+    "docs/develop/arquitetura.md",
+    "docs/develop/artefatos.md",
+    "docs/develop/contrato-das-skills.md",
+    "docs/develop/contribuicao.md",
+    "docs/develop/geradores.md",
+    "docs/develop/testes.md",
+    "docs/reading-order.txt",
+    "docs/user/README.md",
+    "docs/user/agentes.md",
+    "docs/user/ativos-digitais.md",
+    "docs/user/auditoria.md",
+    "docs/user/conceitos.md",
+    "docs/user/descoberta.md",
+    "docs/user/instalacao.md",
+    "docs/user/manual-e-pdf.md",
+    "docs/user/primeira-marca.md",
+    "docs/user/sistema-de-marca.md",
+    "docs/user/solucao-de-problemas.md",
+    "ebooks/VERSION"
+  ],
+  "artifacts": {
+    "pdf": {
+      "file": "Brandfy-Documentacao-Completa-v1.0.0.pdf",
+      "sha256": "daac306cd1863d242092064fb17a2ca72f0e6d8beca070249a93a25952c2170b"
+    },
+    "epub": {
+      "file": "Brandfy-Documentacao-Completa-v1.0.0.epub",
+      "sha256": "4c2cd91100f40588c0ee32a54a0025d7a7937b01e615a5a4278610f0e566f25c"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+/**
+ * Formata a edição EPUB sem impor dimensões fixas ao leitor digital.
+ */
+
+body {
+  max-width: 44em;
+  margin: 0 auto;
+  padding: 1.2em;
+  background: #ffffff;
+  color: #00161e;
+  font-family: sans-serif;
+  line-height: 1.58;
+}
+
+h1,
+h2,
+h3 {
+  color: #00161e;
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  padding-bottom: 0.35em;
+  border-bottom: 0.14em solid #9f1e41;
+}
+
+h2 {
+  margin-top: 1.7em;
+  color: #15626a;
+}
+
+a {
+  color: #9f1e41;
+}
+
+code,
+pre {
+  font-family: monospace;
+}
+
+code {
+  padding: 0.08em 0.28em;
+  background: #f2f8f9;
+}
+
+pre {
+  padding: 0.8em 1em;
+  border-left: 0.24em solid #15626a;
+  background: #f2f8f9;
+  white-space: pre-wrap;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 0.24em solid #9f1e41;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+th,
+td {
+  padding: 0.45em;
+  border: 1px solid #bed3d7;
+  text-align: left;
+}
+
+th {
+  background: #f2f8f9;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
