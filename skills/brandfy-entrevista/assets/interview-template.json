@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "interview": {
+    "date": "",
+    "participants": [],
+    "facilitator": "",
+    "purpose": "",
+    "consentObtained": false,
+    "consentToRecord": false
+  },
+  "brand": {
+    "name": "",
+    "nameStatus": "open",
+    "legalName": "",
+    "category": "",
+    "offer": "",
+    "stage": "",
+    "geography": [],
+    "languages": ["pt-BR"],
+    "origin": ""
+  },
+  "business": {
+    "model": "",
+    "problem": "",
+    "solution": "",
+    "goals": [],
+    "constraints": [],
+    "nonNegotiables": [],
+    "proof": []
+  },
+  "audiences": [],
+  "positioning": {
+    "categoryFrame": "",
+    "alternatives": [],
+    "promise": "",
+    "difference": "",
+    "reasonsToBelieve": [],
+    "associationsToBuild": [],
+    "associationsToAvoid": []
+  },
+  "personality": {
+    "traits": [],
+    "antiTraits": [],
+    "behaviors": [],
+    "tensions": []
+  },
+  "voice": {
+    "principles": [],
+    "tones": [],
+    "preferredWords": [],
+    "avoidedWords": [],
+    "message": "",
+    "examples": [],
+    "counterExamples": []
+  },
+  "visual": {
+    "desiredImpression": [],
+    "references": [],
+    "avoid": [],
+    "existingColors": [],
+    "accessibilityNeeds": [],
+    "channels": []
+  },
+  "identity": {
+    "sloganStatus": "open",
+    "logoStatus": "open",
+    "existingAssets": [],
+    "equityToPreserve": []
+  },
+  "legal": {
+    "trademarkStatus": "unknown",
+    "niceClasses": [],
+    "domains": [],
+    "licenses": [],
+    "consents": [],
+    "restrictions": []
+  },
+  "operations": {
+    "priorityApplications": [],
+    "owners": [],
+    "decisionMaker": "",
+    "deadline": "",
+    "reviewCadence": ""
+  },
+  "evidence": [],
+  "quotes": [],
+  "decisions": [],
+  "unknowns": []
+}

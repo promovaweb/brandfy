@@ -26,13 +26,16 @@ caminho real no qual a skill foi instalada.
 
 ## Fluxos principais
 
-`$brandfy-builder` coordena a construção completa. Uma marca já existente pode
-começar por `$brandfy-diagnostico` e seguir apenas pelas etapas que precisam de
-revisão. As skills especializadas também funcionam de forma direta:
+`$brandfy-builder` coordena a construção completa. Quando o conhecimento ainda
+está disperso, `$brandfy-entrevista` conduz uma descoberta adaptativa antes do
+diagnóstico. Uma marca existente pode começar por `$brandfy-diagnostico` e
+seguir apenas pelas etapas que precisam de revisão. As skills especializadas
+também funcionam de forma direta:
 
 | Skill | Responsabilidade |
 | --- | --- |
 | `brandfy-setup` | Prepara `.brandfy/`, `brand/` e as instruções do projeto. |
+| `brandfy-entrevista` | Entrevista responsáveis e compila briefing, estratégia, voz e pendências. |
 | `brandfy-builder` | Coordena a esteira completa e mantém os marcos de aceite. |
 | `brandfy-diagnostico` | Inventaria materiais, procedência, lacunas e prioridades. |
 | `brandfy-estrategia` | Define propósito, missão, visão, valores, princípios e personalidade. |
@@ -57,6 +60,12 @@ organização encontrada em marcas operadas pela Promovaweb e acrescenta os
 arquivos necessários para outros canais:
 
 ```text
+.brandfy/
+├── interview.json
+├── interview-summary.md
+├── brief.md
+└── evidence/
+
 brand/
 ├── README.md
 ├── global.css
@@ -89,6 +98,18 @@ titular. Quando o agente preparar um recorte sem fundo, ele preserva o original
 e abre a exportação para conferir rosto, proporção e bordas. Uma imagem gerada
 não substitui o retrato oficial de uma pessoa.
 
+## Método de trabalho
+
+As skills atuam como especialistas de branding. Cada etapa separa fato,
+evidência, interpretação, hipótese, preferência, decisão e pendência. As
+recomendações precisam apresentar parâmetros, tensões e alternativas, em vez de
+usar gosto pessoal ou uma lista de adjetivos como justificativa.
+
+O fluxo percorre descoberta, definição, desenvolvimento e entrega. Os gates
+conferem relevância, distinção, credibilidade, coerência, viabilidade,
+proteção e acessibilidade antes de avançar. Uma aprovação registra responsável
+e motivo; uma lacuna continua aberta com pergunta e próximo passo.
+
 ## Geradores incluídos
 
 Os caminhos abaixo consideram a instalação em `.agents/skills/`. Ajuste o
@@ -97,6 +118,7 @@ prefixo quando o `skills add` usar outro diretório no projeto.
 | Resultado | Comando |
 | --- | --- |
 | Configuração inicial | `node .agents/skills/brandfy-setup/scripts/setup.mjs --project .` |
+| Entrevista estruturada | `node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --init` |
 | CSS, JSON e Tailwind | `node .agents/skills/brandfy-design-tokens/scripts/generate-tokens.mjs` |
 | Webfonts e CSS tipográfico | `node .agents/skills/brandfy-tipografia-web/scripts/download-fonts.mjs` |
 | SVGs e PNGs do logo | `node .agents/skills/brandfy-ativos-logo/scripts/export-logo.mjs` |

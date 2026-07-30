@@ -8,7 +8,8 @@ description: Define a base estratégica e comportamental da marca. Use para cria
 ## Protocolo operacional
 
 - **Plano e progresso:** planejar descoberta, síntese, teste e aprovação.
-- **Fontes de verdade:** ler o briefing, entrevistas, evidências comerciais e
+- **Fontes de verdade:** ler `.brandfy/brief.md`,
+  `.brandfy/interview-summary.md`, entrevistas, evidências comerciais e
   [strategy-framework.md](references/strategy-framework.md).
 - **Escopo e idempotência:** preservar afirmações aprovadas e não inventar
   pesquisa de público.
@@ -33,3 +34,14 @@ description: Define a base estratégica e comportamental da marca. Use para cria
 Ao revisar `brand/strategy.md`, procure um exemplo de comportamento para cada
 valor e uma evidência para a missão. Uma frase que não orienta uma escolha da
 empresa precisa de revisão, mesmo quando soa adequada em uma apresentação.
+
+## Raciocínio do especialista
+
+Construir a estratégia como um conjunto de escolhas relacionadas. Público,
+categoria, problema, promessa, diferença e provas precisam fundamentar uns aos
+outros. Testar cada formulação com uma decisão difícil: o que a empresa faria,
+recusaria ou priorizaria por causa dessa definição? Se nada mudar, a frase é
+decorativa.
+
+Separar ambição de capacidade atual. A visão pode apontar um futuro; missão e
+promessa precisam permanecer críveis hoje.

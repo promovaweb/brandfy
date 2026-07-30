@@ -35,3 +35,14 @@ description: Pesquisa, cria e compara nomes de marca com verificações indicati
 
 A busca de anterioridade é indicativa. Não afirmar que um nome está livre,
 registrável ou protegido sem análise profissional do caso e do exame oficial.
+
+## Raciocínio do especialista
+
+Comparar os nomes por estratégia, distinção, pronúncia, escrita, expansão,
+significados culturais, presença digital e conflito indicativo. Não escolher pela
+maior pontuação isolada: um conflito marcário ou significado grave funciona
+como veto, enquanto pequenas dificuldades podem ser compensadas por contexto.
+
+Pesquisar termos idênticos e semelhantes na atividade correta, considerando a
+Classificação de Nice vigente. Registrar data, consulta e resultado sem
+converter a busca em parecer jurídico.

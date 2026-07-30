@@ -14,6 +14,26 @@ posicionamento e experiência do cliente. O material
 reforça o uso de variações do logo, paleta, tipografia e um conjunto de
 referências para manter uniformidade.
 
+O artigo do Sebrae
+[Branding: tudo o que a sua empresa precisa saber](https://meuatendimento.sebrae.com.br/sites/PortalSebrae/ufs/mt/conteudo_uf/branding-tudo-o-que-a-sua-empresa-precisa-saber%2C7dd8713f2535d710VgnVCM100000d701210aRCRD)
+trata branding como gestão estratégica da identidade, ligada aos objetivos do
+negócio. O Brandfy usa essa relação para impedir que logo, voz e aplicações
+sejam desenvolvidos sem base estratégica.
+
+## Entrevistas e descoberta
+
+O [guia de entrevistas em profundidade do GOV.UK](https://www.gov.uk/service-manual/user-research/using-in-depth-interviews)
+orienta perguntas abertas, relatos concretos, aprofundamento e confirmação do
+entendimento. As orientações de
+[consentimento informado](https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)
+e
+[análise das sessões](https://www.gov.uk/service-manual/user-research/analyse-a-research-session)
+ajudam a separar observação de interpretação e a preservar privacidade.
+
+O Brandfy adapta essas práticas para entrevistas com fundadores, responsáveis
+pela marca, equipe, parceiros e clientes. A entrevista não substitui pesquisa
+com usuários reais quando uma afirmação depende da experiência do público.
+
 ## Propriedade intelectual
 
 O [Guia Básico do INPI](https://www.gov.br/inpi/pt-br/servicos/marcas/guia-basico)
@@ -21,6 +41,18 @@ orienta a busca antes do protocolo. O
 [Manual de Marcas](https://manualdemarcas.inpi.gov.br/) detalha tipos de
 marca, exame, pedidos e acompanhamento. O Brandfy registra essas consultas como
 evidência indicativa e não as apresenta como parecer jurídico.
+
+A página de
+[Classificação de produtos e serviços](https://www.gov.br/inpi/pt-br/servicos/marcas/classificacao-marcas/classificacao)
+publica a edição vigente da Classificação de Nice e as listas auxiliares. A
+atividade real precisa ser confirmada antes da escolha de classes; descrições
+vagas ou genéricas não devem ser usadas apenas para ampliar cobertura.
+
+O guia
+[Making a Mark](https://www.wipo.int/publications/en/details.jsp?id=106), da
+WIPO, relaciona a gestão de marcas à estratégia do negócio e ao patrimônio
+intelectual. O Brandfy usa essa perspectiva para tratar naming, símbolo,
+licenças, expansão e governança como partes da mesma decisão.
 
 ## Acessibilidade
 

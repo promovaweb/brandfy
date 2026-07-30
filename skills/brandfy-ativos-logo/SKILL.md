@@ -37,3 +37,10 @@ description: Exporta e organiza variações de logo em SVG e PNG. Use para gerar
 
 O sufixo `light` ou `dark` precisa indicar o fundo de aplicação escolhido pelo
 manual. Documentar essa convenção para evitar uso invertido.
+
+## Raciocínio do especialista
+
+Tratar a exportação como controle de qualidade do sistema, não como conversão
+de formato. Relacionar cada arquivo a função, fundo, tamanho mínimo e canal.
+Recusar exportações que introduzam deformação, cor inesperada, margem
+inconsistente, transparência defeituosa ou dimensão diferente do manifesto.

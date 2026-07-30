@@ -42,8 +42,8 @@ async function main() {
     .map((entry) => entry.name)
     .sort();
 
-  if (entries.length < 14) {
-    errors.push(`Esperadas ao menos 14 skills, encontradas ${entries.length}.`);
+  if (entries.length < 18) {
+    errors.push(`Esperadas ao menos 18 skills, encontradas ${entries.length}.`);
   }
 
   for (const name of entries) {
@@ -87,6 +87,10 @@ async function main() {
       errors.push(`${name}: precisa documentar plano, progresso e validação.`);
     }
 
+    if (!skill.toLocaleLowerCase("pt-BR").includes("especialista")) {
+      errors.push(`${name}: precisa documentar a postura especialista.`);
+    }
+
     if (!metadata.includes(`$${name}`)) {
       errors.push(`${name}: default_prompt precisa mencionar $${name}.`);
     }
@@ -116,6 +120,8 @@ async function main() {
     "LICENSE",
     "package.json",
     "skills/brandfy-setup/scripts/setup.mjs",
+    "skills/brandfy-entrevista/scripts/compile-interview.mjs",
+    "skills/brandfy-entrevista/assets/interview-template.json",
     "skills/brandfy-ativos-logo/scripts/export-logo.mjs",
     "skills/brandfy-design-tokens/scripts/generate-tokens.mjs",
     "skills/brandfy-auditoria/scripts/audit-brand.mjs",

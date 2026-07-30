@@ -41,3 +41,10 @@ description: Gera paletas acessíveis e tokens para websites e sistemas. Use par
 Importe o CSS produzido por `$brandfy-tipografia-web` em `global.css` e abra
 uma página nos modos light e dark. Uma fonte ausente deve acionar o fallback
 documentado sem mudar a hierarquia ou esconder um texto.
+
+## Raciocínio do especialista
+
+Separar cor de origem, escala e função semântica. Escolher tokens pela relação
+entre elementos, não pelo valor isolado. Verificar contraste, diferenciação de
+estados, foco, daltonismo, impressão e coerência entre light e dark. Uma cor de
+marca pode permanecer no logo e ser inadequada para texto ou controle.

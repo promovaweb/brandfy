@@ -35,3 +35,10 @@ canal. Abra a peça no tamanho final para conferir texto, zona segura e logo,
 porque uma composição legível no editor pode falhar no feed móvel ou na
 impressão. Use `$brandfy-templates-canais` para os modelos de Instagram,
 LinkedIn, email e YouTube.
+
+## Raciocínio do especialista
+
+Projetar a aplicação a partir da tarefa, do público e do ambiente de consumo.
+Definir conteúdo obrigatório, hierarquia, restrição técnica, acessibilidade e
+resultado esperado antes de compor. A peça deve demonstrar o sistema sem
+transformar todos os canais na mesma composição redimensionada.

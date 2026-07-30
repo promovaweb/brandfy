@@ -40,3 +40,11 @@ description: Cria templates visuais padronizados para canais digitais. Use para 
 Abra o SVG escolhido, troque os placeholders e exporte uma amostra com a
 paleta da marca. A inspeção no feed ou na tela alvo revela texto pequeno, zona
 segura invadida e logo aplicado na variante errada.
+
+## Raciocínio do especialista
+
+Tratar template como regra flexível. Fixar o que protege reconhecimento,
+acessibilidade e produção; permitir variação onde o conteúdo exige ritmo.
+Testar títulos curtos e longos, ausência de imagem, fotografia clara e escura,
+tradução, recorte móvel e exportação. Um modelo que funciona apenas com o
+exemplo ideal ainda não está pronto para agentes.

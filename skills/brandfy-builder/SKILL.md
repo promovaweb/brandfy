@@ -11,7 +11,9 @@ description: Coordena a construção ou revisão completa de uma marca e seus ar
   estado após cada aceite.
 - **Fontes de verdade:** ler `.brandfy/config.yaml`, `.brandfy/brief.md`, os
   ativos existentes, [artifact-contract.md](references/artifact-contract.md) e
-  [sources.md](references/sources.md).
+  [sources.md](references/sources.md). Ler também
+  [brand-methodology.md](references/brand-methodology.md) antes de definir a
+  sequência.
 - **Escopo e idempotência:** retomar o estado registrado, preservar arquivos
   aprovados e arquivar substituições em `brand/archive/`.
 - **Validação:** executar `$brandfy-auditoria`, recompilar o PDF e conferir os
@@ -21,22 +23,36 @@ description: Coordena a construção ou revisão completa de uma marca e seus ar
 
 ## Esteira
 
-1. Usar `$brandfy-setup` e `$brandfy-diagnostico`.
-2. Definir a base com `$brandfy-estrategia`.
-3. Quando o nome ainda estiver aberto, usar `$brandfy-naming`.
-4. Criar o slogan com `$brandfy-slogan` e a linguagem com `$brandfy-voz`.
-5. Definir direção visual com `$brandfy-identidade-visual`.
-6. Preparar famílias, arquivos e CSS com `$brandfy-tipografia-web`.
-7. Criar ou revisar o sistema de logo com `$brandfy-logo`.
-8. Exportar versões com `$brandfy-ativos-logo`.
-9. Gerar CSS, JSON e tema Tailwind com `$brandfy-design-tokens`.
-10. Produzir as peças prioritárias com `$brandfy-aplicacoes` e os modelos
+1. Usar `$brandfy-setup`.
+2. Conduzir `$brandfy-entrevista` quando os dados não estiverem confirmados.
+3. Usar `$brandfy-diagnostico` para confrontar o relato com arquivos e usos.
+4. Definir a base com `$brandfy-estrategia`.
+5. Quando o nome ainda estiver aberto, usar `$brandfy-naming`.
+6. Criar o slogan com `$brandfy-slogan` e a linguagem com `$brandfy-voz`.
+7. Definir direção visual com `$brandfy-identidade-visual`.
+8. Preparar famílias, arquivos e CSS com `$brandfy-tipografia-web`.
+9. Criar ou revisar o sistema de logo com `$brandfy-logo`.
+10. Exportar versões com `$brandfy-ativos-logo`.
+11. Gerar CSS, JSON e tema Tailwind com `$brandfy-design-tokens`.
+12. Produzir as peças prioritárias com `$brandfy-aplicacoes` e os modelos
     digitais com `$brandfy-templates-canais`.
-11. Compilar o Markdown com `$brandfy-manual`.
-12. Gerar o PDF com `$brandfy-guia-pdf`.
-13. Encerrar com `$brandfy-auditoria`.
+13. Compilar o Markdown com `$brandfy-manual`.
+14. Gerar o PDF com `$brandfy-guia-pdf`.
+15. Encerrar com `$brandfy-auditoria`.
 
 Não avançar da estratégia para a criação visual quando o nome, o público, a
 promessa central ou as restrições de uso continuarem contraditórios. Uma marca
 existente pode pular etapas aprovadas, desde que o diagnóstico registre a
 evidência usada.
+
+## Raciocínio do especialista
+
+Em cada marco, avaliar sete dimensões: relevância para o público, distinção na
+categoria, credibilidade da promessa, coerência entre linguagem e experiência,
+viabilidade operacional, segurança jurídica e acessibilidade. Uma opção forte
+em uma dimensão pode falhar em outra. Registrar a tensão, as alternativas
+comparadas e o motivo do aceite.
+
+Não tratar gosto pessoal como base suficiente. Preferências entram como
+restrição ou hipótese; decisões exigem ligação com estratégia, contexto de uso
+e evidência disponível.

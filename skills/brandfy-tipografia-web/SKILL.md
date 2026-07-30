@@ -41,3 +41,11 @@ description: Seleciona webfonts, baixa arquivos licenciados e gera CSS tipográf
 
 Quando a fonte for proprietária ou hospedada por serviço externo, gerar o CSS
 de integração sem copiar o arquivo para o repositório.
+
+## Raciocínio do especialista
+
+Escolher tipografia pela tarefa: leitura longa, interface, título, número,
+código, idioma e personalidade exigem parâmetros diferentes. Comparar cobertura
+de caracteres, legibilidade, pesos úteis, métricas, performance, licença,
+fallback e manutenção. A semelhança estética com uma referência não compensa
+arquivo sem licença ou família que falha em acentos e telas pequenas.

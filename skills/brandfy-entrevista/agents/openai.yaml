@@ -1,0 +1,4 @@
+interface:
+  display_name: "Entrevista de marca"
+  short_description: "Conduz a descoberta e estrutura o briefing da marca"
+  default_prompt: "Use $brandfy-entrevista para entrevistar os responsáveis e preencher os arquivos da marca com fatos, hipóteses e pendências."

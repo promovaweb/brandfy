@@ -9,8 +9,8 @@ description: Documenta voz, tons, mensagens e vocabulário da marca. Use para or
 
 - **Plano e progresso:** planejar amostras, síntese, exemplos e testes por
   canal.
-- **Fontes de verdade:** ler estratégia, textos reais e
-  [voice-system.md](references/voice-system.md).
+- **Fontes de verdade:** ler estratégia, `.brandfy/interview.json`, textos
+  reais e [voice-system.md](references/voice-system.md).
 - **Escopo e idempotência:** preservar a voz encontrada em boas amostras e
   marcar hipóteses quando não houver corpus suficiente.
 - **Validação:** comparar os exemplos com situações reais de site, suporte,
@@ -33,3 +33,11 @@ description: Documenta voz, tons, mensagens e vocabulário da marca. Use para or
 
 Os exemplos devem demonstrar o mecanismo da voz. Não preencher o guia com
 adjetivos sem mostrar como uma frase muda na prática.
+
+## Raciocínio do especialista
+
+Derivar a voz da estratégia e do comportamento, não de uma lista de estilos.
+Para cada princípio, documentar intenção, mecanismo linguístico, limite,
+exemplo e contraexemplo. Testar a voz em situações sensíveis, como erro,
+cobrança, recusa, crise e suporte, porque uma personalidade que só funciona em
+campanha não governa a marca.

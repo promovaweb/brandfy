@@ -9,7 +9,8 @@ description: Define o sistema visual da marca além do logo. Use para criar dire
 
 - **Plano e progresso:** planejar referências, rotas visuais, protótipos e
   seleção.
-- **Fontes de verdade:** ler estratégia, voz, ativos atuais e
+- **Fontes de verdade:** ler estratégia, voz,
+  `.brandfy/interview-summary.md`, ativos atuais e
   [visual-system.md](references/visual-system.md).
 - **Escopo e idempotência:** manter referências com origem e não substituir
   ativos aprovados durante a exploração.
@@ -35,3 +36,11 @@ description: Define o sistema visual da marca além do logo. Use para criar dire
 
 O sistema visual precisa continuar reconhecível sem o logo. Não depender
 somente da cor para comunicar estado ou hierarquia.
+
+## Raciocínio do especialista
+
+Traduzir cada atributo estratégico em princípios visuais observáveis, como
+contraste, ritmo, proporção, densidade, materialidade e comportamento de
+imagem. Uma rota visual precisa explicar ideia, sinais, vantagens, limitações e
+condições de uso. Comparar rotas nas mesmas aplicações e com acabamento
+equivalente para reduzir viés de apresentação.

@@ -21,6 +21,8 @@ locale: pt-BR
 country: BR
 brand_directory: brand
 stage: discovery
+interview_source: .brandfy/interview.json
+interview_summary: .brandfy/interview-summary.md
 manual_source: brand/README.md
 manual_pdf: brand/brand-guide.pdf
 `;
@@ -231,6 +233,7 @@ Pendente. Vincule \`manifest.json\`, responsáveis, versão e revisão prevista.
 
 const DIRECTORIES = [
   ".brandfy/evidence",
+  ".brandfy/interviews",
   ".brandfy/research",
   "brand/logo/source",
   "brand/logo/svg",

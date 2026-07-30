@@ -31,3 +31,10 @@ description: Desenvolve e testa slogans coerentes com a estratégia e a voz. Use
 
 O slogan é opcional. Recomendar a ausência de uma assinatura fixa quando
 nenhuma frase acrescentar significado ou quando o nome já cumprir essa função.
+
+## Raciocínio do especialista
+
+Determinar primeiro a função da assinatura: esclarecer categoria, condensar
+promessa, criar memória ou marcar uma campanha. Avaliar verdade, especificidade,
+ritmo, compreensão isolada, convivência com o nome e duração esperada. Uma
+frase memorável que amplia demais a promessa deve ser descartada.

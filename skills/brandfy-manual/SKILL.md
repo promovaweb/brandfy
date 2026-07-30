@@ -33,3 +33,10 @@ description: Compila o manual editável da marca a partir dos arquivos aprovados
 Compare cada seção com o arquivo vinculado. Quando o manual citar uma variante
 light, abra o SVG e uma exportação PNG sobre o fundo indicado, pois um nome
 correto não comprova que a cor e a aplicação estejam certas.
+
+## Raciocínio do especialista
+
+Escrever o manual como instrumento de decisão. Cada regra importante precisa
+explicar princípio, aplicação, limite e exemplo. Distinguir definição aprovada,
+orientação, exceção e pendência. Remover declarações que não possam ser ligadas
+a um arquivo, comportamento, evidência ou responsável.

@@ -41,3 +41,11 @@ description: Compila o manual Markdown editável em um PDF de marca. Use para ge
 Quando uma imagem, uma tabela ou um texto aparecer errado no PDF, corrija
 `brand/README.md`, o CSS ou o ativo vinculado. Recompile e abra a página
 afetada para confirmar o ajuste sem editar o PDF diretamente.
+
+## Raciocínio do especialista
+
+Tratar o PDF como uma representação da fonte canônica, não como documento
+independente. Avaliar legibilidade, navegação, sequência pedagógica,
+reprodução, acessibilidade e rastreabilidade dos ativos. Uma compilação sem
+erro técnico ainda falha quando oculta exemplos, separa regra do contexto ou
+torna tabelas ilegíveis.

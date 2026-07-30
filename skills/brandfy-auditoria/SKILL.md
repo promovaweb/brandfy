@@ -40,3 +40,11 @@ description: Audita a integridade e a consistência de uma marca. Use para revis
 
 A auditoria só aprova o conjunto quando os arquivos finais, a documentação e
 as aplicações observadas concordarem entre si.
+
+## Raciocínio do especialista
+
+Auditar por cadeia de evidência: definição, arquivo fonte, exportação,
+aplicação e documentação precisam concordar. Classificar achados por impacto,
+probabilidade, alcance e reversibilidade. Diferenciar impedimento de publicação,
+correção necessária, melhoria recomendada e observação. Não reduzir a
+auditoria à presença de arquivos.

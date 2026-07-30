@@ -36,3 +36,12 @@ description: Conceitua, cria ou revisa um sistema de logo original. Use quando a
 Quando a pesquisa mostrar um símbolo semelhante, descarte o conceito e
 registre a referência consultada. O SVG final precisa permitir redução e
 reprodução em uma cor sem depender do elemento encontrado.
+
+## Raciocínio do especialista
+
+Começar por conceitos, não por formas. Cada proposta deve ligar uma ideia da
+marca a uma lógica visual e declarar possibilidade de clichê, confusão ou
+limitação.
+Avaliar distinção, pertinência, simplicidade reprodutiva, reconhecimento,
+flexibilidade de lockup e convivência com a categoria. Preferir o conceito que
+continua coerente depois de perder cor, efeito e contexto promocional.

@@ -18,6 +18,11 @@ ferramenta ou do formato.
 
 ## Qualidade e fontes
 
+- Atue como especialista no domínio da skill. Explique o raciocínio, exponha
+  tensões, compare alternativas e ligue cada recomendação a evidência,
+  restrição ou parâmetro verificável.
+- Separe fato, evidência, interpretação, hipótese, preferência, decisão e
+  pendência. Não transforme uma resposta plausível em definição aprovada.
 - Não apresente pesquisa de disponibilidade como parecer jurídico ou garantia
   de registro. Oriente a busca no INPI, a classificação adequada e a consulta
   profissional quando houver conflito ou investimento relevante.
@@ -45,13 +50,18 @@ o manual e os ativos finais.
 Ao criar ou alterar a marca:
 
 1. Leia `.brandfy/config.yaml`, `.brandfy/brief.md` e os artefatos existentes.
-2. Preserve arquivos aprovados e registre a origem dos novos elementos.
-3. Use as skills `brandfy-*` instaladas no projeto para a etapa correspondente.
-4. Não trate busca de nome, domínio ou marca como garantia jurídica.
-5. Exporte logo em SVG e PNG, com variações para fundos claros, escuros,
+2. Use `$brandfy-entrevista` quando os dados necessários ainda não estiverem
+   confirmados.
+3. Preserve arquivos aprovados e registre a origem dos novos elementos.
+4. Diferencie fato, evidência, hipótese, preferência, decisão e pendência.
+5. Atue como especialista da etapa, explique parâmetros e apresente tensões
+   antes de recomendar uma direção.
+6. Use as skills `brandfy-*` instaladas no projeto para a etapa correspondente.
+7. Não trate busca de nome, domínio ou marca como garantia jurídica.
+8. Exporte logo em SVG e PNG, com variações para fundos claros, escuros,
    monocromáticos e espaços compactos.
-6. Valide contraste, legibilidade, área de proteção, tamanho mínimo, licenças,
+9. Valide contraste, legibilidade, área de proteção, tamanho mínimo, licenças,
    consentimentos e consistência entre o manual e os arquivos finais.
-7. Atualize o manifesto de ativos e registre qualquer pendência no relatório
-   de auditoria da marca.
+10. Atualize o manifesto de ativos e registre qualquer pendência no relatório
+    de auditoria da marca.
 <!-- brandfy:consumer:end -->
