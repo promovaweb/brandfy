@@ -7,7 +7,14 @@
     "facilitator": "",
     "purpose": "",
     "consentObtained": false,
-    "consentToRecord": false
+    "consentToRecord": false,
+    "confirmedBy": "",
+    "confirmedAt": ""
+  },
+  "progress": {
+    "currentStage": "business",
+    "completedStages": [],
+    "stageConfirmations": []
   },
   "brand": {
     "name": "",
@@ -83,7 +90,11 @@
     "deadline": "",
     "reviewCadence": ""
   },
+  "facts": [],
   "evidence": [],
+  "interpretations": [],
+  "hypotheses": [],
+  "preferences": [],
   "quotes": [],
   "decisions": [],
   "unknowns": []

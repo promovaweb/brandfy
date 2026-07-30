@@ -16,6 +16,16 @@ const skillRoot = path.resolve(scriptRoot, "..");
 const templatePath = path.join(skillRoot, "assets", "interview-template.json");
 const startMarker = "<!-- brandfy:interview:start -->";
 const endMarker = "<!-- brandfy:interview:end -->";
+const requiredStages = [
+  "business",
+  "audiences",
+  "positioning",
+  "personality",
+  "voice",
+  "visual",
+  "assets-rights",
+  "operations-governance",
+];
 
 /**
  * Converte os argumentos de linha de comando em opções explícitas.
@@ -84,8 +94,11 @@ function getField(source, field) {
  * @returns {boolean}
  */
 function hasValue(value) {
-  if (Array.isArray(value)) return value.length > 0;
+  if (Array.isArray(value)) return value.some((item) => hasValue(item));
   if (typeof value === "string") return value.trim().length > 0;
+  if (typeof value === "object" && value !== null) {
+    return Object.values(value).some((item) => hasValue(item));
+  }
   return value !== null && value !== undefined;
 }
 
@@ -114,6 +127,34 @@ function validateInterview(data) {
   }
   if (data.interview?.consentObtained !== true) {
     errors.push("interview.consentObtained precisa confirmar o consentimento.");
+  }
+  for (const field of [
+    "interview.participants",
+    "interview.purpose",
+    "interview.confirmedBy",
+    "interview.confirmedAt",
+  ]) {
+    if (!hasValue(getField(data, field))) {
+      errors.push(`${field} precisa ser preenchido.`);
+    }
+  }
+
+  const stageConfirmations = Array.isArray(data.progress?.stageConfirmations)
+    ? data.progress.stageConfirmations
+    : [];
+  for (const stage of requiredStages) {
+    const confirmation = stageConfirmations.find(
+      (entry) => entry?.stage === stage,
+    );
+    if (
+      !confirmation ||
+      !hasValue(confirmation.confirmedBy) ||
+      !hasValue(confirmation.confirmedAt)
+    ) {
+      errors.push(
+        `progress.stageConfirmations precisa confirmar a etapa ${stage}.`,
+      );
+    }
   }
 
   const requiredFields = [
@@ -355,6 +396,30 @@ function renderSummary(data) {
 - **Data:** ${text(data.interview.date)}
 - **Participantes:** ${text(data.interview.participants)}
 - **Objetivo:** ${text(data.interview.purpose)}
+- **Síntese confirmada por:** ${text(data.interview.confirmedBy)}
+- **Confirmação:** ${text(data.interview.confirmedAt)}
+
+## Cobertura da entrevista
+
+${bullets(data.progress.stageConfirmations, (item) => `**${cell(item.stage)}:** confirmada por ${cell(item.confirmedBy)} em ${cell(item.confirmedAt)}. ${cell(item.notes)}`)}
+
+## Camadas da informação
+
+### Fatos
+
+${bullets(data.facts, (item) => `**${cell(item.claim)}** — fonte: ${cell(item.source)}.`)}
+
+### Interpretações
+
+${bullets(data.interpretations, (item) => `**${cell(item.claim)}** — derivada de: ${cell(item.basedOn)}.`)}
+
+### Hipóteses
+
+${bullets(data.hypotheses, (item) => `**${cell(item.claim)}** — teste previsto: ${cell(item.test)}; responsável: ${cell(item.owner)}.`)}
+
+### Preferências
+
+${bullets(data.preferences, (item) => `**${cell(item.topic)}:** ${cell(item.preference)} Motivo declarado: ${cell(item.rationale)}.`)}
 
 ## Direção visual a investigar
 

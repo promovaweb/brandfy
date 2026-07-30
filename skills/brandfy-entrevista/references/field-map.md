@@ -13,6 +13,8 @@ somente a síntese confirmada.
 | `personality`, `voice` | `brand/voice.md` | `$brandfy-voz` |
 | `visual`, `identity` | `.brandfy/interview-summary.md` | `$brandfy-identidade-visual` e `$brandfy-logo` |
 | `legal`, `evidence` | `brand/legal.md` | `$brandfy-naming` e revisão profissional |
+| `progress`, `facts`, `interpretations` | `.brandfy/interview-summary.md` | `$brandfy-diagnostico` |
+| `hypotheses`, `preferences` | `.brandfy/interview-summary.md` | Especialista do tema |
 | `operations`, `unknowns`, `decisions` | `.brandfy/interview-summary.md` | `$brandfy-builder` |
 
 ## Regras de compilação
@@ -24,6 +26,8 @@ somente a síntese confirmada.
 - Manter uma evidência ligada à afirmação que ela fundamenta.
 - Registrar decisão com motivo, responsável e data.
 - Registrar lacuna com pergunta, responsável e próximo passo.
+- Registrar a confirmação de cada etapa com participante e data.
+- Manter fato, interpretação, hipótese e preferência em coleções distintas.
 - Atualizar apenas o bloco entre
   `<!-- brandfy:interview:start -->` e
   `<!-- brandfy:interview:end -->`.
@@ -44,6 +48,9 @@ Antes da compilação final, confirmar ou registrar em `unknowns`:
 - impressão visual e canais;
 - aplicações prioritárias;
 - responsável pela aprovação.
+
+Também precisam estar identificados os participantes, o objetivo, a
+confirmação da síntese e as confirmações das oito etapas da entrevista.
 
 `status: ready` significa que o conteúdo pode seguir para validação das skills
 especialistas. `status: approved` significa que os participantes confirmaram a

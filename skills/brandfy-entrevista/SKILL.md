@@ -46,19 +46,22 @@ recebe responsável, pergunta e próximo passo.
 3. Fazer de três a cinco perguntas por etapa. Começar pelo negócio e adaptar
    as próximas perguntas conforme as respostas.
 4. Ao final de cada etapa, resumir fatos, hipóteses, escolhas e dúvidas.
-   Pedir correção antes de avançar.
+   Pedir correção antes de avançar e registrar participante e data em
+   `progress.stageConfirmations`.
 5. Cobrir negócio, públicos, alternativas, posicionamento, personalidade, voz,
    direção visual, ativos, propriedade intelectual, operação e governança.
 6. Registrar exemplos literais, fontes e evidências no JSON. Evitar transcrever
-   dados pessoais desnecessários.
+   dados pessoais desnecessários. Usar as coleções próprias para fatos,
+   interpretações, hipóteses, preferências, decisões e perguntas abertas.
 7. Rodar a verificação de cobertura:
 
    ```bash
    node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --check
    ```
 
-8. Resolver campos obrigatórios ou registrá-los em `unknowns`. Alterar
-   `status` para `ready` somente depois da confirmação do usuário.
+8. Resolver campos obrigatórios ou registrá-los em `unknowns`. Preencher
+   `interview.confirmedBy` e `interview.confirmedAt`. Alterar `status` para
+   `ready` somente depois da confirmação do usuário.
 9. Compilar as respostas confirmadas:
 
    ```bash

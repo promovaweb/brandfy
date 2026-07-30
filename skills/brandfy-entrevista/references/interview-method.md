@@ -72,6 +72,17 @@ Cada etapa segue cinco movimentos:
 4. devolver uma síntese curta;
 5. pedir confirmação e registrar pendências.
 
+Registrar cada confirmação em `progress.stageConfirmations`, com identificador
+da etapa, participante, data e observações. `progress.currentStage` permite
+retomar a conversa sem repetir perguntas já confirmadas. Uma etapa pode ser
+confirmada mesmo com lacunas, desde que elas estejam em `unknowns` com
+responsável e próximo passo.
+
+Os campos `facts`, `evidence`, `interpretations`, `hypotheses`, `preferences`,
+`decisions` e `unknowns` formam o registro do raciocínio. Não converter uma
+camada em outra durante a síntese. Quando uma hipótese ganha evidência, manter
+o histórico e registrar a decisão correspondente.
+
 Interromper a entrevista quando houver cansaço, falta de autoridade para
 responder, ausência de consentimento ou necessidade de consultar uma fonte. É
 melhor retomar com evidência do que preencher a lacuna com uma resposta fraca.

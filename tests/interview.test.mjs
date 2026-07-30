@@ -43,6 +43,36 @@ test("entrevista valida cobertura e compila sem apagar texto autoral", async () 
         participants: ["Fundadora"],
         purpose: "Definir a base da marca",
         consentObtained: true,
+        confirmedBy: "Fundadora",
+        confirmedAt: "2026-07-30",
+      },
+      progress: {
+        currentStage: "complete",
+        completedStages: [
+          "business",
+          "audiences",
+          "positioning",
+          "personality",
+          "voice",
+          "visual",
+          "assets-rights",
+          "operations-governance",
+        ],
+        stageConfirmations: [
+          "business",
+          "audiences",
+          "positioning",
+          "personality",
+          "voice",
+          "visual",
+          "assets-rights",
+          "operations-governance",
+        ].map((stage) => ({
+          stage,
+          confirmedBy: "Fundadora",
+          confirmedAt: "2026-07-30",
+          notes: "Síntese conferida.",
+        })),
       },
       brand: {
         ...draft.brand,
@@ -93,7 +123,54 @@ test("entrevista valida cobertura e compila sem apagar texto autoral", async () 
         priorityApplications: ["Website", "Proposta"],
         decisionMaker: "Fundadora",
       },
+      facts: [
+        {
+          claim: "A oferta atual combina facilitação e documentação.",
+          source: "Entrevista com a fundadora",
+        },
+      ],
+      interpretations: [
+        {
+          claim: "Clareza operacional pode embasar o posicionamento.",
+          basedOn: "Oferta e problema relatados",
+        },
+      ],
+      hypotheses: [
+        {
+          claim: "Lideranças valorizam parâmetros reutilizáveis.",
+          test: "Entrevistar três clientes",
+          owner: "Fundadora",
+        },
+      ],
+      preferences: [
+        {
+          topic: "Direção visual",
+          preference: "Evitar excesso de ornamentos",
+          rationale: "Facilitar leitura em documentos",
+        },
+      ],
+      evidence: [
+        {
+          claim: "O método foi aplicado em projetos reais.",
+          source: "Portfólio interno",
+          status: "disponível",
+        },
+      ],
     };
+    const emptyAlternative = {
+      ...ready,
+      positioning: {
+        ...ready.positioning,
+        alternatives: [""],
+      },
+    };
+    await writeFile(
+      input,
+      `${JSON.stringify(emptyAlternative, null, 2)}\n`,
+      "utf8",
+    );
+    assert.notEqual(run(project, ["--check"]).status, 0);
+
     await writeFile(input, `${JSON.stringify(ready, null, 2)}\n`, "utf8");
     await writeFile(
       path.join(project, ".brandfy/brief.md"),
@@ -112,11 +189,22 @@ test("entrevista valida cobertura e compila sem apagar texto autoral", async () 
 
     const strategy = await readFile(path.join(project, "brand/strategy.md"), "utf8");
     assert.match(strategy, /Transformar estratégia em parâmetros utilizáveis/);
+    const voice = await readFile(path.join(project, "brand/voice.md"), "utf8");
+    assert.match(voice, /Explicar o motivo/);
+    const legal = await readFile(path.join(project, "brand/legal.md"), "utf8");
+    assert.match(legal, /Portfólio interno/);
     const summary = await readFile(
       path.join(project, ".brandfy/interview-summary.md"),
       "utf8",
     );
     assert.match(summary, /Próximas validações/);
+    assert.match(summary, /Clareza operacional pode embasar/);
+    assert.match(summary, /Lideranças valorizam parâmetros/);
+    assert.match(summary, /Evitar excesso de ornamentos/);
+    assert.equal(
+      (summary.match(/Síntese conferida/g) ?? []).length,
+      8,
+    );
   } finally {
     await rm(project, { recursive: true, force: true });
   }
