@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">Ícone do Brandfy para fundo escuro</title>
-  <desc id="desc">Letra B modular em branco, turquesa e coral claro.</desc>
-  <path d="M174 76h-78v78M338 76h78v78M174 436h-78v-78M338 436h78v-78" fill="none" stroke="#2AD5BE" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M190 114h98c61 0 102 34 102 86 0 31-16 56-44 70 34 13 54 42 54 78 0 59-45 92-112 92h-98V114zm56 50v82h39c31 0 49-15 49-41 0-26-18-41-49-41h-39zm0 132v94h44c34 0 53-17 53-47s-19-47-53-47h-44z" fill="#F2F8F9"/>
-  <rect x="174" y="198" width="38" height="38" rx="10" fill="#FDA4B7"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">Ícone do Brandfy para fundos escuros</title>
+  <desc id="description">Letra B modular em coral claro, enquadrada por cantos turquesa.</desc>
+  <path d="M80 68H152V92H92V152H68V80C68 73.373 73.373 68 80 68ZM360 68H432C438.627 68 444 73.373 444 80V152H420V92H360V68ZM68 360H92V420H152V444H80C73.373 444 68 438.627 68 432V360ZM420 360H444V432C444 438.627 438.627 444 432 444H360V420H420V360Z" fill="#2AD5BE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M144 104H272C330 104 368 136 368 184C368 220 348 244 320 256C356 268 384 300 384 344C384 384 352 408 288 408H144V104ZM208 160V232H264C292 232 308 218 308 196C308 174 292 160 264 160H208ZM208 288V352H280C308 352 324 340 324 320C324 300 308 288 280 288H208Z" fill="#FDA4B7"/>
 </svg>

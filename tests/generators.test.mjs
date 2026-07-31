@@ -1,9 +1,16 @@
 /**
- * Valida tokens, webfonts vazias e instalação segura dos templates.
+ * Valida tokens, logos com wordmark e instalação segura dos templates.
  */
 
 import assert from "node:assert/strict";
-import { access, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import {
+  access,
+  mkdir,
+  mkdtemp,
+  readFile,
+  rm,
+  writeFile,
+} from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import os from "node:os";
 import path from "node:path";
@@ -74,6 +81,49 @@ test("instalador copia os templates sem substituir alterações", async () => {
     );
     assert.equal(result.status, 0, result.stderr);
     await access(path.join(project, "templates/youtube-banner.svg"));
+  } finally {
+    await rm(project, { recursive: true, force: true });
+  }
+});
+
+test("exportador rasteriza wordmark com fonte local e registra dimensões", async () => {
+  const project = await mkdtemp(path.join(os.tmpdir(), "brandfy-logo-test-"));
+  try {
+    const input = path.join(project, "brand/logo/svg");
+    await mkdir(input, { recursive: true });
+    await writeFile(
+      path.join(input, "logo-light.svg"),
+      [
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">',
+        '  <rect width="80" height="80" fill="#00161E"/>',
+        '  <text x="100" y="70" fill="#00161E" font-size="48">Brandfy</text>',
+        "</svg>",
+      ].join("\n"),
+      "utf8",
+    );
+
+    const result = run(
+      "skills/brandfy-ativos-logo/scripts/export-logo.mjs",
+      [
+        "--input",
+        input,
+        "--output",
+        path.join(project, "brand/logo/png"),
+        "--manifest",
+        path.join(project, "brand/manifest.json"),
+        "--font",
+        path.resolve("brand/fonts/manrope-variable.ttf"),
+      ],
+      process.cwd(),
+    );
+    assert.equal(result.status, 0, result.stderr);
+
+    const manifest = JSON.parse(
+      await readFile(path.join(project, "brand/manifest.json"), "utf8"),
+    );
+    assert.equal(manifest.assets[0].width, 300);
+    assert.equal(manifest.assets[0].height, 100);
+    await access(path.join(project, "brand/logo/png/logo-light-512w.png"));
   } finally {
     await rm(project, { recursive: true, force: true });
   }

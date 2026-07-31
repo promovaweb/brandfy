@@ -6,8 +6,10 @@
 - **Inter**: interface, texto corrido e dados; pesos 400 a 700.
 - **JetBrains Mono**: código e comandos, com fallback local quando indisponível.
 
-As versões latinas de Manrope e Inter estão em `../fonts/`. Ambas usam a
-SIL Open Font License, preservada nos arquivos `OFL-*.txt`.
+As versões latinas de Manrope e Inter estão em `../fonts/`. A Manrope também
+possui o arquivo variável `manrope-variable.ttf`, usado para rasterizar o
+wordmark sem depender das fontes instaladas no sistema. Ambas usam a SIL Open
+Font License, preservada nos arquivos `OFL-*.txt`.
 
 ## Escala para interfaces
 

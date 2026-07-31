@@ -6,10 +6,12 @@ Promovaweb com coral rosado, uma variação que representa expressão e criaçã
 
 ## Conceito visual
 
-O símbolo é um **B modular dentro de uma moldura de enquadramento**. O B
-representa a marca; os quatro cantos representam um sistema que delimita,
-organiza e valida aplicações. O pequeno módulo coral sinaliza a decisão
-criativa dentro dessa estrutura.
+O símbolo é um **B modular dentro de uma moldura de enquadramento**. Os dois
+blocos curvos pertencem à mesma marca, enquanto os quatro cantos representam o
+sistema que delimita, organiza e valida aplicações. A placa petróleo, a
+construção central simples e os cantos arredondados aproximam o Brandfy da
+família visual formada por Specsfy e SetupVibe. O coral preserva a expressão
+própria do Brandfy, e o turquesa mantém o parentesco institucional.
 
 ![Ícone principal da Brandfy](logo/icon.svg)
 

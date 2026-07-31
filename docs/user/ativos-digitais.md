@@ -7,7 +7,8 @@ Mantenha os SVGs mestres em `brand/logo/svg/` e execute:
 ```bash
 node .agents/skills/brandfy-ativos-logo/scripts/export-logo.mjs \
   --input brand/logo/svg \
-  --output brand/logo/png
+  --output brand/logo/png \
+  --font brand/fonts/manrope-variable.ttf
 ```
 
 O exportador produz PNGs a partir das fontes vetoriais e atualiza o manifesto
@@ -18,6 +19,10 @@ transparência, margem, proporção e leitura no tamanho mínimo.
 Favicons e avatares pedem uma versão compacta. Uma assinatura horizontal
 reduzida até caber em 16 px perde leitura mesmo quando o arquivo continua
 tecnicamente válido.
+
+O arquivo informado em `--font` mantém o wordmark consistente quando o SVG
+usa texto editável. O projeto pode omitir esse argumento quando todos os
+elementos do logo já estiverem convertidos em paths.
 
 ## Prepare as webfontes
 

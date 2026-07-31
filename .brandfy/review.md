@@ -1,8 +1,9 @@
 # Revisão humana dos ativos Brandfy
 
-Data: 30 de julho de 2026.
+Data: 31 de julho de 2026.
 
 - [x] Ícones principais inspecionados em fundo petróleo.
+- [x] Construção comparada com os ícones de Specsfy e SetupVibe.
 - [x] Variantes transparentes inspecionadas em fundos claro e escuro.
 - [x] PNGs conferidos em 512 px.
 - [x] Contrastes calculados para light e dark mode.

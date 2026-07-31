@@ -26,7 +26,8 @@ description: Exporta e organiza variações de logo em SVG e PNG. Use para gerar
    ```bash
    node <caminho-da-skill>/scripts/export-logo.mjs \
      --input brand/logo/svg \
-     --output brand/logo/png
+     --output brand/logo/png \
+     --font brand/fonts/manrope-variable.ttf
    ```
 
 4. Gerar versões light e dark, símbolo quadrado, avatar e favicons de
@@ -34,6 +35,9 @@ description: Exporta e organiza variações de logo em SVG e PNG. Use para gerar
 5. Gerar `brand/manifest.json` com caminho, formato, dimensão, função e hash.
 6. Inspecionar bordas, transparência, nitidez, proporção e leitura no tamanho
    mínimo.
+
+O argumento `--font` é opcional. Use uma fonte TTF ou OTF local quando os SVGs
+mantiverem o wordmark como texto editável.
 
 O sufixo `light` ou `dark` precisa indicar o fundo de aplicação escolhido pelo
 manual. Documentar essa convenção para evitar uso invertido.

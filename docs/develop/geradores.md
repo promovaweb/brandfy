@@ -26,11 +26,16 @@ documentos derivados.
 node skills/brandfy-ativos-logo/scripts/export-logo.mjs \
   --input <diretório-svg> \
   --output <diretório-png> \
-  [--manifest <arquivo>]
+  [--manifest <arquivo>] \
+  [--font <arquivo-ttf-ou-otf>]
 ```
 
 O exportador depende do ImageMagick. A interface precisa preservar as fontes
 SVG e relatar qualquer variante que não possa ser rasterizada.
+
+Quando um SVG contém texto editável, `--font` informa a fonte usada na
+rasterização. O padrão é `brand/fonts/manrope-variable.ttf`; arquivos formados
+somente por paths não dependem desse argumento.
 
 ## Design tokens
 

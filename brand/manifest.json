@@ -1,71 +1,238 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T20:44:10.590Z",
+  "generatedAt": "2026-07-31T10:59:40.185Z",
   "assets": [
     {
       "path": "logo/svg/icon-dark.svg",
       "format": "svg",
       "role": "icon-dark",
-      "sha256": "e0a2c13817dcab0bb5e0324a12f45f9d5ff38ae21309d23aac5116b3f5cbc3b8"
-    },
-    {
-      "path": "logo/svg/icon-light.svg",
-      "format": "svg",
-      "role": "icon-light",
-      "sha256": "212bc0881d1fe8b68d05cb1d0b3d716274908d1f7746d1743617c3c5a250e041"
-    },
-    {
-      "path": "logo/svg/icon.svg",
-      "format": "svg",
-      "role": "icon",
-      "sha256": "1530d0d248ff7b137a2a7cf8e1f94c1e1c001b3c35fa7f5a04f64564d9782a8e"
-    },
-    {
-      "path": "logo/svg/logo-dark.svg",
-      "format": "svg",
-      "role": "logo-dark",
-      "sha256": "fac36d807924f114471f645216731cfc830cc0763dcf0258dfe5ee876d1ad726"
-    },
-    {
-      "path": "logo/svg/logo-light.svg",
-      "format": "svg",
-      "role": "logo-light",
-      "sha256": "d9e8f05363eb6b29df793afd1ab6a3ed627cf2971be1fe851c2f9efff0061189"
-    },
-    {
-      "path": "logo/png/icon-512w.png",
-      "format": "png",
-      "role": "icon",
       "width": 512,
-      "sha256": "bec5a4a675c1dd8a3ab2d353712c217035f57d4c79b4e4b93cf380a55989fd05"
+      "height": 512,
+      "sha256": "9fe863236b27024a51da503f70a8452affa263c2a5537504bd73f02b1542807a"
+    },
+    {
+      "path": "logo/png/icon-dark-16w.png",
+      "format": "png",
+      "role": "icon-dark",
+      "width": 16,
+      "height": 16,
+      "sha256": "6268a4fb90dc9757c78214a5f0e14f74a5e87aa538a0930cffa7366aa79c2cff"
+    },
+    {
+      "path": "logo/png/icon-dark-32w.png",
+      "format": "png",
+      "role": "icon-dark",
+      "width": 32,
+      "height": 32,
+      "sha256": "245f82eae046453bb0b383fbaec61931056e7b80556ee324a8f503a86ddc4058"
+    },
+    {
+      "path": "logo/png/icon-dark-48w.png",
+      "format": "png",
+      "role": "icon-dark",
+      "width": 48,
+      "height": 48,
+      "sha256": "a1c8d61226e6daec1301f10ada4b5744f2601997e849a2a99b8c0864cd95a989"
+    },
+    {
+      "path": "logo/png/icon-dark-180w.png",
+      "format": "png",
+      "role": "icon-dark",
+      "width": 180,
+      "height": 180,
+      "sha256": "5fb0fa8f506974b5beaba7fcc7a1e78dcb76cceaff2384ba236acd66cede286b"
+    },
+    {
+      "path": "logo/png/icon-dark-192w.png",
+      "format": "png",
+      "role": "icon-dark",
+      "width": 192,
+      "height": 192,
+      "sha256": "01bc58336a51780f3b66c24ec099a8a80cfc2652f284bc58d865f69bb61da8b3"
     },
     {
       "path": "logo/png/icon-dark-512w.png",
       "format": "png",
       "role": "icon-dark",
       "width": 512,
-      "sha256": "aebf0a88d51903631a2cfe42756c75e87dfbce47c24a982d41042d66c906832c"
+      "height": 512,
+      "sha256": "999ee8cf902aabdfddafd8a30dbbee209f17f644a723a96bc2689b82afa6e0c3"
+    },
+    {
+      "path": "logo/svg/icon-light.svg",
+      "format": "svg",
+      "role": "icon-light",
+      "width": 512,
+      "height": 512,
+      "sha256": "125e945dd41f4e42652e968289bae3d4e85887d7d7624b9090a66d3fe27e3608"
+    },
+    {
+      "path": "logo/png/icon-light-16w.png",
+      "format": "png",
+      "role": "icon-light",
+      "width": 16,
+      "height": 16,
+      "sha256": "eb682dc8341a5f90f10684b84d978b60315b328a6d7a7ea9acb7c4d600ce64f5"
+    },
+    {
+      "path": "logo/png/icon-light-32w.png",
+      "format": "png",
+      "role": "icon-light",
+      "width": 32,
+      "height": 32,
+      "sha256": "b2c92cf2014734ec2bf0ed72c288e6183dfda86df024b4a41092160d55eeffff"
+    },
+    {
+      "path": "logo/png/icon-light-48w.png",
+      "format": "png",
+      "role": "icon-light",
+      "width": 48,
+      "height": 48,
+      "sha256": "93faeaea4c0b8b0e6f4d82ba2f80e53d8c7ff367865a89e2f7d23f98a9623af0"
+    },
+    {
+      "path": "logo/png/icon-light-180w.png",
+      "format": "png",
+      "role": "icon-light",
+      "width": 180,
+      "height": 180,
+      "sha256": "5ab669ff60a21eb6c316649716be56c47826e8e443181dc7ceb99e8d1b1cac26"
+    },
+    {
+      "path": "logo/png/icon-light-192w.png",
+      "format": "png",
+      "role": "icon-light",
+      "width": 192,
+      "height": 192,
+      "sha256": "912ad1e9db1e6fd71f7759663f1c018ceeefdede1c87a4a0d3e76bc736174ba4"
     },
     {
       "path": "logo/png/icon-light-512w.png",
       "format": "png",
       "role": "icon-light",
       "width": 512,
-      "sha256": "8f6f0eaeb5b89c52e4e783e876f3e52183fda829e8eaa7ef9275d5b65cac2609"
+      "height": 512,
+      "sha256": "c2622e31bed0268da6be587cd0230e54b001e43666cce82bea9f9d79ecad3ab0"
+    },
+    {
+      "path": "logo/svg/icon.svg",
+      "format": "svg",
+      "role": "icon",
+      "width": 512,
+      "height": 512,
+      "sha256": "4d3c72288ce3fdb42d5175f9e2d3e696951902ace9e5cec7783b39fd0cbb31af"
+    },
+    {
+      "path": "logo/png/icon-16w.png",
+      "format": "png",
+      "role": "icon",
+      "width": 16,
+      "height": 16,
+      "sha256": "9962fbe46d3e3420895681c1cba929174cf7552a82f8f4026be28b9d8415639b"
+    },
+    {
+      "path": "logo/png/icon-32w.png",
+      "format": "png",
+      "role": "icon",
+      "width": 32,
+      "height": 32,
+      "sha256": "52b9096dccd98e8863cedf2f32180be35819d30316ef1621bac327cdf0b0c228"
+    },
+    {
+      "path": "logo/png/icon-48w.png",
+      "format": "png",
+      "role": "icon",
+      "width": 48,
+      "height": 48,
+      "sha256": "236050ad1da19a327db7fec93de7792a68bdc09c189dc9911443f3029975be31"
+    },
+    {
+      "path": "logo/png/icon-180w.png",
+      "format": "png",
+      "role": "icon",
+      "width": 180,
+      "height": 180,
+      "sha256": "0a138b88fe73eed941ece0a7dc5cc3ad000296459dba884fdfe27ef3aea975a8"
+    },
+    {
+      "path": "logo/png/icon-192w.png",
+      "format": "png",
+      "role": "icon",
+      "width": 192,
+      "height": 192,
+      "sha256": "c360f03674a078e07ea37595db514b45306da777b7b6255669ae192e10ce2f86"
+    },
+    {
+      "path": "logo/png/icon-512w.png",
+      "format": "png",
+      "role": "icon",
+      "width": 512,
+      "height": 512,
+      "sha256": "c929e84ed65e656079e9cdc6ac4053ff7b4da0ff2c4b9535d67af9a090c96f9b"
+    },
+    {
+      "path": "logo/svg/logo-dark.svg",
+      "format": "svg",
+      "role": "logo-dark",
+      "width": 1200,
+      "height": 320,
+      "sha256": "c3712a65456ef21ab0417cf65bd09f88837ca2774ae99009ad77a942cee6c34a"
     },
     {
       "path": "logo/png/logo-dark-512w.png",
       "format": "png",
       "role": "logo-dark",
       "width": 512,
-      "sha256": "5b8e01f70a1445856619e5f136721535805659304938a125323ff30550d0e6e8"
+      "height": 137,
+      "sha256": "1ec48604fdfe7c7017491ca204520ecac214bfcc0782bdd826f4a8afe097740f"
+    },
+    {
+      "path": "logo/png/logo-dark-1024w.png",
+      "format": "png",
+      "role": "logo-dark",
+      "width": 1024,
+      "height": 273,
+      "sha256": "3c83ebbe01533cc2bf3e05b5b5476bc6a06c157e0ba73ea959ca12271066478d"
+    },
+    {
+      "path": "logo/png/logo-dark-2048w.png",
+      "format": "png",
+      "role": "logo-dark",
+      "width": 2048,
+      "height": 546,
+      "sha256": "493b70e809c6bf0d612e0491c516035d4b6d2267f701d695775c964333b3ee64"
+    },
+    {
+      "path": "logo/svg/logo-light.svg",
+      "format": "svg",
+      "role": "logo-light",
+      "width": 1200,
+      "height": 320,
+      "sha256": "11a6298e53260ee629800185ef305dea1ae82c2d7cc1d2e7fc704746689496e6"
     },
     {
       "path": "logo/png/logo-light-512w.png",
       "format": "png",
       "role": "logo-light",
       "width": 512,
-      "sha256": "9f1bc117fc05251f3857b96d5577c4653b9286dbec3cdeb8ab5f388604fc0770"
+      "height": 137,
+      "sha256": "c89ee9bcad9e3da4a4a056ed77dbfd03e277ad5e3d317d3e1e4f638c7995f304"
+    },
+    {
+      "path": "logo/png/logo-light-1024w.png",
+      "format": "png",
+      "role": "logo-light",
+      "width": 1024,
+      "height": 273,
+      "sha256": "0c8f2c0afee5c9f0fd96fb793fd41226af01ca7a3dc9a2507f573180991e842a"
+    },
+    {
+      "path": "logo/png/logo-light-2048w.png",
+      "format": "png",
+      "role": "logo-light",
+      "width": 2048,
+      "height": 546,
+      "sha256": "70c9abcfc4f785061d43f00d8867e373eac95307de827b3b3e0dcd74d8be6bfb"
     }
   ]
 }
