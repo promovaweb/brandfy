@@ -1,18 +1,21 @@
 {
   "schema_version": 1,
-  "version": "1.0.0",
-  "edition": "v1.0.0",
-  "generated_at": "2026-07-30T22:43:34.261908Z",
-  "source_sha256": "64be648e00f7bd00c10f7bcddd468329b03a489cbb2b675d0a72e35541d66df6",
+  "version": "1.1.0",
+  "edition": "v1.1.0",
+  "generated_at": "2026-07-31T00:04:37.643677Z",
+  "source_sha256": "c5db8b0183d6963263857c35eaa769846e582095375203d671e0854d8cdec3b2",
   "sources": [
     ".ebook/build-ebook.sh",
     ".ebook/epub.css",
     ".ebook/external-links.lua",
     ".ebook/metadata.yaml",
     ".ebook/pdf.css",
-    "brand/fonts/inter-latin.woff2",
-    "brand/fonts/manrope-latin.woff2",
     "brand/logo/icon.png",
+    "brand/pdf/fonts/OFL-Inter.txt",
+    "brand/pdf/fonts/OFL-Manrope.txt",
+    "brand/pdf/fonts/inter-latin.woff2",
+    "brand/pdf/fonts/manrope-latin.woff2",
+    "brand/pdf/template.html",
     "docs/README.md",
     "docs/develop/README.md",
     "docs/develop/arquitetura.md",
@@ -37,12 +40,12 @@
   ],
   "artifacts": {
     "pdf": {
-      "file": "Brandfy-Documentacao-Completa-v1.0.0.pdf",
-      "sha256": "daac306cd1863d242092064fb17a2ca72f0e6d8beca070249a93a25952c2170b"
+      "file": "Brandfy-Documentacao-Completa-v1.1.0.pdf",
+      "sha256": "b1cc7fbd9af8c96bb2fe4621561e9163ece7b0088ff56191c839090d56058efc"
     },
     "epub": {
-      "file": "Brandfy-Documentacao-Completa-v1.0.0.epub",
-      "sha256": "4c2cd91100f40588c0ee32a54a0025d7a7937b01e615a5a4278610f0e566f25c"
+      "file": "Brandfy-Documentacao-Completa-v1.1.0.epub",
+      "sha256": "caa8853e68e7a8a3ebf2351ac741a5e68a911f7728d34b5bf0742e21d7401181"
     }
   }
 }

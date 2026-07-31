@@ -117,13 +117,24 @@ async function main() {
 
   const requiredFiles = [
     "README.md",
+    "CHANGELOG.md",
+    "RELEASING.md",
     "LICENSE",
     "package.json",
+    "cli/package.json",
+    "cli/bin/brandfy.mjs",
+    "cli/src/cli.mjs",
+    "cli/tests/cli.test.mjs",
     "skills/brandfy-setup/scripts/setup.mjs",
     "skills/brandfy-entrevista/scripts/compile-interview.mjs",
     "skills/brandfy-entrevista/assets/interview-template.json",
     "skills/brandfy-ativos-logo/scripts/export-logo.mjs",
     "skills/brandfy-design-tokens/scripts/generate-tokens.mjs",
+    "skills/brandfy-guia-pdf/assets/pdf-design-system/pdf.css",
+    "skills/brandfy-guia-pdf/assets/pdf-design-system/template.html",
+    "skills/brandfy-guia-pdf/assets/pdf-design-system/fonts/inter-latin.woff2",
+    "skills/brandfy-guia-pdf/assets/pdf-design-system/fonts/manrope-latin.woff2",
+    "skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs",
     "skills/brandfy-auditoria/scripts/audit-brand.mjs",
   ];
 

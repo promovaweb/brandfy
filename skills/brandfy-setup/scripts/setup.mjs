@@ -5,13 +5,23 @@
  * delimitado que pode ser atualizado sem apagar as instruções do projeto.
  */
 
-import { access, mkdir, readFile, writeFile } from "node:fs/promises";
+import {
+  access,
+  copyFile,
+  mkdir,
+  readFile,
+  writeFile,
+} from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const skillDir = path.resolve(scriptDir, "..");
 const repositoryRoot = path.resolve(skillDir, "../..");
+const pdfAssetSource = path.resolve(
+  skillDir,
+  "../brandfy-guia-pdf/assets/pdf-design-system",
+);
 const startMarker = "<!-- brandfy:consumer:start -->";
 const endMarker = "<!-- brandfy:consumer:end -->";
 
@@ -246,8 +256,19 @@ const DIRECTORIES = [
   "brand/social/youtube",
   "brand/email",
   "brand/print",
+  "brand/pdf/fonts",
   "brand/templates",
   "brand/archive",
+];
+
+const PDF_ASSETS = [
+  "README.md",
+  "pdf.css",
+  "template.html",
+  "fonts/OFL-Inter.txt",
+  "fonts/OFL-Manrope.txt",
+  "fonts/inter-latin.woff2",
+  "fonts/manrope-latin.woff2",
 ];
 
 function parseArguments(argv) {
@@ -331,6 +352,12 @@ async function expectedChanges(projectRoot, block) {
     }
   }
 
+  for (const relativePath of PDF_ASSETS) {
+    if (!(await exists(path.join(projectRoot, "brand/pdf", relativePath)))) {
+      missing.push(`arquivo brand/pdf/${relativePath}`);
+    }
+  }
+
   const agentsPath = path.join(projectRoot, "AGENTS.md");
   const agents = (await exists(agentsPath))
     ? await readFile(agentsPath, "utf8")
@@ -368,6 +395,14 @@ async function main() {
     const target = path.join(projectRoot, relativePath);
     if (!(await exists(target))) {
       await writeFile(target, content, "utf8");
+    }
+  }
+
+  for (const relativePath of PDF_ASSETS) {
+    const target = path.join(projectRoot, "brand/pdf", relativePath);
+    if (!(await exists(target))) {
+      await mkdir(path.dirname(target), { recursive: true });
+      await copyFile(path.join(pdfAssetSource, relativePath), target);
     }
   }
 

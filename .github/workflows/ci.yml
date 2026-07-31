@@ -1,0 +1,33 @@
+name: Validação
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar o Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.20.0
+          cache: npm
+          cache-dependency-path: cli/package-lock.json
+
+      - name: Instalar as dependências do CLI
+        run: npm --prefix cli ci
+
+      - name: Executar os testes
+        run: npm test
+
+      - name: Validar a release
+        run: npm run release:check

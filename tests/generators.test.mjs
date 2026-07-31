@@ -78,3 +78,32 @@ test("instalador copia os templates sem substituir alterações", async () => {
     await rm(project, { recursive: true, force: true });
   }
 });
+
+test("guia instala o design system de PDF sem substituir alterações", async () => {
+  const project = await mkdtemp(path.join(os.tmpdir(), "brandfy-pdf-test-"));
+  try {
+    const script = "skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs";
+    const first = run(
+      script,
+      ["--project", project, "--install-assets"],
+      process.cwd(),
+    );
+    assert.equal(first.status, 0, first.stderr);
+    const cssPath = path.join(project, "brand/pdf/pdf.css");
+    const css = await readFile(cssPath, "utf8");
+    assert.match(css, /pdf-design-system: 1\.0\.0/);
+    await access(path.join(project, "brand/pdf/template.html"));
+    await access(path.join(project, "brand/pdf/fonts/inter-latin.woff2"));
+    await writeFile(cssPath, `${css}\n/* personalização */\n`, "utf8");
+
+    const second = run(
+      script,
+      ["--project", project, "--install-assets"],
+      process.cwd(),
+    );
+    assert.equal(second.status, 0, second.stderr);
+    assert.match(await readFile(cssPath, "utf8"), /personalização/);
+  } finally {
+    await rm(project, { recursive: true, force: true });
+  }
+});

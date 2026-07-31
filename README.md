@@ -7,22 +7,24 @@ conferir se eles continuam fiéis à marca.
 
 ## Instalação
 
-Instale todas as skills no projeto atual com o gerenciador oficial:
+Instale o CLI e prepare o projeto atual:
 
 ```bash
-npx skills add promovaweb/brandfy
+npm install --global @promovaweb/brandfy
+brandfy init .
 ```
 
-Depois, invoque `$brandfy-setup`. A skill cria a configuração em `.brandfy/`,
-prepara o diretório `brand/` e integra um bloco idempotente ao `AGENTS.md` do
-projeto. Para executar o script diretamente:
+O comando usa o `skills` por baixo, cria a configuração em `.brandfy/`, prepara
+o diretório `brand/` e integra um bloco idempotente ao `AGENTS.md`. A execução
+sem instalação global também está disponível:
 
 ```bash
-node .agents/skills/brandfy-setup/scripts/setup.mjs --project .
+npx @promovaweb/brandfy init .
 ```
 
-O destino pode variar conforme o agente escolhido pelo `skills add`. Use o
-caminho real no qual a skill foi instalada.
+O gerenciador também pode ser executado diretamente com
+`npx skills add promovaweb/brandfy`. O destino pode variar conforme o agente
+escolhido.
 
 ## Fluxos principais
 
@@ -152,7 +154,7 @@ prefixo quando o `skills add` usar outro diretório no projeto.
 | Webfonts e CSS tipográfico | `node .agents/skills/brandfy-tipografia-web/scripts/download-fonts.mjs` |
 | SVGs e PNGs do logo | `node .agents/skills/brandfy-ativos-logo/scripts/export-logo.mjs` |
 | Templates de canais | `node .agents/skills/brandfy-templates-canais/scripts/install-templates.mjs` |
-| Manual em PDF | `node .agents/skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs` |
+| Kit e manual em PDF | `node .agents/skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs --project .` |
 | Auditoria final | `node .agents/skills/brandfy-auditoria/scripts/audit-brand.mjs` |
 
 Cada gerador aceita os argumentos documentados em seu `SKILL.md`. Execute o
@@ -174,12 +176,19 @@ requisitos aplicáveis de contraste.
 
 ## Desenvolvimento
 
-Use Node.js 22 ou posterior. O comando abaixo executa os testes do setup e dos
-geradores, depois confere a estrutura das skills e da documentação:
+Use Node.js 22.20 ou posterior. O comando abaixo executa os testes do setup e
+dos geradores, os testes do CLI e as validações das skills e da documentação:
 
 ```bash
+npm --prefix cli ci
 npm test
+npm run release:check
 ```
 
 O exportador de PNG usa ImageMagick. A validação estrutural informa quando o
 comando `magick` não está disponível, sem modificar os arquivos do projeto.
+
+O framework, o pacote `@promovaweb/brandfy` e a documentação portátil usam a
+mesma SemVer. O histórico fica em [`CHANGELOG.md`](CHANGELOG.md), e o processo
+de publicação, tag e GitHub Release está em
+[`RELEASING.md`](RELEASING.md).

@@ -8,9 +8,9 @@ Execute na raiz do Brandfy:
 npm test
 ```
 
-O script roda `node --test tests/*.test.mjs` e
-`node scripts/validate.mjs`. O primeiro grupo exerce comportamento; o segundo
-confere a forma pública da biblioteca.
+O script roda os testes dos geradores, a suíte em `cli/tests/` e os
+validadores estruturais. Os testes do CLI injetam um executor falso, portanto
+não usam a rede nem modificam skills instaladas na máquina.
 
 ## Cobertura atual
 
@@ -24,6 +24,11 @@ gerados.
 `tests/generators.test.mjs` gera tokens em diretório temporário e instala os
 templates sem substituir arquivos. Novos geradores devem receber um teste que
 use entradas pequenas e confira conteúdo, não somente a presença da saída.
+
+`cli/tests/cli.test.mjs` confere ajuda, versão, argumentos repassados ao
+`skills`, setup, diagnóstico e compilação de PDF. O tarball ainda precisa ser
+instalado em um diretório temporário durante a preparação da release, porque
+essa verificação exerce o binário exatamente como o npm o distribuirá.
 
 ## Validador estrutural
 
@@ -49,8 +54,20 @@ npm run ebook:verify
 ```
 
 Quando `docs/` muda, incremente `ebooks/VERSION`, execute `npm run ebook` e
-rode a verificação. Os guias de uso e desenvolvimento pertencem à mesma edição
-portátil.
+rode a verificação. A versão precisa ser igual à de `package.json` e
+`cli/package.json`.
+
+## Release
+
+O comando abaixo confere a versão única, a entrada correspondente no changelog
+e os arquivos do pacote público:
+
+```bash
+npm run release:check
+```
+
+O processo completo de publicação está em
+[`RELEASING.md`](../../RELEASING.md).
 
 ## Inspeção humana
 

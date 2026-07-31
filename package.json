@@ -1,17 +1,21 @@
 {
   "name": "@promovaweb/brandfy",
-  "version": "0.3.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test tests/*.test.mjs && node scripts/validate.mjs && node scripts/validate-docs.mjs",
+    "test": "node --test tests/*.test.mjs && npm run cli:test && node scripts/validate.mjs && node scripts/validate-docs.mjs",
+    "cli:test": "npm --prefix cli test",
+    "cli:pack": "npm pack ./cli --dry-run",
     "validate": "node scripts/validate.mjs",
     "docs:check": "node scripts/validate-docs.mjs",
     "ebook": "bash .ebook/build-ebook.sh",
     "ebook:verify": "bash .ebook/build-ebook.sh --check",
+    "release:check": "node scripts/validate-release.mjs",
+    "version:set": "node scripts/set-version.mjs",
     "setup:example": "node skills/brandfy-setup/scripts/setup.mjs --project example"
   }
 }

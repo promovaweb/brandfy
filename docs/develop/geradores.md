@@ -70,13 +70,15 @@ substitui os templates conhecidos pelo conteúdo distribuído com a skill.
 
 ```bash
 node skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs \
+  --project . \
   --input <manual.md> \
-  --output <manual.pdf> \
-  [--css <impressao.css>]
+  --output <manual.pdf>
 ```
 
-O script cria HTML temporário com Pandoc e PDF com WeasyPrint. Caminhos de
-recursos são resolvidos a partir do diretório do Markdown.
+O script instala o kit versionado em `brand/pdf/`, cria HTML temporário com
+Pandoc e PDF com WeasyPrint. Caminhos de recursos são resolvidos a partir do
+projeto e do diretório do Markdown. `--install-assets` copia somente o kit;
+`--force-assets` substitui conscientemente os arquivos locais.
 
 ## Auditoria
 

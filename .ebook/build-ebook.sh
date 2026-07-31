@@ -11,6 +11,7 @@ VERSION_FILE="$EBOOK_ROOT/VERSION"
 ORDER_FILE="$DOCS_ROOT/reading-order.txt"
 MANIFEST="$EBOOK_ROOT/build.json"
 PDF_STYLE="$SCRIPT_DIR/pdf.css"
+PDF_TEMPLATE="$ROOT/brand/pdf/template.html"
 EPUB_STYLE="$SCRIPT_DIR/epub.css"
 METADATA="$SCRIPT_DIR/metadata.yaml"
 LINK_FILTER="$SCRIPT_DIR/external-links.lua"
@@ -38,13 +39,16 @@ required_sources=(
   "$VERSION_FILE"
   "$ORDER_FILE"
   "$PDF_STYLE"
+  "$PDF_TEMPLATE"
   "$EPUB_STYLE"
   "$METADATA"
   "$LINK_FILTER"
   "$SCRIPT_DIR/build-ebook.sh"
   "$LOGO"
-  "$ROOT/brand/fonts/manrope-latin.woff2"
-  "$ROOT/brand/fonts/inter-latin.woff2"
+  "$ROOT/brand/pdf/fonts/manrope-latin.woff2"
+  "$ROOT/brand/pdf/fonts/inter-latin.woff2"
+  "$ROOT/brand/pdf/fonts/OFL-Manrope.txt"
+  "$ROOT/brand/pdf/fonts/OFL-Inter.txt"
 )
 
 for source in "${required_sources[@]}"; do
@@ -244,12 +248,20 @@ magick \
     --toc \
     --toc-depth=2 \
     --embed-resources \
+    --template="$PDF_TEMPLATE" \
     --css="$PDF_STYLE" \
     --resource-path="$SCRIPT_DIR:$ROOT:$DOCS_ROOT" \
     --metadata-file="$METADATA" \
     --metadata title="Brandfy — Documentação completa · v$VERSION" \
     --metadata version="$VERSION" \
     --metadata date="$PT_DATE" \
+    --variable brand_name="Brandfy" \
+    --variable document_type="Documentação completa" \
+    --variable tagline="Estratégia de marca em artefatos reproduzíveis" \
+    --variable description="Guia do usuário e referência técnica para criar, documentar e auditar sistemas de marca." \
+    --variable logo="$LOGO" \
+    --variable source_label="docs/" \
+    --variable footer_label="Brandfy — Documentação" \
     --output "$HTML_OUT"
 )
 

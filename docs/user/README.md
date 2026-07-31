@@ -23,9 +23,9 @@ aqui entra nas duas edições no próximo build.
 - O EPUB permite ajustar a fonte e o tamanho em leitores digitais.
 
 Baixe o
-[PDF da documentação completa](../../ebooks/Brandfy-Documentacao-Completa-v1.0.0.pdf)
+[PDF da documentação completa](../../ebooks/Brandfy-Documentacao-Completa-v1.1.0.pdf)
 ou o
-[EPUB da documentação completa](../../ebooks/Brandfy-Documentacao-Completa-v1.0.0.epub).
+[EPUB da documentação completa](../../ebooks/Brandfy-Documentacao-Completa-v1.1.0.epub).
 A [pasta dos ebooks](../../ebooks/README.md) registra a edição vigente e os
 hashes dos artefatos.
 

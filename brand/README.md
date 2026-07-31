@@ -86,6 +86,11 @@ Toda alteração em paleta deve partir de `colors/palette.json` e recompilar os
 tokens. Toda alteração de logo deve atualizar os SVGs, PNGs, templates e
 `manifest.json`. Depois, recompile `brand-guide.pdf` e execute a auditoria.
 
+O PDF usa o design system global em `pdf/`. O kit contém CSS, template,
+Inter, Manrope e licenças, e é o mesmo que a skill copia para o projeto
+consumidor. Personalize metadados e logo; preserve A4, capa clara, hierarquia,
+sumário, tabelas, código e paginação.
+
 Este `brand-guide.pdf` documenta a identidade do próprio Brandfy e demonstra a
 saída criada pela skill em um projeto consumidor. O guia de uso do produto é
 outro artefato, compilado de `docs/user/` e publicado em `ebooks/`.

@@ -1,33 +1,51 @@
-/**
- * Diagrama o PDF do guia do usuário com a identidade oficial do Brandfy.
- *
- * As fontes são carregadas do diretório canônico da marca. O arquivo HTML
- * gerado pelo Pandoc incorpora esta folha antes de seguir para o WeasyPrint.
+/*
+ * Design system global para documentos A4 gerados pelo Hub.
+ * pdf-design-system: 1.0.0
  */
 
 @font-face {
-  font-family: "Manrope";
-  src: url("../brand/fonts/manrope-latin.woff2") format("woff2");
+  font-family: "Inter";
+  src: url("../brand/pdf/fonts/inter-latin.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("../brand/fonts/inter-latin.woff2") format("woff2");
+  src: url("../brand/pdf/fonts/inter-latin.woff2") format("woff2");
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../brand/pdf/fonts/manrope-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../brand/pdf/fonts/manrope-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
 }
 
 :root {
-  --brand-petroleum: #00161e;
-  --brand-teal: #15626a;
-  --brand-coral: #9f1e41;
-  --brand-coral-soft: #fda4b7;
-  --paper: #ffffff;
-  --mist: #f2f8f9;
-  --ink-muted: #2d4c58;
-  --border: #bed3d7;
+  --pdf-font-body: "Inter", -apple-system, "Segoe UI", Arial, sans-serif;
+  --pdf-font-title: "Manrope", "Inter", -apple-system, "Segoe UI", Arial, sans-serif;
+  --pdf-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --pdf-black: #000000;
+  --pdf-white: #FFFFFF;
+  --pdf-graphite: #171717;
+  --pdf-fog: #F5F5F5;
+  --pdf-gray: #737373;
+  --pdf-border: #D4D4D4;
+  --pdf-link: #1D4ED8;
 }
 
 * {
@@ -36,13 +54,13 @@
 
 @page {
   size: A4;
-  margin: 22mm 18mm 20mm;
+  margin: 23mm 19mm 21mm;
 
   @bottom-center {
-    content: "Brandfy — Documentação  ·  " counter(page) " / " counter(pages);
-    color: var(--ink-muted);
-    font-family: "Inter", sans-serif;
-    font-size: 8pt;
+    content: "Brandfy — Documentação · " counter(page) " / " counter(pages);
+    color: var(--pdf-gray);
+    font-family: var(--pdf-font-body);
+    font-size: 8.5pt;
   }
 }
 
@@ -58,73 +76,74 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--paper);
-  color: var(--brand-petroleum);
-  font-family: "Inter", sans-serif;
-  font-size: 10.4pt;
+  color: var(--pdf-graphite);
+  font-family: var(--pdf-font-body);
+  font-size: 10.5pt;
   line-height: 1.58;
 }
 
-#title-block-header {
-  position: relative;
+.cover {
   page: cover;
   page-break-after: always;
   width: 210mm;
   height: 297mm;
-  margin: 0;
-  padding: 54mm 24mm 28mm;
-  background: var(--brand-petroleum);
-  color: var(--paper);
+  padding: 26mm 22mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--pdf-white);
+  color: var(--pdf-black);
 }
 
-#title-block-header::after {
-  position: absolute;
-  top: 28mm;
-  right: 24mm;
-  width: 28mm;
-  height: 28mm;
-  border-radius: 50%;
-  background: var(--brand-coral-soft);
-  content: "";
+.cover-mark {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
 }
 
-#title-block-header::before {
-  display: block;
-  width: 18mm;
-  height: 18mm;
-  margin-bottom: 34mm;
-  border: 3px solid #5eede1;
-  border-radius: 4mm;
-  color: var(--brand-coral-soft);
-  content: "B";
-  font-family: "Manrope", sans-serif;
-  font-size: 30pt;
-  font-weight: 800;
-  line-height: 18mm;
-  text-align: center;
+.cover-title {
+  margin-top: 30mm;
 }
 
-#title-block-header h1 {
-  max-width: 145mm;
-  margin: 0 0 10mm;
-  padding: 0;
-  border: 0;
-  color: var(--paper);
-  font-family: "Manrope", sans-serif;
-  font-size: 37pt;
-  line-height: 1.06;
-}
-
-#title-block-header .subtitle {
-  max-width: 120mm;
-  color: #b2c6ce;
-  font-size: 15pt;
-}
-
-#title-block-header .author,
-#title-block-header .date {
-  color: #b2c6ce;
+.cover-kicker {
+  font-family: var(--pdf-font-body);
   font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cover h1 {
+  margin: 12px 0 16px;
+  font-family: var(--pdf-font-title);
+  font-size: 34pt;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.cover-tagline {
+  margin-bottom: 18px;
+  font-family: var(--pdf-font-title);
+  font-size: 13pt;
+  font-weight: 600;
+}
+
+.cover-desc {
+  max-width: 105mm;
+  color: var(--pdf-gray);
+  font-size: 12pt;
+}
+
+.cover-meta {
+  padding-top: 14px;
+  border-top: 1px solid var(--pdf-border);
+  color: var(--pdf-gray);
+  font-size: 9pt;
+}
+
+.cover-meta div {
+  margin: 3px 0;
 }
 
 #TOC {
@@ -132,12 +151,11 @@ body {
 }
 
 #TOC::before {
-  display: block;
-  margin-bottom: 16px;
-  color: var(--brand-coral);
   content: "Sumário";
-  font-family: "Manrope", sans-serif;
-  font-size: 22pt;
+  display: block;
+  margin-bottom: 18px;
+  font-family: var(--pdf-font-title);
+  font-size: 20pt;
   font-weight: 700;
 }
 
@@ -147,7 +165,7 @@ body {
 }
 
 #TOC ul ul {
-  padding-left: 16px;
+  padding-left: 17px;
 }
 
 #TOC li {
@@ -155,38 +173,46 @@ body {
 }
 
 #TOC a {
-  color: var(--brand-petroleum);
+  color: var(--pdf-graphite);
   text-decoration: none;
+}
+
+#TOC a::after {
+  content: leader(".") target-counter(attr(href), page);
+  color: var(--pdf-gray);
+  font-size: 8.5pt;
 }
 
 main > h1 {
   page-break-before: always;
 }
 
+main > h1:first-child {
+  page-break-before: avoid;
+}
+
 h1,
 h2,
 h3 {
-  color: var(--brand-petroleum);
-  font-family: "Manrope", sans-serif;
+  font-family: var(--pdf-font-title);
   page-break-after: avoid;
 }
 
 h1 {
   margin: 0 0 16px;
   padding-bottom: 8px;
-  border-bottom: 3px solid var(--brand-coral);
-  font-size: 22pt;
-  line-height: 1.18;
+  border-bottom: 2px solid var(--pdf-black);
+  font-size: 21pt;
+  line-height: 1.2;
 }
 
 h2 {
-  margin: 24px 0 9px;
-  color: var(--brand-teal);
+  margin: 24px 0 10px;
   font-size: 15pt;
 }
 
 h3 {
-  margin: 19px 0 7px;
+  margin: 20px 0 8px;
   font-size: 12pt;
 }
 
@@ -201,60 +227,59 @@ li {
 }
 
 a {
-  color: var(--brand-coral);
-}
-
-code,
-pre {
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  color: var(--pdf-link);
 }
 
 code {
   padding: 1px 4px;
   border-radius: 3px;
-  background: var(--mist);
+  background: var(--pdf-fog);
+  font-family: var(--pdf-font-mono);
   font-size: 0.88em;
 }
 
 pre {
   padding: 11px 13px;
-  border-left: 4px solid var(--brand-teal);
-  background: var(--mist);
+  border-left: 3px solid var(--pdf-black);
+  background: var(--pdf-fog);
   page-break-inside: avoid;
   white-space: pre-wrap;
 }
 
 pre code {
   padding: 0;
-  background: transparent;
+  background: none;
 }
 
 blockquote {
   margin: 14px 0;
-  padding: 5px 0 5px 14px;
-  border-left: 4px solid var(--brand-coral);
+  padding: 4px 0 4px 14px;
+  border-left: 3px solid var(--pdf-black);
+  font-weight: 500;
 }
 
 table {
   width: 100%;
   margin: 12px 0 18px;
   border-collapse: collapse;
-  font-size: 9.1pt;
+  font-size: 9.3pt;
 }
 
 th,
 td {
   padding: 6px 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--pdf-border);
+  overflow-wrap: anywhere;
   text-align: left;
   vertical-align: top;
-  overflow-wrap: anywhere;
 }
 
 th {
-  background: var(--mist);
-  color: var(--brand-teal);
-  font-family: "Manrope", sans-serif;
+  background: var(--pdf-fog);
+  color: var(--pdf-gray);
+  font-size: 8.4pt;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 tr,
@@ -266,4 +291,19 @@ figure {
 img {
   max-width: 100%;
   height: auto;
+}
+
+figure {
+  margin: 16px 0;
+  text-align: center;
+}
+
+figcaption {
+  color: var(--pdf-gray);
+  font-size: 8.5pt;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--pdf-border);
 }

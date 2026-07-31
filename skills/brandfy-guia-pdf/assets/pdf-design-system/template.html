@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="$if(lang)$$lang$$else$pt-BR$endif$">
+<head>
+  <meta charset="utf-8">
+  <title>$title$</title>
+  $if(description)$<meta name="description" content="$description$">$endif$
+  $for(css)$
+  <link rel="stylesheet" href="$css$">
+  $endfor$
+  <style>
+    @page {
+      @bottom-center {
+        content: "$if(footer_label)$$footer_label$$else$$title$$endif$ · " counter(page) " / " counter(pages);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    $if(logo)$<img class="cover-mark" src="$logo$" alt="Símbolo de $if(brand_name)$$brand_name$$else$$title$$endif$">$endif$
+    <div class="cover-title">
+      $if(brand_name)$<div class="cover-kicker">$brand_name$</div>$endif$
+      <h1>$title$</h1>
+      $if(tagline)$<div class="cover-tagline">$tagline$</div>$endif$
+      $if(description)$<div class="cover-desc">$description$</div>$endif$
+    </div>
+    <div class="cover-meta">
+      $if(document_type)$<div>$document_type$</div>$endif$
+      $if(version)$<div>Edição $version$</div>$endif$
+      $if(date)$<div>Gerado em $date$</div>$endif$
+      $if(source_label)$<div>Fonte editorial: $source_label$</div>$endif$
+    </div>
+  </div>
+
+  $if(toc)$
+  <nav id="TOC" role="doc-toc">
+    $toc$
+  </nav>
+  $endif$
+
+  <main>
+    $body$
+  </main>
+</body>
+</html>

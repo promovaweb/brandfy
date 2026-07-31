@@ -19,6 +19,18 @@ informado, não a partir de dados privados guardados no Brandfy.
 recebe o manual, os ativos e as saídas compiladas. O agente lê as duas fontes,
 mas não mistura trabalho reservado com arquivos destinados a publicação.
 
+## CLI e gerenciador de skills
+
+O pacote npm vive em `cli/` e expõe o comando `brandfy`. Essa camada resolve a
+versão empacotada do `skills`, executa `skills add` no projeto consumidor e
+localiza os scripts instalados em `.agents/skills/`, `.codex/skills/` ou
+`.claude/skills/`.
+
+O CLI não incorpora uma segunda cópia dos geradores. `brandfy pdf` e
+`brandfy audit` executam os arquivos das skills instaladas, mantendo uma única
+fonte para o comportamento. O framework, o pacote npm e o ebook usam a mesma
+SemVer, conferida por `npm run release:check`.
+
 ## Tipos de skill
 
 As 18 skills cumprem quatro papéis:
@@ -49,7 +61,8 @@ especialidade apropriada.
 
 ## Dependências externas
 
-O núcleo usa APIs nativas do Node.js. ImageMagick entra na rasterização dos
-logos e templates. Pandoc e WeasyPrint entram na compilação de PDFs. O projeto
-mantém essas ferramentas fora das dependências npm porque elas são programas
-do sistema e possuem ciclos de instalação próprios.
+O núcleo dos geradores usa APIs nativas do Node.js. O CLI depende do pacote
+`skills`, com versão fixa no lock. ImageMagick entra na rasterização dos logos
+e templates. Pandoc e WeasyPrint entram na compilação de PDFs. O projeto
+mantém os três últimos programas fora das dependências npm porque eles possuem
+ciclos de instalação próprios.

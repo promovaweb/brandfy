@@ -1,0 +1,46 @@
+{
+  "name": "@promovaweb/brandfy",
+  "version": "1.1.0",
+  "description": "CLI do Brandfy para instalar skills e manter sistemas de marca em projetos com agentes.",
+  "type": "module",
+  "bin": {
+    "brandfy": "bin/brandfy.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "prepack": "npm test"
+  },
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "keywords": [
+    "agents",
+    "branding",
+    "brand",
+    "cli",
+    "skills"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/promovaweb/brandfy.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/promovaweb/brandfy/issues"
+  },
+  "homepage": "https://github.com/promovaweb/brandfy#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "skills": "1.5.21"
+  }
+}

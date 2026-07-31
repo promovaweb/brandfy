@@ -10,8 +10,8 @@ description: Compila o manual Markdown editável em um PDF de marca. Use para ge
 - **Plano e progresso:** planejar fonte, tema, compilação e inspeção.
 - **Fontes de verdade:** ler `brand/README.md`, os ativos vinculados e
   [pdf-build.md](references/pdf-build.md).
-- **Escopo e idempotência:** gerar o PDF a partir do Markdown sem modificar a
-  fonte editável.
+- **Escopo e idempotência:** copiar o design system para `brand/pdf/` e gerar
+  o PDF sem modificar a fonte editável nem substituir personalizações.
 - **Validação:** recompilar, conferir links, páginas, imagens, fontes, sumário e
   metadados.
 - **Resumo final:** informar fonte, PDF, ferramentas usadas e avisos.
@@ -20,22 +20,36 @@ description: Compila o manual Markdown editável em um PDF de marca. Use para ge
 
 1. Confirmar que `brand/README.md` é a versão aprovada e que os links relativos
    existem.
-2. Executar:
+2. Instalar ou conferir os ativos locais:
 
    ```bash
    node <caminho-da-skill>/scripts/build-brand-guide.mjs \
-     --input brand/README.md \
-     --output brand/brand-guide.pdf
+     --project . \
+     --install-assets
    ```
 
-3. O compilador usa Pandoc para gerar HTML semântico e WeasyPrint para produzir
+   O comando copia CSS, template, Inter, Manrope e licenças para `brand/pdf/`.
+   Arquivos existentes são preservados. Use `--force-assets` somente depois de
+   revisar as diferenças da versão instalada.
+3. Compilar:
+
+   ```bash
+   node <caminho-da-skill>/scripts/build-brand-guide.mjs \
+     --project . \
+     --input brand/README.md \
+     --output brand/brand-guide.pdf \
+     --brand-name "Nome da marca"
+   ```
+
+4. O compilador usa Pandoc para gerar HTML semântico e WeasyPrint para produzir
    o PDF. Instalar essas ferramentas quando a verificação inicial apontar
    ausência.
-4. Ajustar o tema em `assets/brand-guide.css` quando a marca exigir outra
-   paleta, tipografia ou formato de página.
-5. Abrir o PDF e conferir capa, sumário, quebras, tabelas, SVGs, PNGs, URLs,
+5. Preservar o contrato `pdf-design-system: 1.0.0`: A4, capa clara, Manrope,
+   Inter, sumário, componentes editoriais e paginação. Nome, logo, descrição,
+   tagline e cor de link podem ser personalizados sem duplicar o tema.
+6. Abrir o PDF e conferir capa, sumário, quebras, tabelas, SVGs, PNGs, URLs,
    cabeçalhos, rodapés e propriedades do documento.
-6. Recompilar sempre que o Markdown, o CSS, uma fonte ou um ativo vinculado
+7. Recompilar sempre que o Markdown, o CSS, uma fonte ou um ativo vinculado
    mudar.
 
 Quando uma imagem, uma tabela ou um texto aparecer errado no PDF, corrija

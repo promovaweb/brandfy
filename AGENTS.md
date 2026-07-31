@@ -64,4 +64,6 @@ Ao criar ou alterar a marca:
    consentimentos e consistência entre o manual e os arquivos finais.
 10. Atualize o manifesto de ativos e registre qualquer pendência no relatório
     de auditoria da marca.
+11. Compile manuais com o kit em `brand/pdf/`; preserve o contrato
+    `pdf-design-system: 1.0.0` e não edite o PDF diretamente.
 <!-- brandfy:consumer:end -->

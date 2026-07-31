@@ -39,17 +39,22 @@ Execute:
 npm test
 npm run ebook
 npm run ebook:verify
+npm run release:check
+npm run cli:pack
 ```
 
 Rode também o `quick_validate.py` do Skill Creator para cada skill alterada.
 Depois, confira o diff, abra o PDF e o EPUB e leia os trechos afetados.
 
-## Versione o ebook
+## Versione a release
 
-`ebooks/VERSION` usa SemVer. Uma correção textual ou visual compatível aumenta
-`PATCH`. Um capítulo novo ou ampliação material aumenta `MINOR`. Uma
-reorganização incompatível da jornada aumenta `MAJOR`.
+O framework, o CLI e o ebook usam a mesma SemVer. Aplique a versão com:
 
-O build grava hashes da edição. A versão do ebook não precisa ser igual à
-versão do pacote, pois os dois artefatos podem receber correções em ritmos
-diferentes.
+```bash
+npm run version:set -- 1.2.0
+```
+
+Uma correção compatível aumenta `PATCH`, uma funcionalidade nova aumenta
+`MINOR`, e uma mudança incompatível aumenta `MAJOR`. O processo de commit, tag,
+publicação npm e GitHub Release está em
+[`RELEASING.md`](../../RELEASING.md).

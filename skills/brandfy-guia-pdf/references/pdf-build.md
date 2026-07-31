@@ -10,5 +10,12 @@ relativos alcançáveis a partir de `brand/README.md`. Depois da compilação,
 confira capa, sumário, links, quebras, tabelas, SVGs, PNGs, cabeçalhos, rodapés
 e metadados.
 
-Edite `assets/brand-guide.css` para ajustar formato da página, margens, cores e
-tipografia. O Markdown continua sendo a fonte de conteúdo.
+O kit distribuído fica em `assets/pdf-design-system/` e é copiado para
+`brand/pdf/` do projeto consumidor. Use `--install-assets` para copiar somente
+arquivos ausentes. Use `--force-assets` apenas quando a atualização tiver sido
+revisada e precisar substituir as cópias locais.
+
+Nome, logo, descrição, tagline e cor de link podem variar. Formato A4, capa
+clara, grade, escala tipográfica, Inter, Manrope, sumário, tabelas, código e
+paginação pertencem ao contrato global. O Markdown continua sendo a fonte de
+conteúdo.

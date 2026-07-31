@@ -37,6 +37,9 @@ test("setup cria a estrutura e preserva instruções existentes", async () => {
     );
     assert.match(config, /interview_source: \.brandfy\/interview\.json/);
     await access(path.join(project, ".brandfy/interviews"));
+    await access(path.join(project, "brand/pdf/pdf.css"));
+    await access(path.join(project, "brand/pdf/template.html"));
+    await access(path.join(project, "brand/pdf/fonts/inter-latin.woff2"));
 
     assert.equal(run(["--project", project]).status, 0);
     const second = await readFile(path.join(project, "AGENTS.md"), "utf8");

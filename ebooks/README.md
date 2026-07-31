@@ -20,10 +20,10 @@ A versão do guia do Brandfy está em [`VERSION`](VERSION) e segue SemVer:
 - `MINOR` registra um capítulo novo ou uma ampliação material.
 - `MAJOR` registra uma reorganização incompatível do percurso.
 
-Baixe a edição `v1.0.0` nos dois formatos:
+Baixe a edição `v1.1.0` nos dois formatos:
 
-- [PDF da documentação completa](Brandfy-Documentacao-Completa-v1.0.0.pdf).
-- [EPUB da documentação completa](Brandfy-Documentacao-Completa-v1.0.0.epub).
+- [PDF da documentação completa](Brandfy-Documentacao-Completa-v1.1.0.pdf).
+- [EPUB da documentação completa](Brandfy-Documentacao-Completa-v1.1.0.epub).
 
 Os artefatos do produto seguem estes nomes:
 
@@ -57,5 +57,6 @@ A verificação compara as fontes com o manifesto, recalcula hashes, valida os
 documentos XML do EPUB e confirma que o PDF possui páginas e o título
 esperado.
 
-Toda mudança em `docs/` exige incremento de `VERSION`, novo build,
-inspeção visual do PDF, abertura do EPUB e execução da verificação.
+Toda mudança pública usa a mesma SemVer em `package.json`,
+`cli/package.json` e `ebooks/VERSION`. A release exige novo build, inspeção
+visual do PDF, abertura do EPUB e execução da verificação.
