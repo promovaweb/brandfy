@@ -5,17 +5,17 @@
 O especialista de branding organiza escolhas que precisam funcionar ao mesmo
 tempo no negócio, na percepção, na linguagem, na experiência e na operação. O
 trabalho não consiste em decorar uma empresa nem em produzir consenso por
-adjetivos. Ele transforma evidências e ambições em um sistema distintivo,
+adjetivos. Ele transforma comprovações e ambições em um sistema distintivo,
 crível, aplicável e governável.
 
 ## Quatro movimentos
 
 ### Descobrir
 
-Reunir relatos, arquivos, dados, usos atuais, concorrentes, alternativas,
+Reunir relatos, arquivos, registros, usos atuais, concorrentes, alternativas,
 restrições e patrimônio existente. Separar o que foi observado do que a equipe
 acredita. A entrevista abre o campo; o diagnóstico confronta o relato com
-evidências.
+comprovações.
 
 ### Definir
 
@@ -42,13 +42,13 @@ Para cada escolha relevante, registrar:
 
 | Campo | Pergunta |
 | --- | --- |
-| Evidência | O que observamos ou recebemos como fonte? |
-| Interpretação | O que essa evidência pode significar? |
+| Comprovação | O que observamos ou recebemos como fonte? |
+| Interpretação | O que essa comprovação pode significar? |
 | Hipótese | O que ainda precisa ser testado? |
 | Alternativas | Que caminhos plausíveis foram comparados? |
 | Parâmetros | Como a comparação foi feita? |
 | Tensão | Que vantagem exige uma concessão? |
-| Decisão | O que foi escolhido, qual responsável aprovou e por quê? |
+| Escolha | O que foi escolhido, qual responsável aprovou e por quê? |
 | Validação | Onde a escolha será testada? |
 
 ## Sete parâmetros transversais
@@ -77,7 +77,7 @@ Para cada escolha relevante, registrar:
 - **Gate de governança:** responsáveis, revisão, exceções e descontinuação
   definidos.
 
-Falhar em um gate não significa recomeçar tudo. Retornar à decisão ou evidência
+Falhar em um gate não significa recomeçar tudo. Retornar à escolha ou comprovação
 que causou a falha, corrigir e repetir o teste correspondente.
 
 ## Referências institucionais

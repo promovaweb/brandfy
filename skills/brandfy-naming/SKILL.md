@@ -16,7 +16,7 @@ description: Pesquisa, cria e compara nomes de marca com verificações indicati
   evitar repetição.
 - **Validação:** conferir pronúncia, escrita, significado, busca no INPI,
   domínio e perfis relevantes.
-- **Resumo final:** apresentar opções, evidências, conflitos encontrados e
+- **Resumo final:** apresentar opções, comprovações, conflitos encontrados e
   necessidade de análise jurídica.
 
 ## Fluxo
@@ -31,7 +31,7 @@ description: Pesquisa, cria e compara nomes de marca com verificações indicati
 5. Conferir domínio, mecanismos de busca e perfis sociais prioritários.
 6. Testar pronúncia, ditado, memorização, redução para ícone e expansão para
    submarcas.
-7. Salvar a shortlist e as evidências em `.brandfy/naming.md`.
+7. Salvar a shortlist e as comprovações em `.brandfy/naming.md`.
 
 A busca de anterioridade é indicativa. Não afirmar que um nome está livre,
 registrável ou protegido sem análise profissional do caso e do exame oficial.

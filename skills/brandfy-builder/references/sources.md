@@ -40,7 +40,7 @@ O [Guia Básico do INPI](https://www.gov.br/inpi/pt-br/servicos/marcas/guia-basi
 orienta a busca antes do protocolo. O
 [Manual de Marcas](https://manualdemarcas.inpi.gov.br/) detalha tipos de
 marca, exame, pedidos e acompanhamento. O Brandfy registra essas consultas como
-evidência indicativa e não as apresenta como parecer jurídico.
+comprovação indicativa e não as apresenta como parecer jurídico.
 
 A página de
 [Classificação de produtos e serviços](https://www.gov.br/inpi/pt-br/servicos/marcas/classificacao-marcas/classificacao)
@@ -52,7 +52,7 @@ O guia
 [Making a Mark](https://www.wipo.int/publications/en/details.jsp?id=106), da
 WIPO, relaciona a gestão de marcas à estratégia do negócio e ao patrimônio
 intelectual. O Brandfy usa essa perspectiva para tratar naming, símbolo,
-licenças, expansão e governança como partes da mesma decisão.
+licenças, expansão e governança como partes da mesma escolha.
 
 ## Acessibilidade
 

@@ -3,7 +3,7 @@
 ## Fonte estruturada
 
 `.brandfy/interview.json` é o registro normalizado da entrevista. Respostas
-literais, evidências e pendências permanecem ali. Os arquivos Markdown recebem
+literais, comprovações e pendências permanecem ali. Os arquivos Markdown recebem
 somente a síntese confirmada.
 
 | Grupo do JSON | Destino principal | Validação posterior |
@@ -23,8 +23,8 @@ somente a síntese confirmada.
 - Mostrar “Não confirmado” quando um campo estrutural permanecer vazio.
 - Não converter hipótese em promessa, público prioritário ou valor.
 - Preservar as palavras do participante em `quotes`.
-- Manter uma evidência ligada à afirmação que ela fundamenta.
-- Registrar decisão com motivo, responsável e data.
+- Manter uma comprovação ligada à afirmação que ela fundamenta.
+- Registrar escolha com motivo, responsável e data.
 - Registrar lacuna com pergunta, responsável e próximo passo.
 - Registrar a confirmação de cada etapa com participante e data.
 - Manter fato, interpretação, hipótese e preferência em coleções distintas.

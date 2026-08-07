@@ -15,7 +15,7 @@ description: Conduz uma entrevista adaptativa de branding e transforma respostas
   [field-map.md](references/field-map.md).
 - **Escopo e idempotência:** não substituir texto aprovado. O compilador
   atualiza somente blocos delimitados por `brandfy:interview`.
-- **Validação:** separar fato, evidência, interpretação, hipótese, preferência
+- **Validação:** separar fato, comprovação, interpretação, hipótese, preferência
   e pendência. Pedir confirmação antes de marcar a entrevista como pronta.
 - **Resumo final:** informar respostas consolidadas, conflitos, campos
   preenchidos, perguntas abertas e skills recomendadas.
@@ -24,7 +24,7 @@ description: Conduz uma entrevista adaptativa de branding e transforma respostas
 
 Atuar como estrategista de marca e pesquisador, não como operador de
 formulário. Fazer perguntas abertas e neutras, procurar episódios reais,
-comparar o discurso com evidências e explicar por que uma informação altera a
+comparar o discurso com comprovações e explicar por que uma informação altera a
 estratégia. Não aceitar adjetivos vagos como posicionamento sem pedir
 comportamento, prova e contraste com alternativas.
 
@@ -50,9 +50,9 @@ recebe responsável, pergunta e próximo passo.
    `progress.stageConfirmations`.
 5. Cobrir negócio, públicos, alternativas, posicionamento, personalidade, voz,
    direção visual, ativos, propriedade intelectual, operação e governança.
-6. Registrar exemplos literais, fontes e evidências no JSON. Evitar transcrever
+6. Registrar exemplos literais, fontes e comprovações no JSON. Evitar transcrever
    dados pessoais desnecessários. Usar as coleções próprias para fatos,
-   interpretações, hipóteses, preferências, decisões e perguntas abertas.
+   interpretações, hipóteses, preferências, escolhas e perguntas abertas.
 7. Rodar a verificação de cobertura:
 
    ```bash

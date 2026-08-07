@@ -20,13 +20,13 @@ depois de entender o problema e o público.
 - O que ela faz hoje quando não escolhe esta oferta?
 - Que exposição, custo ou receio atrasa a escolha?
 - Que linguagem o público usa para descrever o problema?
-- Há públicos com necessidades ou parâmetros de decisão diferentes?
+- Há públicos com necessidades ou parâmetros de escolha diferentes?
 - Quais pessoas usam, influenciam, compram e aprovam?
 
 ## Categoria, alternativas e posicionamento
 
 - Em qual categoria o público colocaria a oferta sem explicação adicional?
-- Quais organizações ou soluções aparecem na mesma decisão?
+- Quais organizações ou soluções aparecem na mesma escolha?
 - Por que alguém escolhe esta marca quando poderia escolher uma alternativa?
 - Que promessa é possível cumprir de maneira consistente?
 - Que processo, resultado ou história prova essa diferença?
@@ -38,7 +38,7 @@ depois de entender o problema e o público.
 - Qual convicção orienta o negócio quando não existe uma regra pronta?
 - Que comportamentos demonstram cada valor?
 - Qual atitude seria incompatível com a marca, mesmo que desse resultado?
-- Se a marca fosse lembrada por três características, quais seriam?
+- Se alguém tivesse que resumir a marca em três características observáveis, quais seriam?
 - Que interpretação desses atributos deve ser evitada?
 - Onde proximidade, autoridade, ousadia ou simplicidade encontram limite?
 
@@ -75,7 +75,7 @@ depois de entender o problema e o público.
 
 - Quais aplicações precisam existir primeiro?
 - Quais responsáveis criam, revisam e aprovam?
-- Que decisão cabe à marca e que decisão cabe ao produto ou campanha?
+- Que escolha cabe à marca e que escolha cabe ao produto ou campanha?
 - Como uma exceção deve ser registrada?
 - Quando o manual deverá ser revisto?
 - Quais indicadores podem mostrar reconhecimento, consistência ou confiança?
@@ -86,7 +86,7 @@ depois de entender o problema e o público.
 - Você pode relatar um exemplo recente?
 - O que aconteceu antes e depois?
 - Qual pessoa observou ou mediu isso?
-- Qual arquivo, dado ou relato fundamenta a afirmação?
+- Qual arquivo, registro ou relato fundamenta a afirmação?
 - Essa é uma regra, hipótese, preferência ou escolha já aprovada?
 - O que mudaria sua opinião?
 - Qual alternativa foi descartada e por quê?

@@ -36,7 +36,7 @@ correto não comprova que a cor e a aplicação estejam certas.
 
 ## Raciocínio do especialista
 
-Escrever o manual como instrumento de decisão. Cada regra importante precisa
+Escrever o manual como instrumento de escolha. Cada regra importante precisa
 explicar princípio, aplicação, limite e exemplo. Distinguir definição aprovada,
 orientação, exceção e pendência. Remover declarações que não possam ser ligadas
-a um arquivo, comportamento, evidência ou responsável.
+a um arquivo, comportamento, comprovação ou responsável.

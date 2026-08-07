@@ -15,7 +15,7 @@ description: Audita a integridade e a consistência de uma marca. Use para revis
   aprovados.
 - **Validação:** executar o script, inspecionar amostras reais e recompilar o
   PDF.
-- **Resumo final:** separar reprovações, avisos, evidências e próximos trabalhos.
+- **Resumo final:** separar reprovações, avisos, comprovações e próximos trabalhos.
 
 ## Fluxo
 
@@ -43,7 +43,7 @@ as aplicações observadas concordarem entre si.
 
 ## Raciocínio do especialista
 
-Auditar por cadeia de evidência: definição, arquivo fonte, exportação,
+Auditar por cadeia de comprovação: definição, arquivo fonte, exportação,
 aplicação e documentação precisam concordar. Classificar achados por impacto,
 probabilidade, alcance e reversibilidade. Diferenciar impedimento de publicação,
 correção necessária, melhoria recomendada e observação. Não reduzir a

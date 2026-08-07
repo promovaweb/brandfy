@@ -24,7 +24,7 @@ description: Coordena a construção ou revisão completa de uma marca e seus ar
 ## Esteira
 
 1. Usar `$brandfy-setup`.
-2. Conduzir `$brandfy-entrevista` quando os dados não estiverem confirmados.
+2. Conduzir `$brandfy-entrevista` quando as respostas não estiverem confirmadas.
 3. Usar `$brandfy-diagnostico` para confrontar o relato com arquivos e usos.
 4. Definir a base com `$brandfy-estrategia`.
 5. Quando o nome ainda estiver aberto, usar `$brandfy-naming`.
@@ -43,7 +43,7 @@ description: Coordena a construção ou revisão completa de uma marca e seus ar
 Não avançar da estratégia para a criação visual quando o nome, o público, a
 promessa central ou as restrições de uso continuarem contraditórios. Uma marca
 existente pode pular etapas aprovadas, desde que o diagnóstico registre a
-evidência usada.
+comprovação usada.
 
 ## Raciocínio do especialista
 
@@ -54,5 +54,5 @@ em uma dimensão pode falhar em outra. Registrar a tensão, as alternativas
 comparadas e o motivo do aceite.
 
 Não tratar gosto pessoal como base suficiente. Preferências entram como
-restrição ou hipótese; decisões exigem ligação com estratégia, contexto de uso
-e evidência disponível.
+restrição ou hipótese; escolhas exigem ligação com estratégia, contexto de uso
+e comprovação disponível.

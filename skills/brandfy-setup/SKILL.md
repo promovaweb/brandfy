@@ -48,6 +48,6 @@ qualquer diferença indica configuração incompleta ou bloco do agente antigo.
 ## Raciocínio do especialista
 
 Tratar o setup como preparação de governança, não como criação da marca.
-Confirmar responsáveis por respostas e aprovações, localização das evidências,
+Confirmar responsáveis por respostas e aprovações, localização das comprovações,
 arquivos canônicos e forma de resolver pendências. Uma estrutura completa com
 informação fraca continua sendo um projeto incompleto.

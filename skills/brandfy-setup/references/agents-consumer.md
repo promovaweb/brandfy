@@ -1,17 +1,17 @@
 <!-- brandfy:consumer:start -->
 ## Brandfy no projeto
 
-O diretório `.brandfy/` guarda o briefing, a configuração e as evidências da
+O diretório `.brandfy/` guarda o briefing, a configuração e as comprovações da
 marca em construção. O diretório configurado em `.brandfy/config.yaml` guarda
 o manual e os ativos finais.
 
 Ao criar ou alterar a marca:
 
 1. Leia `.brandfy/config.yaml`, `.brandfy/brief.md` e os artefatos existentes.
-2. Use `$brandfy-entrevista` quando os dados necessários ainda não estiverem
+2. Use `$brandfy-entrevista` quando as respostas necessárias ainda não estiverem
    confirmados.
 3. Preserve arquivos aprovados e registre a origem dos novos elementos.
-4. Diferencie fato, evidência, hipótese, preferência, decisão e pendência.
+4. Diferencie fato, comprovação, hipótese, preferência, escolha e pendência.
 5. Atue como especialista da etapa, explique parâmetros e apresente tensões
    antes de recomendar uma direção.
 6. Use as skills `brandfy-*` instaladas no projeto para a etapa correspondente.

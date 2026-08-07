@@ -5,7 +5,7 @@
 A entrevista transforma conhecimento distribuído entre fundadores, equipe,
 clientes, documentos e ativos em uma base rastreável. Ela não serve para
 confirmar a primeira opinião do participante. O trabalho busca fatos,
-episódios, linguagem real, tensões e parâmetros que permitam tomar decisões de
+episódios, linguagem real, tensões e parâmetros que permitam tomar escolhas de
 marca.
 
 ## Princípios
@@ -16,14 +16,14 @@ marca.
    preferências e escolhas em campos distintos.
 3. **Explorar contraste:** perguntar o que a marca é e o que ela recusa ser.
 4. **Pedir provas:** ligar promessas a produto, processo, resultado, relato ou
-   dado verificável.
+   registro verificável.
 5. **Acompanhar tensões:** crescimento pode conflitar com exclusividade;
    proximidade pode conflitar com autoridade; expressividade pode conflitar
    com acessibilidade.
 6. **Confirmar sínteses:** devolver o entendimento ao participante e permitir
    correção antes da compilação.
-7. **Minimizar dados:** não registrar informação pessoal ou confidencial sem
-   necessidade, finalidade e consentimento.
+7. **Minimizar informação pessoal:** não registrar informação pessoal ou
+   confidencial sem necessidade, finalidade e consentimento.
 
 ## Estrutura adaptativa
 
@@ -60,7 +60,7 @@ Usar estes estados:
 | `hypothesis` | Afirmação ainda não testada | Público suposto, diferença não comprovada |
 | `preference` | Gosto ou aversão declarada | Cor desejada, estilo evitado |
 | `decision` | Escolha com responsável e motivo | Público prioritário, promessa aprovada |
-| `unknown` | Lacuna com pergunta e responsável | Classe do INPI, licença, dado de mercado |
+| `unknown` | Lacuna com pergunta e responsável | Classe do INPI, licença, informação de mercado |
 
 ## Técnica de etapa
 
@@ -80,12 +80,12 @@ responsável e próximo passo.
 
 Os campos `facts`, `evidence`, `interpretations`, `hypotheses`, `preferences`,
 `decisions` e `unknowns` formam o registro do raciocínio. Não converter uma
-camada em outra durante a síntese. Quando uma hipótese ganha evidência, manter
-o histórico e registrar a decisão correspondente.
+camada em outra durante a síntese. Quando uma hipótese ganha comprovação, manter
+o histórico e registrar a escolha correspondente.
 
 Interromper a entrevista quando houver cansaço, falta de autoridade para
 responder, ausência de consentimento ou necessidade de consultar uma fonte. É
-melhor retomar com evidência do que preencher a lacuna com uma resposta fraca.
+melhor retomar com comprovação do que preencher a lacuna com uma resposta fraca.
 
 ## Fontes metodológicas
 

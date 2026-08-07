@@ -1,6 +1,6 @@
 # Rubrica de auditoria da marca
 
-## Cadeia de evidência
+## Cadeia de comprovação
 
 Audite cada tema na sequência:
 
@@ -60,6 +60,6 @@ Abra pelo menos:
 
 ## Resultado
 
-O relatório precisa indicar evidência, caminho, regra afetada, severidade,
+O relatório precisa indicar comprovação, caminho, regra afetada, severidade,
 responsável, correção esperada e forma de reteste. Um item só fecha quando o
 arquivo ou aplicação corrigida for aberto novamente.
