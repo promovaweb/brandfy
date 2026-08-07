@@ -1,4 +1,4 @@
-# Inventário de diagnóstico
+# Levantamento de diagnóstico
 
 Registre caminho, formato, dimensão, versão, origem, autoria, licença, uso atual
 e estado de aprovação. Abra os arquivos principais e não confie somente no
