@@ -132,7 +132,7 @@ npm run ebook:verify
 ## Método de trabalho
 
 As skills atuam como especialistas de branding. Cada etapa separa fato,
-evidência, interpretação, hipótese, preferência, decisão e pendência. As
+comprovação, interpretação, hipótese, preferência, escolha e pendência. As
 recomendações precisam apresentar parâmetros, tensões e alternativas, em vez de
 usar gosto pessoal ou uma lista de adjetivos como justificativa.
 

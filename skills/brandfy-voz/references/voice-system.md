@@ -14,7 +14,7 @@ Para cada princípio de voz, documente:
 | Limite | Exagero ou interpretação que precisa ser evitada |
 | Exemplo | Texto que demonstra o princípio |
 | Contraexemplo | Texto inadequado e motivo |
-| Evidência | Amostra ou comportamento que fundamenta a escolha |
+| Comprovação | Amostra ou comportamento que fundamenta a escolha |
 
 Exemplo: “clara” não significa apenas usar frases curtas. Pode exigir nomear
 responsável, próximo passo, prazo e consequência. O limite impede que clareza

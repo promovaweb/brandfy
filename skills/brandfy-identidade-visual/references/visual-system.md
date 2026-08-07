@@ -48,7 +48,7 @@ Teste:
 - uma cor e escala de cinza;
 - fundo claro, escuro, fotográfico e de baixa qualidade;
 - tela pequena e projeção distante;
-- texto longo, tradução e dados densos;
+- texto longo, tradução e tabelas numéricas densas;
 - impressão doméstica e produção profissional;
 - ausência de fotografia;
 - navegação por teclado e estados de interface;

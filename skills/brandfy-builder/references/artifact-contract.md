@@ -5,8 +5,8 @@ em `.brandfy/config.yaml`, mas precisa manter as mesmas responsabilidades.
 
 ## Núcleo verbal e estratégico
 
-- `.brandfy/interview.json`: respostas estruturadas, evidências, hipóteses,
-  decisões e perguntas abertas.
+- `.brandfy/interview.json`: respostas estruturadas, comprovações, hipóteses,
+  escolhas e perguntas abertas.
 - `.brandfy/interview-summary.md`: síntese para handoff entre especialistas.
 - `strategy.md`: origem, propósito, missão, visão, valores, princípios,
   públicos, posicionamento, personalidade e provas.
@@ -26,7 +26,7 @@ em `.brandfy/config.yaml`, mas precisa manter as mesmas responsabilidades.
 - `tailwind-theme.js`: integração com Tailwind CSS.
 - `fonts/fonts.css`: webfonts e fallbacks.
 - `accessibility.md`: combinações testadas e orientações de acesso.
-- `manifest.json`: inventário com dimensão, função, formato e hash.
+- `manifest.json`: lista dos ativos com dimensão, função, formato e hash.
 
 ## Aplicações
 

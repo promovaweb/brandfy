@@ -11,11 +11,11 @@ orientar a marca. A promessa não pode exceder as provas; a diferença precisa
 ser relevante no contexto de escolha; os comportamentos precisam entregar o
 que a linguagem afirma.
 
-## Níveis de evidência
+## Níveis de comprovação
 
 Use a fonte mais forte disponível e rotule o que ainda é hipótese:
 
-1. comportamento ou dado observado;
+1. comportamento ou fato observado;
 2. relato recorrente de clientes ou equipe de contato;
 3. documento, processo ou resultado verificável;
 4. interpretação da equipe;
@@ -67,7 +67,7 @@ Use esta estrutura de raciocínio:
 - **Em qual categoria:** referência que ajuda compreensão.
 - **Que resultado:** promessa clara e limitada.
 - **Por que esta marca:** diferença percebível e difícil de copiar.
-- **Por que acreditar:** processos, resultados, patrimônio e evidências.
+- **Por que acreditar:** processos, resultados, patrimônio e comprovações.
 
 ## Personalidade
 
@@ -86,5 +86,5 @@ Antes do aceite, use a estratégia para decidir:
 - uma escolha de experiência ou atendimento;
 - uma direção verbal e uma direção visual incompatíveis.
 
-Se a estratégia não consegue reduzir opções, retorne às evidências e às
+Se a estratégia não consegue reduzir opções, retorne às comprovações e às
 prioridades.

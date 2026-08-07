@@ -9,13 +9,13 @@ description: Define a base estratégica e comportamental da marca. Use para cria
 
 - **Plano e progresso:** planejar descoberta, síntese, teste e aprovação.
 - **Fontes de verdade:** ler `.brandfy/brief.md`,
-  `.brandfy/interview-summary.md`, entrevistas, evidências comerciais e
+  `.brandfy/interview-summary.md`, entrevistas, comprovações comerciais e
   [strategy-framework.md](references/strategy-framework.md).
 - **Escopo e idempotência:** preservar afirmações aprovadas e não inventar
   pesquisa de público.
 - **Validação:** testar cada afirmação contra exemplos de comportamento e
   escolhas reais da empresa.
-- **Resumo final:** informar o que foi definido, a evidência usada e as lacunas.
+- **Resumo final:** informar o que foi definido, a comprovação usada e as lacunas.
 
 ## Fluxo
 
@@ -32,14 +32,14 @@ description: Define a base estratégica e comportamental da marca. Use para cria
    `.brandfy/strategy.md`.
 
 Ao revisar `brand/strategy.md`, procure um exemplo de comportamento para cada
-valor e uma evidência para a missão. Uma frase que não orienta uma escolha da
+valor e uma comprovação para a missão. Uma frase que não orienta uma escolha da
 empresa precisa de revisão, mesmo quando soa adequada em uma apresentação.
 
 ## Raciocínio do especialista
 
 Construir a estratégia como um conjunto de escolhas relacionadas. Público,
 categoria, problema, promessa, diferença e provas precisam fundamentar uns aos
-outros. Testar cada formulação com uma decisão difícil: o que a empresa faria,
+outros. Testar cada formulação com uma escolha difícil: o que a empresa faria,
 recusaria ou priorizaria por causa dessa definição? Se nada mudar, a frase é
 decorativa.
 
