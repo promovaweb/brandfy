@@ -1,6 +1,6 @@
 ---
 name: brandfy-diagnostico
-description: Inventaria materiais, procedência e lacunas de uma marca. Use antes de criar, redesenhar, organizar ou auditar uma identidade existente.
+description: Levanta materiais, procedência e lacunas de uma marca. Use antes de criar, redesenhar, organizar ou auditar uma identidade existente.
 ---
 
 # Diagnosticar a marca
@@ -10,7 +10,7 @@ description: Inventaria materiais, procedência e lacunas de uma marca. Use ante
 - **Plano e progresso:** planejar o levantamento de materiais, entrevistas, pesquisa e relatório.
 - **Fontes de verdade:** ler `.brandfy/`, `brand/`, a síntese de
   `$brandfy-entrevista` quando existir, os arquivos citados pelo usuário e
-  [inventory.md](references/inventory.md).
+  [levantamento.md](references/levantamento.md).
 - **Escopo e idempotência:** não mover, renomear ou converter ativos durante o
   diagnóstico.
 - **Validação:** conferir cada achado no arquivo original e separar fato,
@@ -20,7 +20,7 @@ description: Inventaria materiais, procedência e lacunas de uma marca. Use ante
 
 ## Fluxo
 
-1. Inventariar arquivos, dimensões, formatos, versões, cores, fontes e
+1. Levantar arquivos, dimensões, formatos, versões, cores, fontes e
    fotografias.
 2. Registrar autoria, licença, consentimento de imagem e fonte de cada ativo.
 3. Comparar o uso atual nos principais canais com o manual existente.
