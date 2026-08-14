@@ -32,6 +32,11 @@ Brandfy-Documentacao-Completa-v<versão>.pdf
 Brandfy-Documentacao-Completa-v<versão>.epub
 ```
 
+Para links permanentes, use os aliases da edição mais recente:
+
+- [PDF vigente](ebook-brandfy.pdf): `ebook-brandfy.pdf`;
+- [EPUB vigente](ebook-brandfy.epub): `ebook-brandfy.epub`.
+
 [`build.json`](build.json) registra a versão, o digest das fontes e os hashes
 dos dois arquivos.
 

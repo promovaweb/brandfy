@@ -2,8 +2,8 @@
   "schema_version": 1,
   "version": "1.1.0",
   "edition": "v1.1.0",
-  "generated_at": "2026-07-31T13:52:59.735460Z",
-  "source_sha256": "6dd8095bb5e4ac51d380e2369089afe3fca9272f4fc088cb47cae209988507a2",
+  "generated_at": "2026-08-14T23:47:34.208518Z",
+  "source_sha256": "82acd972a5fe67ec21f1cbc8db96de5c8715c5c8b1522a7079053f17e350284b",
   "sources": [
     ".ebook/build-ebook.sh",
     ".ebook/epub.css",
@@ -41,11 +41,11 @@
   "artifacts": {
     "pdf": {
       "file": "Brandfy-Documentacao-Completa-v1.1.0.pdf",
-      "sha256": "5d9abd5377f7fcb2e9e8849c9d552e131c5573dff70c86a2d6803436c1561737"
+      "sha256": "1d071e758db6e9e04054f4705effefb6bcaf1613d19f7d1b8e8c25c8aa10d950"
     },
     "epub": {
       "file": "Brandfy-Documentacao-Completa-v1.1.0.epub",
-      "sha256": "f4c328c22009975e5f31f8337d162a72384e56f319d573c639eda3a9004590fa"
+      "sha256": "faf4b756c7ef55f11cbd743c1b93118ef24cc2418fa5b85e45ab4961415ee6e6"
     }
   }
 }
