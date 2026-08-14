@@ -34,6 +34,8 @@ VERSION="$(tr -d '[:space:]' < "$VERSION_FILE")"
 STEM="Brandfy-Documentacao-Completa-v$VERSION"
 PDF_OUT="$EBOOK_ROOT/$STEM.pdf"
 EPUB_OUT="$EBOOK_ROOT/$STEM.epub"
+PDF_ALIAS="$EBOOK_ROOT/ebook-brandfy.pdf"
+EPUB_ALIAS="$EBOOK_ROOT/ebook-brandfy.epub"
 
 required_sources=(
   "$VERSION_FILE"
@@ -103,6 +105,10 @@ check_build() {
   [ -f "$MANIFEST" ] || fail "ebooks/build.json ausente; execute npm run ebook."
   [ -f "$PDF_OUT" ] || fail "$(basename "$PDF_OUT") ausente."
   [ -f "$EPUB_OUT" ] || fail "$(basename "$EPUB_OUT") ausente."
+  [ -f "$PDF_ALIAS" ] || fail "ebook-brandfy.pdf ausente; execute npm run ebook."
+  [ -f "$EPUB_ALIAS" ] || fail "ebook-brandfy.epub ausente; execute npm run ebook."
+  cmp -s "$PDF_OUT" "$PDF_ALIAS" || fail "ebook-brandfy.pdf não corresponde à edição vigente."
+  cmp -s "$EPUB_OUT" "$EPUB_ALIAS" || fail "ebook-brandfy.epub não corresponde à edição vigente."
 
   VERSION="$VERSION" SOURCE_SHA="$SOURCE_SHA" PDF_OUT="$PDF_OUT" \
     EPUB_OUT="$EPUB_OUT" MANIFEST="$MANIFEST" python3 - <<'PY'
@@ -329,6 +335,10 @@ Path(os.environ["MANIFEST"]).write_text(
     encoding="utf-8",
 )
 PY
+
+# Mantém URLs estáveis para a edição mais recente sem substituir os arquivos versionados.
+cp "$PDF_OUT" "$PDF_ALIAS"
+cp "$EPUB_OUT" "$EPUB_ALIAS"
 
 check_build
 echo "PDF:  $PDF_OUT"
