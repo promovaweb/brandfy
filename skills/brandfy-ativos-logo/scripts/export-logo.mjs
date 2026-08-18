@@ -34,9 +34,18 @@ function parseArguments(argv) {
 
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, { encoding: "utf8", ...options });
+  if (command === "magick" && result.error?.code === "ENOENT") {
+    const [subcommand, ...remainingArgs] = args;
+    return run(
+      subcommand === "identify" ? "identify" : "convert",
+      subcommand === "identify" ? remainingArgs : args,
+      options,
+    );
+  }
   if (result.status !== 0) {
+    const output = result.stderr || result.stdout || result.error?.message || "sem saída do ImageMagick";
     throw new Error(
-      `${command} falhou: ${(result.stderr || result.stdout).trim()}`,
+      `${command} falhou: ${output.trim()}`,
     );
   }
   return result.stdout.trim();
