@@ -16,6 +16,9 @@ jobs:
       - name: Baixar o repositório
         uses: actions/checkout@v4
 
+      - name: Instalar ImageMagick
+        run: sudo apt-get update && sudo apt-get install --yes imagemagick
+
       - name: Preparar o Node.js
         uses: actions/setup-node@v4
         with:

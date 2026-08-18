@@ -40,7 +40,7 @@ conversa ou registre honestamente o que falta.
 Confirme o ImageMagick e a presença dos SVGs mestres:
 
 ```bash
-magick -version
+magick -version || convert -version
 find brand/logo/svg -type f -name '*.svg' -print
 ```
 
