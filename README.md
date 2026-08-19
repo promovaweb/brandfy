@@ -180,6 +180,7 @@ O exportador de PNG usa ImageMagick. A validação estrutural informa quando o
 comando `magick` não está disponível, sem modificar os arquivos do projeto.
 
 O framework, o pacote `@promovaweb/brandfy` e a documentação portátil usam a
-mesma SemVer. O histórico fica em [`CHANGELOG.md`](CHANGELOG.md), e o processo
-de publicação, tag e GitHub Release está em
+mesma SemVer. Toda versão publicada precisa aparecer no
+[`CHANGELOG.md`](CHANGELOG.md), na tag Git e na GitHub Release correspondente,
+além de estar disponível no npm. O processo completo de publicação está em
 [`RELEASING.md`](RELEASING.md).
