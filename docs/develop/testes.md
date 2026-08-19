@@ -66,6 +66,14 @@ e os arquivos do pacote público:
 npm run release:check
 ```
 
+Essa verificação cobre as superfícies locais. Antes de encerrar uma release,
+confira também a publicação remota da mesma versão:
+
+```bash
+npm view @promovaweb/brandfy@<versão> version
+gh release view v<versão> --json tagName,isDraft,isPrerelease
+```
+
 O processo completo de publicação está em
 [`RELEASING.md`](../../RELEASING.md).
 

@@ -30,6 +30,17 @@ jobs:
       - name: Validar a release
         run: npm run release:check
 
+      - name: Conferir a versão da GitHub Release
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          EXPECTED_TAG="v${VERSION}"
+          if [ "${RELEASE_TAG}" != "${EXPECTED_TAG}" ]; then
+            echo "A GitHub Release usa ${RELEASE_TAG}, mas a versão esperada é ${EXPECTED_TAG}."
+            exit 1
+          fi
+
       - name: Conferir a versão no npm
         id: registry
         working-directory: cli

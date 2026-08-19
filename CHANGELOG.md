@@ -2,6 +2,8 @@
 
 Este arquivo registra as mudanças públicas do Brandfy. O framework, o CLI npm
 e a documentação portátil compartilham a mesma versão em cada release.
+Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
+Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
 ## Próxima versão
 
@@ -11,7 +13,7 @@ e a documentação portátil compartilham a mesma versão em cada release.
   contexto normalizado e listar lacunas antes da criação dos assets.
 - Skill `brandfy` como única porta de entrada conversacional para orquestrar as
   especialistas do percurso completo.
-- Índice `brand/README.md` e mapa de arquivos dentro do guia `BRAND.md`.
+- Índice `brand/README.md` e lista de arquivos dentro do guia `BRAND.md`.
 
 ### Alterado
 
@@ -19,6 +21,8 @@ e a documentação portátil compartilham a mesma versão em cada release.
   `brand/README.md` reservado à navegação dos arquivos.
 - O CLI público passou a expor somente `brandfy install .`, `brandfy update` e
   `brandfy doctor`.
+- O contrato de release passou a exigir a mesma versão no changelog, na
+  GitHub Release e no pacote npm.
 
 ## [1.1.0] - 2026-07-30
 

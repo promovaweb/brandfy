@@ -57,5 +57,10 @@ npm run version:set -- 1.2.0
 
 Uma correção compatível aumenta `PATCH`, uma funcionalidade nova aumenta
 `MINOR`, e uma mudança incompatível aumenta `MAJOR`. O processo de commit, tag,
-publicação npm e GitHub Release está em
+registro no `CHANGELOG.md`, publicação npm e GitHub Release está em
 [`RELEASING.md`](../../RELEASING.md).
+
+A release só pode ser considerada completa quando o mesmo número aparece no
+changelog, na tag `v<versão>`, na GitHub Release e no pacote
+`@promovaweb/brandfy@<versão>`. A criação da GitHub Release aciona o workflow
+que valida a tag e publica o pacote npm quando necessário.
