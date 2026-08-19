@@ -26,7 +26,7 @@ const bundledAssets = path.join(skillRoot, "assets", "pdf-design-system");
 function parseArguments(argv) {
   const options = {
     project: ".",
-    input: "brand/README.md",
+    input: "BRAND.md",
     output: "brand/brand-guide.pdf",
     css: "brand/pdf/pdf.css",
     template: "brand/pdf/template.html",

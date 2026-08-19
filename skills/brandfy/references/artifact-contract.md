@@ -12,7 +12,8 @@ em `.brandfy/config.yaml`, mas precisa manter as mesmas responsabilidades.
   públicos, posicionamento, personalidade e provas.
 - `voice.md`: voz, tons, mensagem principal, slogan, vocabulário, grafia,
   exemplos e contraexemplos.
-- `README.md`: manual canônico e editável.
+- `BRAND.md`: manual canônico e editável na raiz do projeto.
+- `README.md`: índice dos arquivos operacionais dentro de `brand/`.
 - `brand-guide.pdf`: versão compilada do manual.
 
 ## Identidade visual e implementação

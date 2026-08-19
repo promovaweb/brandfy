@@ -1,4 +1,0 @@
-interface:
-  display_name: "Construir Marca"
-  short_description: "Coordena a construção completa da marca"
-  default_prompt: "Use $brandfy-builder para construir uma marca completa do zero."

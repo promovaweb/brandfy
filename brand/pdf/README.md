@@ -23,7 +23,7 @@ condicional.
 Exemplo:
 
 ```bash
-pandoc brand/README.md \
+pandoc BRAND.md \
   --from=gfm \
   --to=html5 \
   --standalone \

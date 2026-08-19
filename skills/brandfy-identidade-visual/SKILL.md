@@ -9,7 +9,8 @@ description: Define o sistema visual da marca além do logo. Use para criar dire
 
 - **Plano e progresso:** planejar referências, rotas visuais, protótipos e
   seleção.
-- **Fontes de verdade:** ler estratégia, voz,
+- **Fontes de verdade:** ler estratégia, voz, `BRAND.md`,
+  `.brandfy/mvp-context.json`, `.brandfy/asset-brief.md`,
   `.brandfy/interview-summary.md`, ativos atuais e
   [visual-system.md](references/visual-system.md).
 - **Escopo e idempotência:** manter referências com origem e não substituir

@@ -2,27 +2,21 @@
 
 ## A skill não aparece
 
-Liste a origem e procure o arquivo instalado:
+Na raiz do projeto, atualize a instalação e confira o diagnóstico:
 
 ```bash
-npx skills add promovaweb/brandfy --list
-find . -path '*/brandfy-setup/SKILL.md' -print
+brandfy update
+brandfy doctor
 ```
 
-Quando o diretório não existe, repita a instalação na raiz do projeto. Quando
-ele existe em outro prefixo, ajuste os comandos diretos e reinicie o agente
-conforme a ferramenta em uso.
+O diagnóstico mostra as skills esperadas, os arquivos de configuração, o
+estado de `BRAND.md`, o índice `brand/README.md` e a presença de `MVP.md`.
 
 ## O setup alteraria arquivos
 
-Execute o modo de conferência:
-
-```bash
-node .agents/skills/brandfy-setup/scripts/setup.mjs --project . --check
-```
-
-Abra o `AGENTS.md` e procure os dois marcadores do Brandfy. Um bloco incompleto
-ou duplicado precisa ser corrigido antes de outra execução. Preserve todo
+Execute `brandfy doctor` e peça ao agente para revisar o setup. Abra o
+`AGENTS.md` e procure os dois marcadores do Brandfy. Um bloco incompleto ou
+duplicado precisa ser corrigido antes de outra execução. Preserve todo
 conteúdo autoral fora dos marcadores.
 
 ## A entrevista não passa no check

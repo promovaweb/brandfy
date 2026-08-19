@@ -2,13 +2,16 @@
 
 ## Execute a conferência automatizada
 
-Depois de compilar o manual e gerar os ativos, rode:
+Depois de compilar o manual e gerar os assets, peça ao agente:
 
-```bash
-node .agents/skills/brandfy-auditoria/scripts/audit-brand.mjs \
-  --project . \
-  --config .brandfy/config.yaml
+```text
+Use $brandfy para auditar a marca, os assets, o manual e as aplicações do
+projeto.
 ```
+
+Durante o fluxo, `$brandfy` chama `brandfy-auditoria` e grava o relatório no
+caminho configurado. O usuário não precisa executar o script interno da
+especialista.
 
 O relatório padrão fica em `.brandfy/audit.md`. Ele separa reprovações, avisos,
 evidências encontradas e itens que dependem de inspeção humana. A skill não

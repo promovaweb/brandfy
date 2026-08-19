@@ -1,5 +1,5 @@
 /**
- * Confere a navegação e a cobertura da documentação oficial do Brandfy.
+ * Confere a navegação e a cobertura do guia do usuário do Brandfy.
  *
  * A validação mantém o guia do usuário compatível com o build do ebook e
  * encontra links relativos quebrados antes que o Pandoc remova o destino.
@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const docsRoot = path.join(root, "docs");
+const docsRoot = path.join(root, "docs", "user");
 const orderFile = path.join(docsRoot, "reading-order.txt");
 
 /**

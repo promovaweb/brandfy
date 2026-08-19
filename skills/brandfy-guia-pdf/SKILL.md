@@ -1,6 +1,6 @@
 ---
 name: brandfy-guia-pdf
-description: Compila o manual Markdown editável em um PDF de marca. Use para gerar ou recompilar o guia após alterações no README ou nos ativos.
+description: Compila o guia BRAND.md em um PDF de marca. Use para gerar ou recompilar o guia após alterações no manual ou nos ativos.
 ---
 
 # Compilar o guia da marca em PDF
@@ -8,7 +8,7 @@ description: Compila o manual Markdown editável em um PDF de marca. Use para ge
 ## Protocolo operacional
 
 - **Plano e progresso:** planejar fonte, tema, compilação e inspeção.
-- **Fontes de verdade:** ler `brand/README.md`, os ativos vinculados e
+- **Fontes de verdade:** ler `BRAND.md`, `brand/README.md` como índice, os ativos vinculados e
   [pdf-build.md](references/pdf-build.md).
 - **Escopo e idempotência:** copiar o design system para `brand/pdf/` e gerar
   o PDF sem modificar a fonte editável nem substituir personalizações.
@@ -18,7 +18,7 @@ description: Compila o manual Markdown editável em um PDF de marca. Use para ge
 
 ## Fluxo
 
-1. Confirmar que `brand/README.md` é a versão aprovada e que os links relativos
+1. Confirmar que `BRAND.md` é a versão aprovada e que os links relativos
    existem.
 2. Instalar ou conferir os ativos locais:
 
@@ -36,7 +36,7 @@ description: Compila o manual Markdown editável em um PDF de marca. Use para ge
    ```bash
    node <caminho-da-skill>/scripts/build-brand-guide.mjs \
      --project . \
-     --input brand/README.md \
+     --input BRAND.md \
      --output brand/brand-guide.pdf \
      --brand-name "Nome da marca"
    ```

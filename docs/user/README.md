@@ -12,42 +12,42 @@ um designer. As skills ajudam a registrar evidências, comparar alternativas,
 produzir arquivos repetíveis e mostrar o que ainda precisa de aprovação
 humana.
 
-## Leia online ou como parte do ebook
+## Leia online ou como parte do guia portátil
 
-Este percurso e a referência técnica são publicados no mesmo PDF e EPUB. Os
-arquivos Markdown em `docs/` são a fonte editorial, por isso uma correção feita
-aqui entra nas duas edições no próximo build.
+Este percurso forma o PDF e o EPUB do Brandfy. Os arquivos Markdown em
+`docs/user/` são a fonte editorial, por isso uma correção feita aqui entra nas
+duas edições no próximo build. A referência técnica permanece disponível
+online em `docs/develop/` e não entra nesses artefatos.
 
 - O PDF preserva a diagramação e funciona bem para leitura, compartilhamento e
   impressão.
 - O EPUB permite ajustar a fonte e o tamanho em leitores digitais.
 
-Baixe o
-[PDF da documentação completa](../../ebooks/Brandfy-Documentacao-Completa-v1.1.0.pdf)
-ou o
-[EPUB da documentação completa](../../ebooks/Brandfy-Documentacao-Completa-v1.1.0.epub).
+Baixe o [PDF do guia do usuário](../../ebooks/Brandfy-Guia-do-Usuario-v1.1.0.pdf)
+ou o [EPUB do guia do usuário](../../ebooks/Brandfy-Guia-do-Usuario-v1.1.0.epub).
 A [pasta dos ebooks](../../ebooks/README.md) registra a edição vigente e os
 hashes dos artefatos.
 
 ## Percurso recomendado
 
-Comece pela [instalação](instalacao.md) e confirme que as skills aparecem no
-projeto. Depois, leia [como o Brandfy organiza os arquivos](conceitos.md) antes
-de executar o setup. Essa ordem evita que `.brandfy/` seja confundido com a
-pasta pública `brand/`.
+Comece pela [instalação](instalacao.md) e confirme o estado com `brandfy
+doctor`. Depois, leia [como o Brandfy organiza os arquivos](conceitos.md),
+[o guia de `BRAND.md`](brand.md) e [o papel de cada skill](skills.md). Essa
+ordem ajuda a separar `.brandfy/`, `BRAND.md` e a pasta pública `brand/`.
 
 O trabalho completo segue esta sequência:
 
-1. [Instale e confira as skills](instalacao.md).
+1. [Instale e confira o CLI](instalacao.md).
 2. [Entenda os arquivos e as camadas de informação](conceitos.md).
-3. [Prepare o projeto consumidor](primeira-marca.md).
-4. [Conduza a entrevista e o diagnóstico](descoberta.md).
-5. [Construa ou revise o sistema de marca](sistema-de-marca.md).
-6. [Gere logos, tokens, webfontes e templates](ativos-digitais.md).
-7. [Compile o manual e o PDF da marca](manual-e-pdf.md).
-8. [Audite os arquivos antes de publicar](auditoria.md).
-9. [Oriente outros agentes a usar a marca](agentes.md).
-10. [Investigue falhas conhecidas](solucao-de-problemas.md).
+3. [Leia o guia de `BRAND.md`](brand.md) e [o papel de cada skill](skills.md).
+4. [Prepare o projeto consumidor](primeira-marca.md).
+5. [Conduza a entrevista e o diagnóstico](descoberta.md).
+6. [Construa ou revise o sistema de marca](sistema-de-marca.md).
+7. [Gere logos, tokens, webfontes e templates](ativos-digitais.md).
+8. [Compile o manual e o PDF da marca](manual-e-pdf.md).
+9. [Audite os arquivos antes de publicar](auditoria.md).
+10. [Oriente outros agentes a usar a marca](agentes.md).
+11. [Investigue falhas conhecidas](solucao-de-problemas.md).
 
 Uma marca existente pode começar pelo diagnóstico e preservar tudo o que já
 possui evidência de uso e aprovação. Uma marca nova precisa de entrevista antes

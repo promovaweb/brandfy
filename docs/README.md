@@ -1,8 +1,8 @@
 # Documentação do Brandfy
 
 O Brandfy organiza a construção de uma marca em skills especializadas. A
-documentação possui dois percursos porque o uso da biblioteca e a manutenção
-do repositório exigem informações diferentes.
+documentação separa o guia do usuário da referência técnica porque cada
+percurso atende uma necessidade diferente.
 
 | Percurso | Para que serve | Comece por |
 | --- | --- | --- |
@@ -10,13 +10,12 @@ do repositório exigem informações diferentes.
 | Guia técnico | Entender a arquitetura, alterar skills, manter geradores e publicar uma versão | [Guia de desenvolvimento](develop/README.md) |
 
 O [guia do usuário](user/README.md) acompanha uma marca desde a instalação até
-a auditoria. Ele e o guia técnico compõem o PDF e o EPUB publicados em
-[`ebooks/`](../ebooks/), conforme a ordem registrada em `reading-order.txt`.
+a auditoria. Ele compõe o PDF e o EPUB publicados em [`ebooks/`](../ebooks/), conforme a
+ordem registrada em `user/reading-order.txt`.
 
 O [guia técnico](develop/README.md) explica o contrato de uma skill, os
 diretórios gerenciados, os geradores, os testes e a manutenção da biblioteca.
-Ele deve ser usado junto com o código, que continua sendo a fonte executável do
-comportamento.
+Ele é uma referência online e não faz parte do PDF ou do EPUB do usuário.
 
 ## Fontes oficiais
 

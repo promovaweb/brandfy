@@ -9,7 +9,8 @@ description: Conduz uma entrevista adaptativa de branding e transforma respostas
 
 - **Plano e progresso:** dividir a conversa em etapas curtas, registrar o
   avanço em `.brandfy/interview.json` e informar o que ainda falta.
-- **Fontes de verdade:** ler `.brandfy/`, `brand/`,
+  - **Fontes de verdade:** ler `.brandfy/` e `MVP.md` quando
+  existirem, `brand/`,
   [interview-method.md](references/interview-method.md),
   [question-bank.md](references/question-bank.md) e
   [field-map.md](references/field-map.md).
@@ -37,40 +38,43 @@ recebe responsável, pergunta e próximo passo.
 
 1. Confirmar participantes, objetivo, escopo, privacidade e permissão para
    registrar as respostas.
-2. Inicializar o arquivo estruturado:
+2. Se `.brandfy/mvp-context.json` existir, usar os campos importados como
+   respostas de contexto e consultar suas lacunas antes de abrir novas
+   perguntas. Não repetir perguntas já respondidas no MVP.md.
+3. Inicializar o arquivo estruturado:
 
    ```bash
    node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --init
    ```
 
-3. Fazer de três a cinco perguntas por etapa. Começar pelo negócio e adaptar
+4. Fazer de três a cinco perguntas por etapa somente para lacunas. Começar pelo negócio e adaptar
    as próximas perguntas conforme as respostas.
-4. Ao final de cada etapa, resumir fatos, hipóteses, escolhas e dúvidas.
+5. Ao final de cada etapa, resumir fatos, hipóteses, escolhas e dúvidas.
    Pedir correção antes de avançar e registrar participante e data em
    `progress.stageConfirmations`.
-5. Cobrir negócio, públicos, alternativas, posicionamento, personalidade, voz,
+6. Cobrir negócio, públicos, alternativas, posicionamento, personalidade, voz,
    direção visual, ativos, propriedade intelectual, operação e governança.
-6. Registrar exemplos literais, fontes e comprovações no JSON. Evitar transcrever
+7. Registrar exemplos literais, fontes e comprovações no JSON. Evitar transcrever
    dados pessoais desnecessários. Usar as coleções próprias para fatos,
    interpretações, hipóteses, preferências, escolhas e perguntas abertas.
-7. Rodar a verificação de cobertura:
+8. Rodar a verificação de cobertura:
 
    ```bash
    node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --check
    ```
 
-8. Resolver campos obrigatórios ou registrá-los em `unknowns`. Preencher
+9. Resolver campos obrigatórios ou registrá-los em `unknowns`. Preencher
    `interview.confirmedBy` e `interview.confirmedAt`. Alterar `status` para
    `ready` somente depois da confirmação do usuário.
-9. Compilar as respostas confirmadas:
+10. Compilar as respostas confirmadas:
 
    ```bash
    node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs
    ```
 
-10. Abrir os arquivos gerados, reler com o usuário e encaminhar os próximos
+1. Abrir os arquivos gerados, reler com o usuário e encaminhar os próximos
     passos para `$brandfy-diagnostico`, `$brandfy-estrategia`,
-    `$brandfy-voz` ou `$brandfy-builder`.
+    `$brandfy-voz` ou `$brandfy`.
 
 ## Gate de saída
 

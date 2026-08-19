@@ -7,7 +7,9 @@ node skills/brandfy-setup/scripts/setup.mjs --project <diretório> [--check]
 ```
 
 Sem `--check`, prepara `.brandfy/`, `brand/` e o bloco do consumidor no
-`AGENTS.md`. Com `--check`, compara o estado esperado sem escrever.
+`AGENTS.md`. Também migra o manual antigo de `brand/README.md` para `BRAND.md`
+quando encontra essa estrutura. Com `--check`, compara o estado esperado sem
+escrever.
 
 ## Entrevista
 
@@ -19,6 +21,20 @@ node skills/brandfy-entrevista/scripts/compile-interview.mjs \
 `--init` cria o JSON inicial. `--check` valida cobertura e confirmações. Sem
 esses modos, o script compila as respostas e atualiza os blocos delimitados nos
 documentos derivados.
+
+## Importação do MVPFy
+
+```bash
+node skills/brandfy-mvp/scripts/import-mvp.mjs \
+  --project <diretório> [--input <MVP.md>] [--check]
+```
+
+O importador procura `MVP.md` na raiz quando `--input` não é informado. O
+comando valida o frontmatter e os 35 marcadores de seção do
+MVPFy, grava `.brandfy/mvp-context.json`, prepara a entrevista importada,
+atualiza `BRAND.md` e cria o índice `brand/README.md`. Se encontrar um manual
+antigo nesse README, promove o conteúdo para `BRAND.md` e preserva o caminho
+como índice. `--check` somente lê a fonte.
 
 ## Logos
 

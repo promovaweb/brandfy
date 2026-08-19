@@ -1,85 +1,46 @@
-# Logos, webfontes, tokens e templates
+# Assets digitais
 
-## Exporte o sistema de logo
+## Produção coordenada
 
-Mantenha os SVGs mestres em `brand/logo/svg/` e execute:
+Depois da aprovação da estratégia e da direção visual, `$brandfy` chama as
+especialistas de produção na ordem necessária. A pessoa usuária não precisa
+executar exportadores ou recompiladores individualmente.
 
-```bash
-node .agents/skills/brandfy-ativos-logo/scripts/export-logo.mjs \
-  --input brand/logo/svg \
-  --output brand/logo/png \
-  --font brand/fonts/manrope-variable.ttf
-```
+## Tipografia
 
-O exportador produz PNGs a partir das fontes vetoriais e atualiza o manifesto
-quando configurado. Os sufixos `light` e `dark` indicam o fundo no qual cada
-arquivo será aplicado. Abra uma amostra de cada variante para conferir
-transparência, margem, proporção e leitura no tamanho mínimo.
+`brandfy-tipografia-web` seleciona webfontes licenciadas, registra pesos,
+fallbacks, hierarquia e CSS. O resultado deve apontar para os arquivos de fonte,
+a licença e o uso esperado em `BRAND.md`.
 
-Favicons e avatares pedem uma versão compacta. Uma assinatura horizontal
-reduzida até caber em 16 px perde leitura mesmo quando o arquivo continua
-tecnicamente válido.
+## Logo
 
-O arquivo informado em `--font` mantém o wordmark consistente quando o SVG
-usa texto editável. O projeto pode omitir esse argumento quando todos os
-elementos do logo já estiverem convertidos em paths.
+`brandfy-logo` define conceito, símbolo, assinatura, variantes, área livre,
+tamanho mínimo e usos inadequados. `brandfy-ativos-logo` transforma a versão
+aprovada em SVG, PNG, favicon, avatar e manifesto, preservando a fonte editável.
 
-## Prepare as webfontes
+O agente deve abrir os arquivos exportados e conferir proporção, bordas,
+transparência, fundo, tamanho mínimo e legibilidade antes da auditoria.
 
-Preencha o manifesto de fontes com família, origem, licença, arquivos, pesos e
-fallbacks. Depois execute:
+## Tokens
 
-```bash
-node .agents/skills/brandfy-tipografia-web/scripts/download-fonts.mjs \
-  --manifest .brandfy/fonts.json \
-  --output brand/fonts
-```
+`brandfy-design-tokens` transforma as escolhas visuais em tokens reutilizáveis.
+Ele produz CSS, JSON e tema Tailwind, além de registrar estados e combinações
+de contraste. Componentes devem consumir tokens sem copiar valores isolados.
 
-O gerador baixa somente arquivos declarados, registra a licença e produz o CSS
-tipográfico. Use WOFF2 e `font-display: swap` quando a família permitir. A
-ausência da webfont deve acionar o fallback sem esconder conteúdo nem desmontar
-a hierarquia.
+## Templates e aplicações
 
-Antes de versionar uma fonte, confirme que a licença permite redistribuição e
-hospedagem própria. Arquivos proprietários permanecem no serviço autorizado ou
-no ambiente licenciado.
+`brandfy-aplicacoes` define quais peças precisam existir, para qual canal,
+formato e situação. `brandfy-templates-canais` instala modelos editáveis para
+Instagram, LinkedIn, email e YouTube, com zona segura, campos variáveis,
+dimensões e exemplos.
 
-## Gere os design tokens
+O manual registra a relação entre cada aplicação, o template, a variante do
+logo, os tokens e a saída exportada. Isso permite que outro agente retome a
+produção sem reconstruir a intenção visual.
 
-A paleta editável fica em `.brandfy/palette.json`. Ela separa famílias de cor
-das funções semânticas usadas por websites e sistemas:
+## Arquivos e fontes
 
-```bash
-node .agents/skills/brandfy-design-tokens/scripts/generate-tokens.mjs \
-  --input .brandfy/palette.json \
-  --output brand
-```
-
-O comando gera `global.css`, `tokens.json`, `tailwind-theme.js` e
-`accessibility.md`. Os tokens semânticos definem fundo, superfície, texto,
-texto secundário, borda, acento e foco nos modos light e dark. Cores de sucesso,
-aviso e erro podem ser adicionadas quando a interface realmente usa esses
-estados.
-
-Importe `brand/global.css` no website. Em Tailwind CSS, aplique o objeto de
-`brand/tailwind-theme.js` em `theme.extend`. Prefira os nomes semânticos a
-valores hexadecimais copiados para componentes.
-
-## Instale templates de canais
-
-O Brandfy inclui fontes SVG para Instagram, LinkedIn, email e YouTube:
-
-```bash
-node .agents/skills/brandfy-templates-canais/scripts/install-templates.mjs \
-  --output brand/templates
-```
-
-Arquivos existentes são preservados. Use `--force` somente quando a fonte
-aprovada deve ser substituída conscientemente. Antes de publicar, aplique a
-paleta, as fontes e o logo da marca, remova as guias da exportação e confira a
-leitura no tamanho final.
-
-O carrossel usa 1080 por 1350 px, a arte do LinkedIn usa 1200 por 1200 px, o
-cabeçalho de email é criado em 1200 por 400 px e a thumbnail do YouTube usa 1280
-por 720 px. O banner do canal tem 2560 por 1440 px, mas textos e logos ficam na
-área central segura de 1546 por 423 px.
+O arquivo-fonte é preservado junto das exportações. Assets gerados recebem
+manifesto, dimensão, formato, licença e origem. A auditoria reprova um pacote
+quando só existe o PNG final, quando a fonte editável desapareceu ou quando
+`BRAND.md` aponta para um caminho que não existe.

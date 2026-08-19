@@ -14,6 +14,28 @@ export const SKILL_DIRECTORIES = [
   ".claude/skills",
 ];
 
+export const REQUIRED_SKILLS = [
+  "brandfy",
+  "brandfy-setup",
+  "brandfy-mvp",
+  "brandfy-entrevista",
+  "brandfy-diagnostico",
+  "brandfy-estrategia",
+  "brandfy-naming",
+  "brandfy-slogan",
+  "brandfy-voz",
+  "brandfy-identidade-visual",
+  "brandfy-tipografia-web",
+  "brandfy-logo",
+  "brandfy-ativos-logo",
+  "brandfy-design-tokens",
+  "brandfy-aplicacoes",
+  "brandfy-templates-canais",
+  "brandfy-manual",
+  "brandfy-guia-pdf",
+  "brandfy-auditoria",
+];
+
 export async function exists(target) {
   try {
     await access(target);
@@ -51,15 +73,19 @@ function supportsRequiredNode(version) {
  * @returns {Promise<Array<{name: string, ok: boolean, detail: string}>>}
  */
 export async function inspectProject(project) {
-  const setup = await locateSkillScript(
-    project,
-    "brandfy-setup",
-    "scripts/setup.mjs",
-  );
   const agentsPath = path.join(project, "AGENTS.md");
   const agents = await exists(agentsPath)
     ? await readFile(agentsPath, "utf8")
     : "";
+  const installedSkills = await Promise.all(
+    REQUIRED_SKILLS.map(async (skill) => ({
+      skill,
+      path: await locateSkillScript(project, skill, "SKILL.md"),
+    })),
+  );
+  const missingSkills = installedSkills
+    .filter(({ path: skillPath }) => !skillPath)
+    .map(({ skill }) => skill);
 
   return [
     {
@@ -68,11 +94,11 @@ export async function inspectProject(project) {
       detail: `versão ${process.versions.node}`,
     },
     {
-      name: "Skills do Brandfy",
-      ok: Boolean(setup),
-      detail: setup
-        ? path.relative(project, setup)
-        : "brandfy-setup não foi encontrada",
+      name: "Biblioteca do Brandfy",
+      ok: missingSkills.length === 0,
+      detail: missingSkills.length === 0
+        ? `${REQUIRED_SKILLS.length} skills instaladas`
+        : `ausentes: ${missingSkills.join(", ")}`,
     },
     {
       name: "Lock das skills",
@@ -85,7 +111,12 @@ export async function inspectProject(project) {
       detail: ".brandfy/config.yaml",
     },
     {
-      name: "Manual editável",
+      name: "Guia da marca",
+      ok: await exists(path.join(project, "BRAND.md")),
+      detail: "BRAND.md",
+    },
+    {
+      name: "Índice da marca",
       ok: await exists(path.join(project, "brand", "README.md")),
       detail: "brand/README.md",
     },
@@ -94,6 +125,13 @@ export async function inspectProject(project) {
       ok: agents.includes("<!-- brandfy:consumer:start -->")
         && agents.includes("<!-- brandfy:consumer:end -->"),
       detail: "bloco gerenciado no AGENTS.md",
+    },
+    {
+      name: "MVP.md",
+      ok: true,
+      detail: await exists(path.join(project, "MVP.md"))
+        ? "detectado; será lido pela skill brandfy-mvp"
+        : "não presente; entrada opcional",
     },
   ];
 }

@@ -7,19 +7,22 @@ O setup inclui no `AGENTS.md` um bloco que orienta o uso de `.brandfy/` e
 somente esse trecho. Instruções específicas do projeto continuam fora do
 bloco.
 
-Antes de criar uma peça, o agente deve ler `.brandfy/config.yaml`, o manual e
+Antes de criar uma peça, o agente deve ler `.brandfy/config.yaml`, `BRAND.md`,
+o índice e
 os arquivos ligados ao canal. Para uma arte social, isso inclui os tokens, o
 logo apropriado e o guia do template. Para um texto, inclui a estratégia, a voz
 e os exemplos do canal.
 
 ## Escreva instruções verificáveis
 
-Uma solicitação útil nomeia a skill, a entrada, o canal e a saída:
+Uma solicitação útil nomeia a entrada, o canal e a saída. A porta de entrada
+continua sendo `$brandfy`; os nomes abaixo ajudam a explicar qual especialista
+será acionada internamente:
 
 ```text
-Use $brandfy-templates-canais para preparar um carrossel de Instagram a partir
-do template aprovado. Leia brand/README.md e brand/templates/README.md,
-preserve a zona segura, salve o SVG editável e abra o PNG final em 1080 × 1350.
+Use $brandfy para preparar um carrossel de Instagram a partir do template
+aprovado. Leia BRAND.md, brand/README.md e brand/templates/README.md, preserve a
+zona segura, salve o SVG editável e abra o PNG final em 1080 × 1350.
 ```
 
 O agente precisa relatar quais arquivos leu, quais arquivos criou, que

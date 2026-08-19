@@ -35,5 +35,6 @@ npm test
 ```
 
 O comando executa os testes de setup, entrevista e geradores, depois confere a
-estrutura das skills. Alterações documentais também precisam passar pelo lint
-de Markdown e pelo build do ebook quando atingirem `docs/`.
+estrutura das skills. Alterações no guia do usuário também precisam passar pelo
+lint de Markdown e pelo build do ebook quando atingirem `docs/user/`.
+Alterações exclusivas desta referência técnica não entram no PDF ou no EPUB.

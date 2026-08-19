@@ -1,16 +1,17 @@
 # Ebooks da documentação do Brandfy
 
-Esta pasta publica a documentação completa do Brandfy em PDF e EPUB. O conteúdo
-é compilado das páginas em `docs/`, enquanto o manual criado para uma marca
-cliente é compilado de `brand/README.md` no projeto consumidor e termina em
+Esta pasta publica o guia do usuário do Brandfy em PDF e EPUB. O conteúdo é
+compilado exclusivamente das páginas em `docs/user/`. A referência técnica em
+`docs/develop/` permanece online e não entra nesses artefatos. O manual criado
+para uma marca cliente é compilado de `BRAND.md` no projeto consumidor e termina em
 `brand/brand-guide.pdf`.
 
-Os dois PDFs não compartilham a mesma fonte:
+Os dois produtos não compartilham a mesma fonte:
 
 | Artefato | Fonte editável | Destino |
 | --- | --- | --- |
-| Documentação completa do Brandfy | `brandfy/docs/**/*.md` | `brandfy/ebooks/Brandfy-Documentacao-Completa-v<versão>.pdf` |
-| Manual da marca do usuário | `<projeto>/brand/README.md` | `<projeto>/brand/brand-guide.pdf` |
+| Guia do usuário do Brandfy | `brandfy/docs/user/**/*.md` | `brandfy/ebooks/Brandfy-Guia-do-Usuario-v<versão>.pdf` |
+| Manual da marca do usuário | `<projeto>/BRAND.md` | `<projeto>/brand/brand-guide.pdf` |
 
 ## Edição vigente
 
@@ -22,14 +23,14 @@ A versão do guia do Brandfy está em [`VERSION`](VERSION) e segue SemVer:
 
 Baixe a edição `v1.1.0` nos dois formatos:
 
-- [PDF da documentação completa](Brandfy-Documentacao-Completa-v1.1.0.pdf).
-- [EPUB da documentação completa](Brandfy-Documentacao-Completa-v1.1.0.epub).
+- [PDF do guia do usuário](Brandfy-Guia-do-Usuario-v1.1.0.pdf).
+- [EPUB do guia do usuário](Brandfy-Guia-do-Usuario-v1.1.0.epub).
 
 Os artefatos do produto seguem estes nomes:
 
 ```text
-Brandfy-Documentacao-Completa-v<versão>.pdf
-Brandfy-Documentacao-Completa-v<versão>.epub
+Brandfy-Guia-do-Usuario-v<versão>.pdf
+Brandfy-Guia-do-Usuario-v<versão>.epub
 ```
 
 Para links permanentes, use os aliases da edição mais recente:
@@ -49,8 +50,8 @@ npm run ebook
 ```
 
 O build exige Pandoc, WeasyPrint, Python, `xmllint`, `pdfinfo`, `pdftotext` e
-`unzip`. `docs/reading-order.txt` precisa listar cada página Markdown
-exatamente uma vez.
+`unzip`. `docs/user/reading-order.txt` precisa listar cada página Markdown do
+guia exatamente uma vez.
 
 ## Confira a edição
 

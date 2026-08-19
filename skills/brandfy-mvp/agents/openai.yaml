@@ -1,0 +1,4 @@
+interface:
+  display_name: "Importar MVP"
+  short_description: "Transforma MVP.md em base de marca e briefs de assets"
+  default_prompt: "Use $brandfy-mvp para ler o MVP.md e preparar o contexto da marca."

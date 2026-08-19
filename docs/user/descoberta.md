@@ -1,62 +1,45 @@
-# Entrevista e diagnóstico
+# Descoberta e contexto
 
-## Inicie a entrevista
+## O Brandfy começa pelo que já existe
 
-A entrevista deve ser conduzida com os responsáveis pela marca e com permissão
-para registrar as respostas. Inicialize a estrutura antes da conversa:
+Ao iniciar o percurso, `$brandfy` lê a configuração, `BRAND.md`, o índice, os
+assets existentes e o estado em `.brandfy/`. Se houver `MVP.md` na raiz,
+`brandfy-mvp` transforma o conteúdo em contexto estruturado antes de abrir
+qualquer nova pergunta.
 
-```bash
-node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --init
-```
+Essa ordem evita repetir respostas e permite que a entrevista seja usada para
+completar somente o que o MVP não registrou. O documento do MVP não é editado;
+as conclusões para a marca ficam em `.brandfy/mvp-context.json`, no briefing e
+nos briefs de assets.
 
-O comando cria `.brandfy/interview.json`. A skill conduz de três a cinco
-perguntas por etapa, começando pelo trabalho atual da empresa. Depois de cada
-bloco, ela resume fatos, hipóteses, escolhas e dúvidas para que o participante
-possa corrigir a síntese.
+## O que a entrevista cobre
 
-A entrevista cobre oferta, públicos, alternativas, posicionamento,
-personalidade, voz, direção visual, patrimônio existente, propriedade
-intelectual, aplicações e governança. Respostas desconhecidas continuam
-marcadas como desconhecidas, com uma pergunta e um responsável, em vez de
-receberem uma formulação inventada.
+`brandfy-entrevista` conduz a conversa complementar sobre:
 
-## Valide a cobertura
+- nome, estado da marca e categoria;
+- público, personas, problema, alternativas e resultado desejado;
+- oferta, modelo de negócio, jornada, canais e operação;
+- posicionamento, promessa, diferenças, provas e objeções;
+- personalidade, voz, tom, vocabulário e exemplos;
+- direção visual, aplicações, logo, tipografia, imagens e acessibilidade;
+- licenças, responsáveis, aprovação, prazo e revisão.
 
-Depois da conversa, execute:
+Cada resposta recebe fonte, participante, estado e confirmação. O resumo da
+entrevista permite retomar o trabalho sem transformar uma hipótese em regra.
 
-```bash
-node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --check
-```
+## O diagnóstico
 
-O modo `--check` rejeita uma entrevista marcada como pronta quando faltam
-confirmações, campos obrigatórios ou etapas. Corrija o JSON com as respostas
-recebidas, preencha o nome do responsável e a data da confirmação, então rode
-o compilador sem argumentos:
+Depois da descoberta, `brandfy-diagnostico` compara o relato com os arquivos
+reais. Ele identifica logos duplicados, tokens sem fonte, fontes sem licença,
+aplicações incompatíveis, links quebrados, documentos desatualizados e assets
+que o manual promete mas não entrega.
 
-```bash
-node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs
-```
+O relatório não substitui a conversa. Ele organiza as perguntas e mostra qual
+arquivo ou uso motivou cada recomendação.
 
-O compilador atualiza blocos delimitados e preserva texto escrito fora deles.
-Ele produz a síntese da entrevista e leva conteúdo confirmado para o briefing,
-a estratégia, a voz e o registro jurídico.
+## Passagem para a estratégia
 
-## Diagnostique uma marca existente
-
-`$brandfy-diagnostico` abre os arquivos existentes em vez de confiar somente
-nos nomes. O inventário registra formato, dimensão, versão, cor, fonte,
-autoria, licença e uso observado. Ele compara o manual, o site, os templates e
-as respostas da entrevista para encontrar convergências e divergências.
-
-O diagnóstico não move nem converte ativos. Seu resultado fica em
-`.brandfy/diagnostico.md` e indica quais skills precisam atuar. Um logo antigo
-com reconhecimento comprovado pode ser preservado, enquanto uma paleta sem
-contraste pode seguir para revisão de identidade visual e design tokens.
-
-## Leia o resultado com os responsáveis
-
-A síntese compilada é uma base para as especialidades, não aprovação automática
-da estratégia. Releia os conflitos e as perguntas abertas antes de iniciar o
-desenho. Uma divergência sobre o público prioritário ou a promessa altera voz,
-logo, cor e aplicações, por isso deve permanecer visível até receber
-confirmação.
+Quando o contexto estiver confirmado, `brandfy-estrategia` organiza propósito,
+posicionamento, promessa, diferenciais, princípios e personalidade. A partir
+daí, a orquestradora chama naming, slogan, voz e identidade visual conforme as
+lacunas e o escopo aprovados.

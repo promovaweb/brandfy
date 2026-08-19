@@ -33,7 +33,10 @@ brand_directory: brand
 stage: discovery
 interview_source: .brandfy/interview.json
 interview_summary: .brandfy/interview-summary.md
-manual_source: brand/README.md
+brand_document: BRAND.md
+manual_source: BRAND.md
+legacy_index: brand/README.md
+mvp_source: MVP.md
 manual_pdf: brand/brand-guide.pdf
 `;
 
@@ -189,7 +192,7 @@ Pendente.
 Pendente.
 `;
 
-const DEFAULT_MANUAL = `# Manual da marca
+const DEFAULT_BRAND = `# BRAND.md
 
 Este arquivo é a fonte editável do guia. Substitua os campos pendentes conforme
 as etapas do Brandfy forem aprovadas e recompile o PDF depois de cada revisão.
@@ -239,6 +242,35 @@ Pendente.
 ## Arquivos oficiais e governança
 
 Pendente. Vincule \`manifest.json\`, responsáveis, versão e revisão prevista.
+`;
+
+const DEFAULT_INDEX = `# Índice dos arquivos da marca
+
+Este arquivo orienta a leitura dos arquivos dentro de \`brand/\`. O guia
+completo da marca fica em [BRAND.md](../BRAND.md), na raiz do projeto.
+
+| Arquivo ou pasta | Representação |
+| --- | --- |
+| [../BRAND.md](../BRAND.md) | Guia completo da marca, suas regras, fontes e lacunas. |
+| \`strategy.md\` | Estratégia, posicionamento, públicos e personalidade. |
+| \`voice.md\` | Voz, tons, mensagens, vocabulário e exemplos. |
+| \`legal.md\` | Origem, licenças, naming, consentimentos e restrições. |
+| \`accessibility.md\` | Contraste, legibilidade e orientações de acesso. |
+| \`manifest.json\` | Mapa técnico dos assets, dimensões, funções e hashes. |
+| \`global.css\` | Tokens CSS e comportamento visual global. |
+| \`tokens.json\` | Tokens estruturados para ferramentas. |
+| \`tailwind-theme.js\` | Tema Tailwind derivado dos tokens. |
+| \`fonts/\` | Webfonts, CSS tipográfico e licenças. |
+| \`logo/\` | Fontes editáveis e variantes SVG e PNG do logo. |
+| \`favicon/\` | Ícones compactos e favicon. |
+| \`social/\` | Aplicações finais para redes sociais. |
+| \`email/\` | Cabeçalhos, assinaturas e peças de email. |
+| \`print/\` | Materiais de impressão e produção. |
+| \`templates/\` | Fontes editáveis para agentes e designers. |
+| \`pdf/\` | Kit visual e guia compilado em PDF. |
+
+O importador do MVPFy atualiza o mapa no [BRAND.md](../BRAND.md) depois de
+cada geração.
 `;
 
 const DIRECTORIES = [
@@ -298,6 +330,17 @@ async function exists(filePath) {
   }
 }
 
+/**
+ * Detecta o manual antigo armazenado no README do diretório da marca.
+ *
+ * @param {string} markdown Conteúdo do README existente.
+ * @returns {boolean} Indica se o arquivo precisa ser migrado.
+ */
+function isLegacyManual(markdown) {
+  return /##\s+(?:Conceito visual|Paleta essencial|Sistema digital|Governança)/iu.test(markdown)
+    || /^#\s+(?:Manual|Marca)/mu.test(markdown);
+}
+
 async function loadConsumerBlock() {
   const canonical = path.join(repositoryRoot, "AGENTS.md");
   const bundled = path.join(skillDir, "references", "agents-consumer.md");
@@ -327,6 +370,39 @@ function mergeAgents(existing, block) {
   return `${existing.slice(0, start)}${block}${existing.slice(end + endMarker.length)}`;
 }
 
+/**
+ * Migra o manual usado antes do BRAND.md sem apagar a versão anterior.
+ *
+ * Quando o README antigo contém seções de manual, seu conteúdo passa para a
+ * raiz e o caminho original recebe apenas o índice operacional. Se já existe
+ * BRAND.md, uma cópia do README antigo fica em `brand/archive/` antes da troca.
+ *
+ * @param {string} projectRoot Raiz do projeto consumidor.
+ * @returns {Promise<boolean>} Indica se uma migração foi executada.
+ */
+async function migrateLegacyManual(projectRoot) {
+  const legacyPath = path.join(projectRoot, "brand/README.md");
+  const brandPath = path.join(projectRoot, "BRAND.md");
+  if (!(await exists(legacyPath))) return false;
+
+  const legacy = await readFile(legacyPath, "utf8");
+  if (!isLegacyManual(legacy)) return false;
+
+  if (!(await exists(brandPath))) {
+    await mkdir(path.dirname(brandPath), { recursive: true });
+    await writeFile(brandPath, legacy, "utf8");
+  } else {
+    const archivePath = path.join(projectRoot, "brand/archive/README-legacy.md");
+    if (!(await exists(archivePath))) {
+      await mkdir(path.dirname(archivePath), { recursive: true });
+      await writeFile(archivePath, legacy, "utf8");
+    }
+  }
+
+  await writeFile(legacyPath, DEFAULT_INDEX, "utf8");
+  return true;
+}
+
 async function expectedChanges(projectRoot, block) {
   const missing = [];
   for (const directory of DIRECTORIES) {
@@ -340,7 +416,8 @@ async function expectedChanges(projectRoot, block) {
     [".brandfy/brief.md", DEFAULT_BRIEF],
     [".brandfy/palette.json", DEFAULT_PALETTE],
     [".brandfy/fonts.json", DEFAULT_FONTS],
-    ["brand/README.md", DEFAULT_MANUAL],
+    ["BRAND.md", DEFAULT_BRAND],
+    ["brand/README.md", DEFAULT_INDEX],
     ["brand/strategy.md", DEFAULT_STRATEGY],
     ["brand/voice.md", DEFAULT_VOICE],
     ["brand/legal.md", DEFAULT_LEGAL],
@@ -349,6 +426,14 @@ async function expectedChanges(projectRoot, block) {
   for (const [relativePath] of files) {
     if (!(await exists(path.join(projectRoot, relativePath)))) {
       missing.push(`arquivo ${relativePath}`);
+    }
+  }
+
+  const legacyIndexPath = path.join(projectRoot, "brand/README.md");
+  if (await exists(legacyIndexPath)) {
+    const legacyIndex = await readFile(legacyIndexPath, "utf8");
+    if (isLegacyManual(legacyIndex)) {
+      missing.push("migração do manual antigo em brand/README.md");
     }
   }
 
@@ -374,6 +459,7 @@ async function main() {
   const options = parseArguments(process.argv.slice(2));
   const projectRoot = path.resolve(options.project);
   const block = await loadConsumerBlock();
+  if (!options.check) await migrateLegacyManual(projectRoot);
   const state = await expectedChanges(projectRoot, block);
 
   if (options.check) {
