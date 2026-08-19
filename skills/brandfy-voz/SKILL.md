@@ -9,8 +9,8 @@ description: Documenta voz, tons, mensagens e vocabulário da marca. Use para or
 
 - **Plano e progresso:** planejar amostras, síntese, exemplos e testes por
   canal.
-- **Fontes de verdade:** ler estratégia, `.brandfy/interview.json`, textos
-  reais e [voice-system.md](references/voice-system.md).
+- **Fontes de verdade:** ler estratégia, `BRAND.md`, `.brandfy/mvp-context.json`,
+  `.brandfy/interview.json`, textos reais e [voice-system.md](references/voice-system.md).
 - **Escopo e idempotência:** preservar a voz encontrada em boas amostras e
   marcar hipóteses quando não houver corpus suficiente.
 - **Validação:** comparar os exemplos com situações reais de site, suporte,

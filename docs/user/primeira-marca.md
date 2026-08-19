@@ -2,66 +2,45 @@
 
 ## Prepare o projeto
 
-Depois de instalar as skills, execute o setup na raiz do projeto consumidor:
+Depois de executar `brandfy install .`, abra o projeto no agente escolhido e
+converse com `$brandfy`. A orquestradora chama `brandfy-setup` antes de
+qualquer definição e confere a raiz, o `AGENTS.md`, `.brandfy/`, `BRAND.md`,
+`brand/README.md` e a estrutura de assets.
 
-```bash
-node .agents/skills/brandfy-setup/scripts/setup.mjs --project .
-```
+O setup preserva instruções fora do bloco gerenciado. Em um projeto antigo,
+migra o conteúdo que ainda estiver em `brand/README.md` para `BRAND.md` e
+mantém uma cópia no arquivo de arquivo quando necessário.
 
-O setup cria `.brandfy/`, prepara `brand/` e inclui um bloco delimitado no
-`AGENTS.md`. O conteúdo que já existe fora dos marcadores
-`brandfy:consumer:start` e `brandfy:consumer:end` deve permanecer intacto.
+## A entrada do projeto
 
-Execute novamente em modo de conferência:
+Se `MVP.md` existir na raiz, `$brandfy` chama `brandfy-mvp` antes da entrevista.
+Essa especialista lê o documento gerado pelo MVPFy, mantém o arquivo intacto,
+responde as perguntas já cobertas e registra as lacunas que ainda dependem de
+uma pessoa.
 
-```bash
-node .agents/skills/brandfy-setup/scripts/setup.mjs --project . --check
-```
+Se `MVP.md` não existir, a orquestradora chama `brandfy-entrevista` para
+descobrir o negócio, o público, a oferta, o problema, a diferença pretendida,
+as provas, a personalidade, as aplicações e as restrições de uso.
 
-O segundo comando comprova a idempotência e informa qualquer arquivo
-obrigatório que esteja ausente. Abra o diff do Git antes de avançar para
-confirmar que a escrita ficou restrita aos caminhos previstos.
+Uma marca existente passa primeiro por `brandfy-diagnostico`. Ele confronta o
+manual e os assets atuais com o contexto confirmado e indica o que deve ser
+preservado, corrigido ou criado.
 
-## Preencha a configuração
+## O que precisa de confirmação
 
-O arquivo `.brandfy/config.yaml` identifica o projeto e a pasta da marca. Uma
-configuração inicial usa esta forma:
+A pessoa usuária confirma nome, público, promessa, posicionamento, alternativas,
+personalidade, voz, direção visual, aplicações prioritárias, licenças e
+responsáveis por aprovação. O Brandfy não completa uma lacuna com uma resposta
+apenas plausível.
 
-```yaml
-project_name: Minha Marca
-brand_directory: brand
-mode: greenfield
-language: pt-BR
-primary_audience: público ainda em pesquisa
-status: draft
-```
+Quando uma resposta ainda estiver aberta, `$brandfy` registra a pergunta,
+mostra três caminhos quando a escolha for editorial e aguarda a confirmação
+antes de avançar para a próxima especialista.
 
-Use `mode: greenfield` para uma marca nova. Uma identidade existente pode usar
-o modo de revisão adotado no projeto e começar pelo diagnóstico. Mantenha
-`status: draft` enquanto definições importantes ainda estiverem abertas.
+## O primeiro resultado
 
-## Escolha a entrada adequada
-
-Quando responsáveis, público, oferta ou materiais ainda não foram ouvidos,
-comece com `$brandfy-entrevista`. Quando a marca possui manual e ativos
-anteriores, use `$brandfy-diagnostico` para inventariá-los antes de redesenhar.
-
-Use `$brandfy-builder` quando o trabalho abranger estratégia, voz, visual,
-ativos e manual. Um pedido de escopo menor deve chamar a especialidade
-correspondente. Por exemplo:
-
-```text
-Use $brandfy-design-tokens para recompilar CSS, JSON e Tailwind a partir da
-paleta aprovada em .brandfy/palette.json.
-```
-
-## Confira a primeira estrutura
-
-O setup prepara arquivos editáveis, não uma marca aprovada. Antes da
-entrevista, os documentos podem conter campos vazios e instruções. O resultado
-esperado é uma base organizada que preserve o trabalho existente e deixe as
-lacunas visíveis.
-
-Não publique o conteúdo inicial de `brand/` como manual final. A publicação
-começa somente depois que as especialidades registrarem as fontes, os arquivos
-visuais forem abertos e a auditoria não apresentar reprovações.
+O primeiro percurso não entrega apenas uma pasta vazia. Ele deixa uma base
+consultável em `.brandfy/`, um `BRAND.md` com as definições confirmadas e um
+`brand/README.md` que aponta para os assets e documentos. As especialistas
+seguintes completam estratégia, voz, direção visual, logos, tokens, templates,
+manual e auditoria conforme o escopo.

@@ -6,7 +6,7 @@ O Pandoc transforma o Markdown em HTML semântico, cria o sumário e incorpora
 os recursos locais. O WeasyPrint aplica o CSS de impressão e produz o PDF.
 
 Mantenha imagens e fontes dentro do diretório da marca ou use caminhos
-relativos alcançáveis a partir de `brand/README.md`. Depois da compilação,
+relativos alcançáveis a partir de `BRAND.md`. Depois da compilação,
 confira capa, sumário, links, quebras, tabelas, SVGs, PNGs, cabeçalhos, rodapés
 e metadados.
 

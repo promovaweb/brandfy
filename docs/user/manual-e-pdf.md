@@ -1,59 +1,36 @@
-# Manual editável e PDF da marca
+# Manual e PDF da marca
 
-## O Markdown é a fonte
+## O manual editável
 
-O manual canônico vive em `brand/README.md`. Ele liga a estratégia aos
-arquivos e explica como designers, redatores, desenvolvedores e agentes devem
-usar a marca. Corrija o Markdown e recompile o PDF; não faça uma correção
-isolada no arquivo binário.
+`brandfy-manual` consolida as definições confirmadas em `BRAND.md` e atualiza
+`brand/README.md` como índice. O manual reúne estratégia, posicionamento, voz,
+direção visual, aplicações, governança, lacunas e mapa dos arquivos.
 
-Um manual completo cobre origem, estratégia, posicionamento, personalidade,
-voz, logo, cor, tipografia, imagens, aplicações, acessibilidade, licenças e
-governança. Os links relativos precisam apontar para arquivos que existam
-dentro da pasta da marca.
+`BRAND.md` é a fonte editorial. O PDF não deve ser corrigido diretamente, e o
+índice não deve repetir o manual inteiro.
 
-## Compile o guia
+## O PDF do projeto consumidor
 
-Com Pandoc e WeasyPrint disponíveis no `PATH`, execute:
+Quando o manual e os assets estiverem prontos, `$brandfy` chama
+`brandfy-guia-pdf`. A especialista instala ou confere o kit de PDF em
+`brand/pdf/`, sem substituir personalizações existentes, e compila
+`brand/brand-guide.pdf` a partir de `BRAND.md`.
 
-```bash
-node .agents/skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs \
-  --project . \
-  --input brand/README.md \
-  --output brand/brand-guide.pdf \
-  --brand-name "Nome da marca"
-```
+O PDF usa A4, capa clara, Manrope nos títulos, Inter no corpo, sumário, tabelas,
+blocos de código, paginação e links internos. O design system global fica em
+`brand/pdf/` e inclui as licenças das fontes.
 
-Antes da compilação, a skill copia CSS, template, Inter, Manrope e licenças
-para `brand/pdf/`. Arquivos locais existentes são preservados. O Pandoc
-converte o Markdown para HTML, cria o sumário e incorpora recursos locais. O
-WeasyPrint aplica o CSS e produz o PDF.
+## O que conferir na leitura
 
-Para instalar o kit sem compilar:
+Abra o PDF depois da compilação e confira:
 
-```bash
-node .agents/skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs \
-  --project . \
-  --install-assets
-```
+- capa, nome, descrição, logo e edição;
+- sumário e hierarquia dos capítulos;
+- quebras de página, tabelas, imagens e blocos de código;
+- variantes do logo, contraste, fontes e licenças;
+- URLs, rodapé, cabeçalho e propriedades do documento;
+- correspondência entre o texto do PDF e `BRAND.md`.
 
-Use `--force-assets` somente para atualizar deliberadamente a cópia local.
-
-## Abra o resultado
-
-Uma compilação sem erro não comprova a qualidade visual. Abra a capa, o
-sumário, páginas com tabela, páginas com imagens e a última página. Confirme as
-fontes, a numeração, as quebras, a proporção dos logos e os links.
-
-Quando uma imagem não aparece, confira o caminho relativo a
-`brand/README.md`. Quando a fonte não carrega, confirme a URL no CSS e a
-licença ao lado do arquivo. Tabelas extensas podem exigir uma redação mais
-compacta ou outra disposição, mas o Markdown continua sendo a origem.
-
-## Diferencie os dois PDFs
-
-O PDF em `brand/brand-guide.pdf` é o manual da identidade de um projeto
-consumidor e é compilado de `brand/README.md` dentro desse projeto. O PDF em
-`brandfy/ebooks/` pertence ao repositório do Brandfy e é a edição portátil
-deste guia de uso. Eles possuem fontes, destinos e públicos diferentes, mas
-usam o mesmo `pdf-design-system: 1.0.0`.
+O PDF do Brandfy em `ebooks/` é outro produto: ele contém somente o guia do
+usuário do framework. `brand/brand-guide.pdf` é o manual da marca do projeto
+consumidor.

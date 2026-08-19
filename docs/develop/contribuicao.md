@@ -27,9 +27,10 @@ Atualize o guia do usuário quando a mudança altera instalação, sequência de
 uso, comando ou arquivo produzido. Atualize o guia técnico quando muda a
 arquitetura, o contrato ou a manutenção.
 
-Todas as páginas entram uma única vez em `docs/reading-order.txt`. Uma página
-esquecida reprova o build do ebook para impedir a publicação de uma edição
-incompleta.
+Todas as páginas do guia do usuário entram uma única vez em
+`docs/user/reading-order.txt`. Uma página esquecida reprova o build do ebook
+para impedir a publicação de uma edição incompleta. Páginas técnicas ficam
+fora dessa ordem e não entram no PDF ou no EPUB.
 
 ## Valide antes da publicação
 

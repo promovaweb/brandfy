@@ -1,9 +1,8 @@
 # CLI do Brandfy
 
-O pacote `@promovaweb/brandfy` instala as skills oficiais e oferece atalhos
-para preparar, conferir e compilar a marca de um projeto. O executável usa o
-pacote `skills` como dependência fixa, portanto a instalação e a atualização
-continuam compatíveis com `skills-lock.json`.
+O pacote `@promovaweb/brandfy` instala e mantém o sistema de skills no projeto
+consumidor. A conversa sobre a marca acontece exclusivamente na skill
+`$brandfy`; o CLI não expõe atalhos para especialistas, geradores ou auditorias.
 
 ## Instalação
 
@@ -11,57 +10,43 @@ Instale o executável globalmente:
 
 ```bash
 npm install --global @promovaweb/brandfy
-brandfy init .
+brandfy install .
 ```
 
-Também é possível executar sem instalação global:
+O comando instala o catálogo completo pelo gerenciador `skills`, prepara
+`.brandfy/`, cria ou confere `BRAND.md`, mantém `brand/README.md` como índice e
+atualiza o bloco gerenciado do `AGENTS.md`.
 
-```bash
-npx @promovaweb/brandfy init .
-```
-
-O comando `init` instala todas as skills no projeto, prepara `.brandfy/`,
-cria a estrutura inicial em `brand/` e inclui o bloco gerenciado no
-`AGENTS.md`.
-
-## Comandos
+## Comandos públicos
 
 | Comando | Resultado |
 | --- | --- |
-| `brandfy init [diretório]` | Instala as skills e executa o setup. |
-| `brandfy doctor [diretório]` | Confere Node.js, skills, lock, configuração, manual e instruções. |
-| `brandfy skills list` | Lista o catálogo disponível na origem configurada. |
-| `brandfy skills install [diretório]` | Instala todas as skills pelo `skills add`. |
-| `brandfy skills update [diretório]` | Reinstala somente as skills do Brandfy a partir da origem. |
-| `brandfy pdf [diretório]` | Compila `brand/README.md` em `brand/brand-guide.pdf`. |
-| `brandfy audit [diretório]` | Executa a auditoria e atualiza `.brandfy/audit.md`. |
-| `brandfy update [diretório]` | Atualiza as skills e executa o setup em modo de conferência. |
+| `brandfy install .` | Instala todas as skills e prepara o projeto consumidor. |
+| `brandfy update` | Atualiza as skills, reconcilia a estrutura e confere o setup. |
+| `brandfy doctor` | Diagnostica Node.js, as 19 skills, lock, configuração e arquivos da marca. |
 
-Use `--source <origem>` para testar um checkout local ou outra origem aceita
-pelo gerenciador. O destino padrão é `promovaweb/brandfy`, e o agente padrão é
-o Codex.
+O diretório usado por `update` e `doctor` é o projeto atual. Para instalar em
+outro local, informe esse caminho somente no comando `install`, como em
+`brandfy install ../meu-projeto`.
 
-Os argumentos escritos depois de `--` seguem para o script da skill. Este
-exemplo escolhe outro nome para o PDF:
-
-```bash
-brandfy pdf . -- --output brand/manual-da-marca.pdf
-```
+Depois de `brandfy install .`, abra o agente e use apenas `$brandfy`. A skill
+orquestradora chama `brandfy-setup`, `brandfy-mvp` e as demais especialistas na
+ordem adequada.
 
 ## Atualizações
 
 O framework e o CLI compartilham a mesma SemVer. Atualize o executável pelo npm
-e, dentro do projeto, atualize as skills:
+e, dentro do projeto, execute:
 
 ```bash
 npm install --global @promovaweb/brandfy@latest
-brandfy update .
-brandfy doctor .
+brandfy update
+brandfy doctor
 ```
 
-O comando `brandfy update` não substitui arquivos da marca que pertencem ao
-usuário. O setup executado na sequência confere a estrutura e informa qualquer
-arquivo ausente.
+O `brandfy update` preserva arquivos autorais e reaplica somente a estrutura
+gerenciada. O diagnóstico retorna código diferente de zero quando faltar uma
+skill, configuração, arquivo da marca ou bloco de instruções.
 
 ## Desenvolvimento
 

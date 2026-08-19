@@ -9,6 +9,7 @@ description: Define a base estratégica e comportamental da marca. Use para cria
 
 - **Plano e progresso:** planejar descoberta, síntese, teste e aprovação.
 - **Fontes de verdade:** ler `.brandfy/brief.md`,
+  `.brandfy/mvp-context.json`, `.brandfy/asset-brief.md`, `BRAND.md`,
   `.brandfy/interview-summary.md`, entrevistas, comprovações comerciais e
   [strategy-framework.md](references/strategy-framework.md).
 - **Escopo e idempotência:** preservar afirmações aprovadas e não inventar

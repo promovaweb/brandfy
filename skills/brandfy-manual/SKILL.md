@@ -1,6 +1,6 @@
 ---
 name: brandfy-manual
-description: Compila o manual editável da marca a partir dos arquivos aprovados. Use para criar ou atualizar o README canônico do diretório brand.
+description: Compila o guia editável da marca a partir dos arquivos aprovados. Use para criar ou atualizar BRAND.md e o índice operacional de brand.
 ---
 
 # Compilar o manual da marca
@@ -8,8 +8,8 @@ description: Compila o manual editável da marca a partir dos arquivos aprovados
 ## Protocolo operacional
 
 - **Plano e progresso:** planejar coleta, redação, links, revisão e compilação.
-- **Fontes de verdade:** ler todos os arquivos aprovados e
-  [manual-outline.md](references/manual-outline.md).
+- **Fontes de verdade:** ler todos os arquivos aprovados, `BRAND.md` e o índice
+  `brand/README.md`, além de [manual-outline.md](references/manual-outline.md).
 - **Escopo e idempotência:** atualizar seções afetadas sem apagar exemplos,
   exceções ou histórico válido.
 - **Validação:** conferir cada afirmação nos arquivos finais, validar links e
@@ -18,7 +18,7 @@ description: Compila o manual editável da marca a partir dos arquivos aprovados
 
 ## Fluxo
 
-1. Usar `brand/README.md` como fonte Markdown editável do guia.
+1. Usar `BRAND.md` como fonte Markdown editável do guia.
 2. Documentar essência, propósito, missão, visão, valores, públicos,
    posicionamento, personalidade, voz, mensagens, naming e slogan.
 3. Documentar logo, variantes light/dark, símbolo, área de proteção, tamanho

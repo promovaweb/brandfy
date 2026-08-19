@@ -2,8 +2,8 @@
   "schema_version": 1,
   "version": "1.1.0",
   "edition": "v1.1.0",
-  "generated_at": "2026-08-14T23:47:34.208518Z",
-  "source_sha256": "82acd972a5fe67ec21f1cbc8db96de5c8715c5c8b1522a7079053f17e350284b",
+  "generated_at": "2026-08-19T09:21:39.030145Z",
+  "source_sha256": "a391146af842d6b59d03d141cfdc544df2c84a27636f02ed630848b2ff662e52",
   "sources": [
     ".ebook/build-ebook.sh",
     ".ebook/epub.css",
@@ -16,36 +16,30 @@
     "brand/pdf/fonts/inter-latin.woff2",
     "brand/pdf/fonts/manrope-latin.woff2",
     "brand/pdf/template.html",
-    "docs/README.md",
-    "docs/develop/README.md",
-    "docs/develop/arquitetura.md",
-    "docs/develop/artefatos.md",
-    "docs/develop/contrato-das-skills.md",
-    "docs/develop/contribuicao.md",
-    "docs/develop/geradores.md",
-    "docs/develop/testes.md",
-    "docs/reading-order.txt",
     "docs/user/README.md",
     "docs/user/agentes.md",
     "docs/user/ativos-digitais.md",
     "docs/user/auditoria.md",
+    "docs/user/brand.md",
     "docs/user/conceitos.md",
     "docs/user/descoberta.md",
     "docs/user/instalacao.md",
     "docs/user/manual-e-pdf.md",
     "docs/user/primeira-marca.md",
+    "docs/user/reading-order.txt",
     "docs/user/sistema-de-marca.md",
+    "docs/user/skills.md",
     "docs/user/solucao-de-problemas.md",
     "ebooks/VERSION"
   ],
   "artifacts": {
     "pdf": {
-      "file": "Brandfy-Documentacao-Completa-v1.1.0.pdf",
-      "sha256": "1d071e758db6e9e04054f4705effefb6bcaf1613d19f7d1b8e8c25c8aa10d950"
+      "file": "Brandfy-Guia-do-Usuario-v1.1.0.pdf",
+      "sha256": "17b0a9c858605dfc810d776644f3fea9bfc027a0261151dd0e85b7a570ae2ff9"
     },
     "epub": {
-      "file": "Brandfy-Documentacao-Completa-v1.1.0.epub",
-      "sha256": "faf4b756c7ef55f11cbd743c1b93118ef24cc2418fa5b85e45ab4961415ee6e6"
+      "file": "Brandfy-Guia-do-Usuario-v1.1.0.epub",
+      "sha256": "a349a93807cc694dffa59db2093409ce5c1a8d111b4835e5c68c7055641ba422"
     }
   }
 }

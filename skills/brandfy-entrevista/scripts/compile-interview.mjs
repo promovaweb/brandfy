@@ -113,6 +113,7 @@ function hasValue(value) {
  */
 function validateInterview(data) {
   const errors = [];
+  const importedFromMvp = data.status === "imported" && data.source === "mvpfy";
   const unknowns = Array.isArray(data.unknowns) ? data.unknowns : [];
   const coveredByUnknown = (field) =>
     unknowns.some(
@@ -125,7 +126,7 @@ function validateInterview(data) {
   if (data.schemaVersion !== 1) {
     errors.push("schemaVersion precisa ser 1.");
   }
-  if (data.interview?.consentObtained !== true) {
+  if (!importedFromMvp && data.interview?.consentObtained !== true) {
     errors.push("interview.consentObtained precisa confirmar o consentimento.");
   }
   for (const field of [
@@ -134,7 +135,7 @@ function validateInterview(data) {
     "interview.confirmedBy",
     "interview.confirmedAt",
   ]) {
-    if (!hasValue(getField(data, field))) {
+    if (!importedFromMvp && !hasValue(getField(data, field))) {
       errors.push(`${field} precisa ser preenchido.`);
     }
   }
@@ -142,7 +143,7 @@ function validateInterview(data) {
   const stageConfirmations = Array.isArray(data.progress?.stageConfirmations)
     ? data.progress.stageConfirmations
     : [];
-  for (const stage of requiredStages) {
+  for (const stage of importedFromMvp ? [] : requiredStages) {
     const confirmation = stageConfirmations.find(
       (entry) => entry?.stage === stage,
     );
@@ -202,8 +203,11 @@ function validateInterview(data) {
     });
   }
 
-  if (!["ready", "approved"].includes(data.status)) {
-    errors.push("status precisa ser ready ou approved para compilação.");
+  if (!["ready", "approved", "imported"].includes(data.status)) {
+    errors.push("status precisa ser ready, approved ou imported para compilação.");
+  }
+  if (importedFromMvp && !hasValue(data.sourceDocument)) {
+    errors.push("sourceDocument precisa apontar para o MVP.md importado.");
   }
 
   return errors;
@@ -388,6 +392,10 @@ análise jurídica profissional.
  * @returns {string}
  */
 function renderSummary(data) {
+  const importedFromMvp = data.status === "imported" && data.source === "mvpfy";
+  const coverage = importedFromMvp
+    ? "- Contexto respondido pelo documento MVPFy; somente as lacunas listadas abaixo exigem entrevista complementar."
+    : bullets(data.progress.stageConfirmations, (item) => `**${cell(item.stage)}:** confirmada por ${cell(item.confirmedBy)} em ${cell(item.confirmedAt)}. ${cell(item.notes)}`);
   return `# Síntese da entrevista de marca
 
 ## Estado
@@ -396,12 +404,13 @@ function renderSummary(data) {
 - **Data:** ${text(data.interview.date)}
 - **Participantes:** ${text(data.interview.participants)}
 - **Objetivo:** ${text(data.interview.purpose)}
-- **Síntese confirmada por:** ${text(data.interview.confirmedBy)}
-- **Confirmação:** ${text(data.interview.confirmedAt)}
+- **Fonte:** ${text(data.sourceDocument || "Entrevista direta")}
+- **Síntese confirmada por:** ${importedFromMvp ? "Não aplicável: origem MVPFy" : text(data.interview.confirmedBy)}
+- **Confirmação:** ${importedFromMvp ? "Aguardando validação da marca" : text(data.interview.confirmedAt)}
 
 ## Cobertura da entrevista
 
-${bullets(data.progress.stageConfirmations, (item) => `**${cell(item.stage)}:** confirmada por ${cell(item.confirmedBy)} em ${cell(item.confirmedAt)}. ${cell(item.notes)}`)}
+${coverage}
 
 ## Camadas da informação
 

@@ -2,82 +2,59 @@
 
 ## Requisitos
 
-O repositório de destino precisa estar acessível ao agente e usar um arquivo
-`AGENTS.md` que possa receber o bloco gerenciado do Brandfy. O CLI e os
-geradores usam Node.js 22.20 ou posterior. Algumas saídas exigem ferramentas
-adicionais:
+O projeto consumidor precisa ter uma raiz definida, permissão para criar ou
+atualizar arquivos e um `AGENTS.md` que possa receber o bloco gerenciado do
+Brandfy. O CLI e as skills usam Node.js 22.20 ou posterior.
 
-| Ferramenta | Uso |
-| --- | --- |
-| ImageMagick | Exportação raster de SVG para PNG |
-| Pandoc | Conversão do manual Markdown para HTML |
-| WeasyPrint | Geração do PDF a partir do HTML |
+ImageMagick, Pandoc e WeasyPrint são necessários somente quando o percurso
+chegar a exportações raster, ao manual em PDF ou a algum asset que dependa
+deles. O diagnóstico informa a dependência ausente quando ela for necessária.
 
-As skills continuam úteis sem todos esses programas, mas o gerador
-correspondente informará a dependência ausente. Instale somente ferramentas
-compatíveis com o sistema operacional e com a política do repositório.
+## Os três comandos públicos
 
-## Instale com o CLI do Brandfy
-
-Abra o terminal na raiz do projeto que receberá a marca e execute:
+Instale o CLI uma vez:
 
 ```bash
 npm install --global @promovaweb/brandfy
-brandfy init .
 ```
 
-O CLI usa o gerenciador `skills` como dependência e instala o catálogo do
-Brandfy para o Codex. Também é possível executar a versão mais recente sem
-instalação global:
+Depois, na raiz do projeto que receberá a marca:
 
 ```bash
-npx @promovaweb/brandfy init .
+brandfy install .
 ```
 
-Depois do setup, confira os arquivos esperados:
+O `install` instala todas as 19 skills, prepara `.brandfy/`, cria ou confere
+`BRAND.md`, deixa `brand/README.md` como índice, cria os diretórios esperados e
+atualiza o bloco do `AGENTS.md`. A conversa de marca começa depois disso com a
+skill `$brandfy`.
+
+Quando uma nova versão do Brandfy for publicada, use:
 
 ```bash
-brandfy doctor .
+brandfy update
 ```
 
-O Hub da Promovaweb instala a biblioteca externa em `.agents/skills/`, enquanto
-`.codex/skills/` permanece reservado às skills nativas do próprio Hub.
+O `update` atualiza as skills, reaplica a estrutura gerenciada sem substituir
+conteúdo autoral e executa a verificação do setup.
 
-## Confira o catálogo
-
-Liste o conteúdo remoto antes da instalação quando precisar escolher apenas
-algumas especialidades:
+Para conferir a instalação e os arquivos:
 
 ```bash
-brandfy skills list
+brandfy doctor
 ```
 
-Depois da instalação, confirme que o diretório contém `brandfy-setup`,
-`brandfy-builder` e as especialidades que serão usadas. A ausência de uma skill
-impede o fluxo coordenado de concluir a etapa relacionada, mas não invalida as
-demais skills instaladas.
+O diagnóstico confere Node.js, as 19 skills, `skills-lock.json`,
+`.brandfy/config.yaml`, `BRAND.md`, `brand/README.md` e o bloco do `AGENTS.md`.
+Ele também informa se `MVP.md` foi encontrado na raiz. A ausência do MVP é
+aceita porque a entrada é opcional.
 
-## Atualize o CLI e a biblioteca
+## Depois da instalação
 
-O framework e o CLI usam a mesma SemVer. Atualize o pacote pelo npm e depois
-reinstale as skills do Brandfy registradas no projeto:
+Não execute scripts das skills e não use o gerenciador `skills` diretamente. A
+skill `$brandfy` lê o estado, conversa sobre as lacunas e chama
+`brandfy-setup`, `brandfy-mvp` e todas as especialistas necessárias.
 
-```bash
-npm install --global @promovaweb/brandfy@latest
-brandfy update .
-brandfy doctor .
-```
-
-O `skills add` mantém a origem em `skills-lock.json`. Uma skill modificada
-diretamente pode divergir do repositório e deve ser preservada em outro
-diretório antes da atualização.
-
-O gerenciador continua disponível diretamente quando for necessário escolher
-outro agente ou uma parte do catálogo:
-
-```bash
-npx skills add promovaweb/brandfy --agent codex --skill '*' -y --copy
-```
-
-Quando o diagnóstico informar estrutura ausente, siga o capítulo
-[Primeira marca](primeira-marca.md) para preparar o projeto.
+O capítulo [Skills do Brandfy](skills.md) explica cada especialista. O capítulo
+[BRAND.md em detalhe](brand.md) explica o manual e o mapa de arquivos que a
+orquestradora mantém.

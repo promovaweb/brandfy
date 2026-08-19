@@ -32,9 +32,14 @@ desnecessários e ativos sem permissão não devem entrar em evidências.
 
 ## Arquivos finais
 
+`BRAND.md` é o guia completo na raiz do projeto. `brand/README.md` é um índice
+curto para localizar os arquivos abaixo; ele não duplica o manual.
+
 O contrato completo de `brand/` admite:
 
 ```text
+BRAND.md
+
 brand/
 ├── README.md
 ├── strategy.md

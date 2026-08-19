@@ -4,7 +4,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-DOCS_ROOT="$ROOT/docs"
+DOCS_ROOT="$ROOT/docs/user"
 EBOOK_ROOT="$ROOT/ebooks"
 BUILD_ROOT="$SCRIPT_DIR/build"
 VERSION_FILE="$EBOOK_ROOT/VERSION"
@@ -31,7 +31,7 @@ VERSION="$(tr -d '[:space:]' < "$VERSION_FILE")"
 [[ "$VERSION" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] \
   || fail "ebook/VERSION deve conter SemVer estável."
 
-STEM="Brandfy-Documentacao-Completa-v$VERSION"
+STEM="Brandfy-Guia-do-Usuario-v$VERSION"
 PDF_OUT="$EBOOK_ROOT/$STEM.pdf"
 EPUB_OUT="$EBOOK_ROOT/$STEM.epub"
 PDF_ALIAS="$EBOOK_ROOT/ebook-brandfy.pdf"
@@ -65,22 +65,22 @@ mapfile -t ordered_pages < <(
   sed -e '/^[[:space:]]*#/d' -e '/^[[:space:]]*$/d' "$ORDER_FILE"
 )
 [ "${#ordered_pages[@]}" -gt 0 ] \
-  || fail "docs/reading-order.txt está vazio."
+  || fail "docs/user/reading-order.txt está vazio."
 
 declare -A ordered_set=()
 page_inputs=()
 for relative in "${ordered_pages[@]}"; do
-  [[ "$relative" == docs/*.md || "$relative" == docs/*/*.md ]] \
-    || fail "página fora de docs/: $relative"
+  [[ "$relative" == docs/user/*.md ]] \
+    || fail "página fora de docs/user/reading-order.txt: $relative"
   [ -f "$ROOT/$relative" ] || fail "página ausente: $relative"
   [ -z "${ordered_set[$relative]:-}" ] || fail "página duplicada: $relative"
   ordered_set["$relative"]=1
-  page_inputs+=("${relative#docs/}")
+  page_inputs+=("${relative#docs/user/}")
 done
 
 while IFS= read -r relative; do
   [ -n "${ordered_set[$relative]:-}" ] \
-    || fail "página não ordenada: $relative"
+    || fail "página não ordenada em docs/user/reading-order.txt: $relative"
 done < <(
   find "$DOCS_ROOT" -type f -name '*.md' -print0 \
     | sort -z \
@@ -198,11 +198,11 @@ PY
   PDF_TEXT="$(pdftotext "$PDF_OUT" -)"
   grep -Fq "Brandfy" <<<"$PDF_TEXT" \
     || fail "PDF não contém o nome do produto."
-  grep -Fq "Documentação" <<<"$PDF_TEXT" \
-    || fail "PDF não contém a identificação documental."
-  grep -Fq "completa" <<<"$PDF_TEXT" \
-    || fail "PDF não contém o título esperado."
-  echo "OK: edição v$VERSION sincronizada com docs/."
+  grep -Fq "Guia" <<<"$PDF_TEXT" \
+    || fail "PDF não contém a identificação do guia."
+  grep -Fq "usuário" <<<"$PDF_TEXT" \
+    || fail "PDF não contém a identificação do público."
+  echo "OK: guia do usuário v$VERSION sincronizado com docs/user/."
 }
 
 if [ "${1:-}" = "--check" ]; then
@@ -234,10 +234,10 @@ magick \
   -gravity northwest -annotate +226+375 'B' \
   -fill '#FFFFFF' -font "$BOLD_FONT" -pointsize 120 \
   -annotate +180+940 'Brandfy' \
-  -annotate +180+1085 'Documentação' \
-  -annotate +180+1230 'completa' \
+  -annotate +180+1085 'Guia do' \
+  -annotate +180+1230 'usuário' \
   -fill '#B2C6CE' -font "$SANS_FONT" -pointsize 54 \
-  -annotate +180+1500 'Guia do usuário e referência técnica' \
+  -annotate +180+1500 'Guia do usuário para criar sistemas de marca' \
   -stroke '#15626A' -strokewidth 4 -draw 'line 180,2220 1420,2220' \
   -stroke none -fill '#B2C6CE' -pointsize 38 \
   -annotate +180+2280 'PROMOVAWEB · DOCUMENTAÇÃO OFICIAL' \
@@ -258,16 +258,16 @@ magick \
     --css="$PDF_STYLE" \
     --resource-path="$SCRIPT_DIR:$ROOT:$DOCS_ROOT" \
     --metadata-file="$METADATA" \
-    --metadata title="Brandfy — Documentação completa · v$VERSION" \
+    --metadata title="Brandfy — Guia do usuário · v$VERSION" \
     --metadata version="$VERSION" \
     --metadata date="$PT_DATE" \
     --variable brand_name="Brandfy" \
-    --variable document_type="Documentação completa" \
+    --variable document_type="Guia do usuário" \
     --variable tagline="Estratégia de marca em artefatos reproduzíveis" \
-    --variable description="Guia do usuário e referência técnica para criar, documentar e auditar sistemas de marca." \
+    --variable description="Guia do usuário para instalar o Brandfy, criar e documentar sistemas de marca." \
     --variable logo="$LOGO" \
-    --variable source_label="docs/" \
-    --variable footer_label="Brandfy — Documentação" \
+    --variable source_label="docs/user/" \
+    --variable footer_label="Brandfy — Guia do usuário" \
     --output "$HTML_OUT"
 )
 
@@ -288,7 +288,7 @@ weasyprint "$HTML_OUT" "$PDF_OUT" --base-url "$ROOT"
     --css="$EPUB_STYLE" \
     --resource-path="$SCRIPT_DIR:$ROOT:$DOCS_ROOT" \
     --metadata-file="$METADATA" \
-    --metadata title="Brandfy — Documentação completa · v$VERSION" \
+    --metadata title="Brandfy — Guia do usuário · v$VERSION" \
     --metadata version="$VERSION" \
     --metadata date="$(date +%F)" \
     --output "$EPUB_OUT"

@@ -80,6 +80,10 @@ async function main() {
   const config = await readFile(configPath, "utf8");
   const brandDirectory = readYamlScalar(config, "brand_directory", "brand");
   const brand = path.resolve(project, brandDirectory);
+  const brandDocument = path.resolve(
+    project,
+    readYamlScalar(config, "brand_document", "BRAND.md"),
+  );
 
   const requiredFiles = [
     "README.md",
@@ -101,6 +105,23 @@ async function main() {
       failures.push(`Arquivo vazio: ${brandDirectory}/${relativePath}.`);
     } else {
       evidence.push(`${brandDirectory}/${relativePath}`);
+    }
+  }
+
+  if (!(await exists(brandDocument))) {
+    failures.push(`Guia da marca ausente: ${path.relative(project, brandDocument)}.`);
+  } else {
+    evidence.push(path.relative(project, brandDocument));
+  }
+
+  const indexPath = path.join(brand, "README.md");
+  if (await exists(indexPath)) {
+    const index = await readFile(indexPath, "utf8");
+    if (!index.includes("BRAND.md")) {
+      failures.push("brand/README.md precisa apontar para o BRAND.md da raiz.");
+    }
+    if (isLegacyManual(index)) {
+      failures.push("brand/README.md ainda contém o manual antigo; deve ser somente índice.");
     }
   }
 
@@ -154,9 +175,8 @@ async function main() {
     }
   }
 
-  const manualPath = path.join(brand, "README.md");
-  if (await exists(manualPath)) {
-    const manual = await readFile(manualPath, "utf8");
+  if (await exists(brandDocument)) {
+    const manual = await readFile(brandDocument, "utf8");
     for (const heading of [
       "Missão",
       "Visão",
@@ -205,6 +225,17 @@ ${renderList(evidence, "Nenhum arquivo obrigatório confirmado.")}
   await writeFile(reportPath, report, "utf8");
   console.log(`Auditoria registrada em ${reportPath}.`);
   if (failures.length > 0) process.exitCode = 1;
+}
+
+/**
+ * Identifica o formato antigo que colocava o manual dentro do README.
+ *
+ * @param {string} markdown Conteúdo do índice encontrado.
+ * @returns {boolean} Indica se o arquivo ainda é um manual legado.
+ */
+function isLegacyManual(markdown) {
+  return /##\s+(?:Conceito visual|Paleta essencial|Sistema digital|Governança)/iu.test(markdown)
+    || /^#\s+(?:Manual|Marca)/mu.test(markdown);
 }
 
 await main();

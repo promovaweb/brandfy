@@ -12,8 +12,8 @@ description: Prepara a configuração .brandfy, a árvore de artefatos e as inst
 - **Fontes de verdade:** ler o `AGENTS.md` do projeto, os arquivos existentes
   em `.brandfy/` e a referência [agents-consumer.md](references/agents-consumer.md).
 - **Escopo e idempotência:** preservar configurações e artefatos existentes. O
-  setup só cria arquivos ausentes e substitui apenas o bloco Brandfy no
-  `AGENTS.md`.
+  setup só cria arquivos ausentes, migra o manual legado para `BRAND.md` e
+  substitui apenas o bloco Brandfy no `AGENTS.md`.
 - **Validação:** executar o setup com `--check` depois da escrita e revisar o
   `git diff`.
 - **Resumo final:** informar arquivos criados, arquivos preservados,
@@ -41,9 +41,12 @@ description: Prepara a configuração .brandfy, a árvore de artefatos e as inst
    node <caminho-da-skill>/scripts/setup.mjs --project . --check
    ```
 
-Depois do setup, abra `.brandfy/config.yaml` e `brand/README.md` para confirmar
-o destino e a fonte do manual. Um segundo uso deve terminar sem alterações, e
+Depois do setup, abra `.brandfy/config.yaml`, `BRAND.md` e `brand/README.md` para
+confirmar o destino, o guia e o índice. Um segundo uso deve terminar sem alterações, e
 qualquer diferença indica configuração incompleta ou bloco do agente antigo.
+
+Em um projeto antigo, o manual que ainda estiver em `brand/README.md` passa para
+`BRAND.md`; uma cópia anterior fica em `brand/archive/` quando necessário.
 
 ## Raciocínio do especialista
 

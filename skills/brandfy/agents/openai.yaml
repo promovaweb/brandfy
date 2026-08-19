@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brandfy"
+  short_description: "Orquestra todo o percurso de criação da marca"
+  default_prompt: "Use $brandfy para criar ou revisar a marca completa e seus assets."

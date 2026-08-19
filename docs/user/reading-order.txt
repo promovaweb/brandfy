@@ -1,7 +1,8 @@
-docs/README.md
 docs/user/README.md
 docs/user/instalacao.md
 docs/user/conceitos.md
+docs/user/brand.md
+docs/user/skills.md
 docs/user/primeira-marca.md
 docs/user/descoberta.md
 docs/user/sistema-de-marca.md
@@ -10,10 +11,3 @@ docs/user/manual-e-pdf.md
 docs/user/auditoria.md
 docs/user/agentes.md
 docs/user/solucao-de-problemas.md
-docs/develop/README.md
-docs/develop/arquitetura.md
-docs/develop/contrato-das-skills.md
-docs/develop/artefatos.md
-docs/develop/geradores.md
-docs/develop/testes.md
-docs/develop/contribuicao.md

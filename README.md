@@ -11,34 +11,34 @@ Instale o CLI e prepare o projeto atual:
 
 ```bash
 npm install --global @promovaweb/brandfy
-brandfy init .
+brandfy install .
 ```
 
 O comando usa o `skills` por baixo, cria a configuração em `.brandfy/`, prepara
-o diretório `brand/` e integra um bloco idempotente ao `AGENTS.md`. A execução
-sem instalação global também está disponível:
+o diretório `brand/` e integra um bloco idempotente ao `AGENTS.md`.
+
+Depois da instalação, converse somente com `$brandfy`. A execução sem
+instalação global também está disponível:
 
 ```bash
-npx @promovaweb/brandfy init .
+npx @promovaweb/brandfy install .
 ```
 
-O gerenciador também pode ser executado diretamente com
-`npx skills add promovaweb/brandfy`. O destino pode variar conforme o agente
-escolhido.
+Não é necessário executar o gerenciador `skills` diretamente.
 
 ## Fluxos principais
 
-`$brandfy-builder` coordena a construção completa. Quando o conhecimento ainda
-está disperso, `$brandfy-entrevista` conduz uma descoberta adaptativa antes do
-diagnóstico. Uma marca existente pode começar por `$brandfy-diagnostico` e
-seguir apenas pelas etapas que precisam de revisão. As skills especializadas
-também funcionam de forma direta:
+`$brandfy` coordena a construção completa. Quando existe um `MVP.md` na raiz,
+ela chama `brandfy-mvp`, responde as perguntas já cobertas e registra somente
+as lacunas antes do diagnóstico. Depois chama as especialistas necessárias em
+ordem, sem exigir que a pessoa usuária conheça scripts ou comandos internos.
 
 | Skill | Responsabilidade |
 | --- | --- |
-| `brandfy-setup` | Prepara `.brandfy/`, `brand/` e as instruções do projeto. |
+| `brandfy` | Orquestra todo o percurso e é a única skill chamada pela pessoa usuária. |
+| `brandfy-setup` | Valida a consistência da raiz, prepara `.brandfy/`, `brand/`, `BRAND.md` e as instruções do projeto. |
+| `brandfy-mvp` | Importa `MVP.md`, deriva a base da marca e prepara os briefs de assets. |
 | `brandfy-entrevista` | Entrevista responsáveis e compila briefing, estratégia, voz e pendências. |
-| `brandfy-builder` | Coordena a esteira completa e mantém os marcos de aceite. |
 | `brandfy-diagnostico` | Inventaria materiais, procedência, lacunas e prioridades. |
 | `brandfy-estrategia` | Define propósito, missão, visão, valores, princípios e personalidade. |
 | `brandfy-naming` | Pesquisa nomes, disponibilidade indicativa e possíveis conflitos. |
@@ -57,7 +57,8 @@ também funcionam de forma direta:
 
 ## Identidade do projeto
 
-A própria marca Brandfy vive em [`brand/`](brand/). A pasta contém o logo
+A própria marca Brandfy é documentada em [`BRAND.md`](BRAND.md). A pasta
+[`brand/`](brand/) contém o logo
 modular, as variantes light/dark, a paleta derivada da Promovaweb, webfontes
 locais, tokens CSS/JSON/Tailwind, manual recompilável e templates de canais.
 Ela também funciona como implementação de referência para as skills.
@@ -74,6 +75,8 @@ arquivos necessários para outros canais:
 ├── interview-summary.md
 ├── brief.md
 └── evidence/
+
+BRAND.md
 
 brand/
 ├── README.md
@@ -96,7 +99,8 @@ brand/
 └── archive/
 ```
 
-O manual reúne a estratégia e a linguagem em seções próprias. A parte visual
+`BRAND.md` reúne a estratégia e a linguagem em seções próprias. `brand/README.md`
+é somente o índice dos arquivos operacionais. A parte visual
 explica logo, cores, tipografia, fotografia, ilustração, iconografia e motion,
 com exemplos de aplicações permitidas e inadequadas. Os diretórios de ativos
 guardam as variantes vetoriais e raster, os favicons, os templates e as peças
@@ -113,13 +117,14 @@ A documentação oficial separa o uso da biblioteca e a manutenção do
 repositório:
 
 - [`docs/user/`](docs/user/) acompanha instalação, descoberta, construção,
-  ativos, manual, auditoria e uso por agentes.
+  ativos, manual, auditoria e uso por agentes. Este percurso alimenta o PDF e
+  o EPUB do guia do usuário.
 - [`docs/develop/`](docs/develop/) descreve arquitetura, contratos, geradores,
-  testes e contribuição.
+  testes e contribuição. Ele permanece como referência online e não entra nos
+  artefatos portáteis.
 
-Os dois percursos são compilados em um PDF e um EPUB dentro de
-[`ebooks/`](ebooks/). O manual de uma marca cliente continua separado: sua
-fonte vive em `brand/README.md` no projeto consumidor e a saída fica em
+O manual de uma marca cliente continua separado: sua fonte vive em `BRAND.md`
+no projeto consumidor e a saída fica em
 `brand/brand-guide.pdf`.
 
 Gere e confira a edição portátil do Brandfy:
@@ -141,26 +146,12 @@ conferem relevância, distinção, credibilidade, coerência, viabilidade,
 proteção e acessibilidade antes de avançar. Uma aprovação registra responsável
 e motivo; uma lacuna continua aberta com pergunta e próximo passo.
 
-## Geradores incluídos
+## Especialistas internas
 
-Os caminhos abaixo consideram a instalação em `.agents/skills/`. Ajuste o
-prefixo quando o `skills add` usar outro diretório no projeto.
-
-| Resultado | Comando |
-| --- | --- |
-| Configuração inicial | `node .agents/skills/brandfy-setup/scripts/setup.mjs --project .` |
-| Entrevista estruturada | `node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --init` |
-| CSS, JSON e Tailwind | `node .agents/skills/brandfy-design-tokens/scripts/generate-tokens.mjs` |
-| Webfonts e CSS tipográfico | `node .agents/skills/brandfy-tipografia-web/scripts/download-fonts.mjs` |
-| SVGs e PNGs do logo | `node .agents/skills/brandfy-ativos-logo/scripts/export-logo.mjs` |
-| Templates de canais | `node .agents/skills/brandfy-templates-canais/scripts/install-templates.mjs` |
-| Kit e manual em PDF | `node .agents/skills/brandfy-guia-pdf/scripts/build-brand-guide.mjs --project .` |
-| Auditoria final | `node .agents/skills/brandfy-auditoria/scripts/audit-brand.mjs` |
-
-Cada gerador aceita os argumentos documentados em seu `SKILL.md`. Execute o
-setup com `--check` para confirmar a configuração sem escrita. Os demais
-geradores mantêm a fonte editável em `.brandfy/` ou `brand/` e atualizam apenas
-as saídas correspondentes.
+As especialistas instaladas em `.agents/skills/` são chamadas internamente por
+`$brandfy`. A documentação do usuário explica a responsabilidade, a entrada,
+a saída e o momento de atuação de cada uma. Não as chame diretamente, porque a
+orquestradora precisa preservar a ordem, o estado e as dependências entre elas.
 
 ## Pesquisa e responsabilidade
 

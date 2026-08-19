@@ -48,10 +48,16 @@ os arquivos com a auditoria.
 
 ## As skills como especialistas
 
-`$brandfy-builder` coordena o percurso, mas não substitui as especialidades.
-Ele encaminha a tarefa para a skill adequada e retoma o plano depois que a
-etapa produz os arquivos esperados. Uma chamada direta continua válida quando
-o escopo é restrito, como recompilar tokens a partir de uma paleta já aprovada.
+`$brandfy` é a única skill que o usuário precisa chamar. Ela coordena o
+percurso, escolhe as especialistas internas conforme o estado do projeto e
+retoma o trabalho depois que cada etapa produz os arquivos esperados. Entre
+essas especialistas estão `brandfy-setup`, `brandfy-mvp`, `brandfy-entrevista`,
+`brandfy-estrategia`, `brandfy-identidade-visual`, `brandfy-design-tokens`,
+`brandfy-manual` e `brandfy-auditoria`.
+
+As demais skills não formam uma segunda interface pública. Elas são partes do
+fluxo orquestrado e podem ser atualizadas pelo CLI sem exigir que o usuário
+conheça seus scripts ou seus caminhos internos.
 
 Cada skill precisa informar a fonte consultada, o arquivo alterado, a
 conferência executada e o que permaneceu aberto. O relatório final deve

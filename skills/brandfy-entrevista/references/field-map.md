@@ -15,7 +15,7 @@ somente a síntese confirmada.
 | `legal`, `evidence` | `brand/legal.md` | `$brandfy-naming` e revisão profissional |
 | `progress`, `facts`, `interpretations` | `.brandfy/interview-summary.md` | `$brandfy-diagnostico` |
 | `hypotheses`, `preferences` | `.brandfy/interview-summary.md` | Especialista do tema |
-| `operations`, `unknowns`, `decisions` | `.brandfy/interview-summary.md` | `$brandfy-builder` |
+| `operations`, `unknowns`, `decisions` | `.brandfy/interview-summary.md` | `$brandfy` |
 
 ## Regras de compilação
 

@@ -1,6 +1,7 @@
 # Estrutura do manual
 
-O manual canônico vive em `brand/README.md` e precisa ser compreensível para
+O manual canônico vive em `BRAND.md`; `brand/README.md` é somente o índice. O
+guia precisa ser compreensível para
 designers, redatores, desenvolvedores e agentes.
 
 Cubra:

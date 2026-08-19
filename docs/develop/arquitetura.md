@@ -15,8 +15,9 @@ informado, não a partir de dados privados guardados no Brandfy.
 | Skills instaladas | Os geradores escrevem fontes e derivados aprovados | `brand/` recebe manual e ativos |
 | `brand/` | A auditoria confronta definição, fonte e aplicação | `.brandfy/audit.md` registra o resultado |
 
-`.brandfy/` recebe configuração, entrevista, briefing e relatórios. `brand/`
-recebe o manual, os ativos e as saídas compiladas. O agente lê as duas fontes,
+`.brandfy/` recebe configuração, entrevista, briefing e relatórios. `BRAND.md`
+na raiz recebe o guia completo da marca. `brand/` recebe o índice operacional,
+os ativos e as saídas compiladas. O agente lê as duas fontes,
 mas não mistura trabalho reservado com arquivos destinados a publicação.
 
 ## CLI e gerenciador de skills
@@ -26,18 +27,20 @@ versão empacotada do `skills`, executa `skills add` no projeto consumidor e
 localiza os scripts instalados em `.agents/skills/`, `.codex/skills/` ou
 `.claude/skills/`.
 
-O CLI não incorpora uma segunda cópia dos geradores. `brandfy pdf` e
-`brandfy audit` executam os arquivos das skills instaladas, mantendo uma única
+O CLI não incorpora uma segunda cópia dos geradores. `brandfy install`,
+`brandfy update` e `brandfy doctor` cuidam somente da instalação e da saúde do
+projeto. `$brandfy` chama os arquivos das skills instaladas, mantendo uma única
 fonte para o comportamento. O framework, o pacote npm e o ebook usam a mesma
 SemVer, conferida por `npm run release:check`.
 
 ## Tipos de skill
 
-As 18 skills cumprem quatro papéis:
+As 19 skills cumprem cinco papéis:
 
 | Papel | Skills |
 | --- | --- |
-| Coordenação | `brandfy-setup`, `brandfy-builder` |
+| Coordenação | `brandfy`, `brandfy-setup` |
+| Integração de contexto | `brandfy-mvp` |
 | Descoberta e base verbal | `brandfy-entrevista`, `brandfy-diagnostico`, `brandfy-estrategia`, `brandfy-naming`, `brandfy-slogan`, `brandfy-voz` |
 | Sistema visual | `brandfy-identidade-visual`, `brandfy-logo`, `brandfy-tipografia-web`, `brandfy-design-tokens` |
 | Produção e conferência | `brandfy-ativos-logo`, `brandfy-aplicacoes`, `brandfy-templates-canais`, `brandfy-manual`, `brandfy-guia-pdf`, `brandfy-auditoria` |

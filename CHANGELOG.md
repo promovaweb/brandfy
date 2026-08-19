@@ -3,6 +3,23 @@
 Este arquivo registra as mudanças públicas do Brandfy. O framework, o CLI npm
 e a documentação portátil compartilham a mesma versão em cada release.
 
+## Próxima versão
+
+### Adicionado
+
+- Skill `brandfy-mvp` para ler `MVP.md`, preparar `BRAND.md`, registrar
+  contexto normalizado e listar lacunas antes da criação dos assets.
+- Skill `brandfy` como única porta de entrada conversacional para orquestrar as
+  especialistas do percurso completo.
+- Índice `brand/README.md` e mapa de arquivos dentro do guia `BRAND.md`.
+
+### Alterado
+
+- O manual da marca passou a ter `BRAND.md` como fonte principal, com
+  `brand/README.md` reservado à navegação dos arquivos.
+- O CLI público passou a expor somente `brandfy install .`, `brandfy update` e
+  `brandfy doctor`.
+
 ## [1.1.0] - 2026-07-30
 
 ### Adicionado
