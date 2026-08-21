@@ -5,7 +5,7 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
-## Próxima versão
+## [1.2.0] - 2026-08-21
 
 ### Adicionado
 
@@ -48,3 +48,4 @@ Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
 [1.1.0]: https://github.com/promovaweb/brandfy/compare/8889486...v1.1.0
 [1.0.1]: https://github.com/promovaweb/brandfy/commit/8889486
+[1.2.0]: https://github.com/promovaweb/brandfy/compare/v1.1.0...v1.2.0
