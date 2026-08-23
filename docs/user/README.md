@@ -23,8 +23,8 @@ online em `docs/develop/` e não entra nesses artefatos.
   impressão.
 - O EPUB permite ajustar a fonte e o tamanho em leitores digitais.
 
-Baixe o [PDF do guia do usuário](../../ebooks/Brandfy-Guia-do-Usuario-v1.1.0.pdf)
-ou o [EPUB do guia do usuário](../../ebooks/Brandfy-Guia-do-Usuario-v1.1.0.epub).
+Baixe o [PDF do guia do usuário](../../ebooks/Brandfy-Guia-do-Usuario-v1.3.1.pdf)
+ou o [EPUB do guia do usuário](../../ebooks/Brandfy-Guia-do-Usuario-v1.3.1.epub).
 A [pasta dos ebooks](../../ebooks/README.md) registra a edição vigente e os
 hashes dos artefatos.
 

@@ -47,7 +47,7 @@ ordem, sem exigir que a pessoa usuária conheça scripts ou comandos internos.
 | `brandfy-identidade-visual` | Define direção visual, cores, tipografia, imagens e iconografia. |
 | `brandfy-logo` | Conduz conceitos originais e a criação do sistema de logo. |
 | `brandfy-ativos-logo` | Exporta SVG, PNG, favicons, avatares e manifestos. |
-| `brandfy-design-tokens` | Produz tokens CSS e JSON com combinações acessíveis. |
+| `brandfy-design-tokens` | Deriva a paleta pelo círculo cromático e produz tokens CSS e JSON com combinações acessíveis. |
 | `brandfy-tipografia-web` | Documenta a hierarquia, baixa webfontes licenciadas e gera o CSS. |
 | `brandfy-aplicacoes` | Planeja e cria peças digitais, sociais, impressas e institucionais. |
 | `brandfy-templates-canais` | Fornece modelos editáveis para Instagram, LinkedIn, email e YouTube. |
@@ -57,7 +57,9 @@ ordem, sem exigir que a pessoa usuária conheça scripts ou comandos internos.
 
 ## Identidade do projeto
 
-A própria marca Brandfy é documentada em [`BRAND.md`](BRAND.md). A pasta
+A própria marca Brandfy é documentada em [`BRAND.md`](BRAND.md). A origem da
+cor, o esquema do círculo cromático e a decisão estão em
+[`CHROMATIC.md`](CHROMATIC.md). A pasta
 [`brand/`](brand/) contém o logo
 modular, as variantes light/dark, a paleta derivada da Promovaweb, webfontes
 locais, tokens CSS/JSON/Tailwind, manual recompilável e templates de canais.
@@ -77,6 +79,7 @@ arquivos necessários para outros canais:
 └── evidence/
 
 BRAND.md
+CHROMATIC.md
 
 brand/
 ├── README.md
@@ -84,6 +87,7 @@ brand/
 ├── tokens.json
 ├── manifest.json
 ├── accessibility.md
+├── color-harmony.md
 ├── legal.md
 ├── voice.md
 ├── strategy.md
@@ -99,8 +103,10 @@ brand/
 └── archive/
 ```
 
-`BRAND.md` reúne a estratégia e a linguagem em seções próprias. `brand/README.md`
-é somente o índice dos arquivos operacionais. A parte visual
+`BRAND.md` reúne a estratégia e a linguagem em seções próprias. `CHROMATIC.md`
+guarda a origem da cor-base, o esquema do círculo cromático e a decisão, sem
+repetir o método técnico já documentado na skill `brandfy-design-tokens`.
+`brand/README.md` é somente o índice dos arquivos operacionais. A parte visual
 explica logo, cores, tipografia, fotografia, ilustração, iconografia e motion,
 com exemplos de aplicações permitidas e inadequadas. Os diretórios de ativos
 guardam as variantes vetoriais e raster, os favicons, os templates e as peças

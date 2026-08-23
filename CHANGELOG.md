@@ -5,6 +5,16 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.3.1] - 2026-08-22
+
+### Corrigido
+
+- `README.md` da raiz volta a descrever `brandfy-design-tokens`, o mapa de
+  artefatos e `BRAND.md`/`CHROMATIC.md` de acordo com a ciência de cor pelo
+  círculo cromático introduzida em `1.3.0`.
+- `docs/user/README.md` apontava para os arquivos do ebook na versão antiga
+  (`v1.1.0`); os links agora seguem a versão publicada.
+
 ## [1.3.0] - 2026-08-22
 
 ### Adicionado
