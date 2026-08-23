@@ -21,11 +21,19 @@ aprovada em SVG, PNG, favicon, avatar e manifesto, preservando a fonte editável
 O agente deve abrir os arquivos exportados e conferir proporção, bordas,
 transparência, fundo, tamanho mínimo e legibilidade antes da auditoria.
 
-## Tokens
+## Tokens e círculo cromático
 
 `brandfy-design-tokens` transforma as escolhas visuais em tokens reutilizáveis.
 Ele produz CSS, JSON e tema Tailwind, além de registrar estados e combinações
 de contraste. Componentes devem consumir tokens sem copiar valores isolados.
+
+A cor de origem não é escolhida por gosto do agente. Ela vem de pesquisa de
+referência ou de preferência declarada pela pessoa responsável pela marca, e é
+ajustada tecnicamente pelo círculo cromático: um esquema de harmonia
+(monocromático, análogo, complementar, split-complementar, tríade ou
+tetrádico) relaciona `primary` e `accent` por distância angular de matiz, não
+por combinação arbitrária. `CHROMATIC.md`, na raiz do projeto, registra essa
+origem, o esquema escolhido e a decisão final.
 
 ## Templates e aplicações
 

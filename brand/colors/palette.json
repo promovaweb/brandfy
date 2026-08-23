@@ -1,5 +1,10 @@
 {
   "name": "Brandfy",
+  "harmony": {
+    "scheme": "complementar",
+    "baseHue": 172,
+    "accentHue": 349
+  },
   "families": {
     "primary": {
       "50": "#ECFDFB",

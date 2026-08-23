@@ -84,6 +84,10 @@ async function main() {
     project,
     readYamlScalar(config, "brand_document", "BRAND.md"),
   );
+  const chromaticGuide = path.resolve(
+    project,
+    readYamlScalar(config, "chromatic_guide", "CHROMATIC.md"),
+  );
 
   const requiredFiles = [
     "README.md",
@@ -112,6 +116,19 @@ async function main() {
     failures.push(`Guia da marca ausente: ${path.relative(project, brandDocument)}.`);
   } else {
     evidence.push(path.relative(project, brandDocument));
+  }
+
+  if (!(await exists(chromaticGuide))) {
+    failures.push(`Guia de cores ausente: ${path.relative(project, chromaticGuide)}.`);
+  } else {
+    const chromatic = await readFile(chromaticGuide, "utf8");
+    if (/Pendente\./u.test(chromatic)) {
+      failures.push(
+        `${path.relative(project, chromaticGuide)} ainda tem campos "Pendente": origem da cor, esquema do círculo cromático ou decisão sem registro.`,
+      );
+    } else {
+      evidence.push(path.relative(project, chromaticGuide));
+    }
   }
 
   const indexPath = path.join(brand, "README.md");

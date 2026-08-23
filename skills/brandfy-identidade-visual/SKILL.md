@@ -9,7 +9,7 @@ description: Define o sistema visual da marca além do logo. Use para criar dire
 
 - **Plano e progresso:** planejar referências, rotas visuais, protótipos e
   seleção.
-- **Fontes de verdade:** ler estratégia, voz, `BRAND.md`,
+- **Fontes de verdade:** ler estratégia, voz, `BRAND.md`, `CHROMATIC.md`,
   `.brandfy/mvp-context.json`, `.brandfy/asset-brief.md`,
   `.brandfy/interview-summary.md`, ativos atuais e
   [visual-system.md](references/visual-system.md).
@@ -25,14 +25,23 @@ description: Define o sistema visual da marca além do logo. Use para criar dire
 1. Traduzir atributos estratégicos em forma, composição, densidade, contraste
    e materialidade.
 2. Criar duas ou três rotas visuais distintas, sem imitar concorrentes.
-3. Definir paleta funcional com combinações de fundo, texto, acento, estado e
-   superfície.
-4. Definir tipografia, escala, espaçamento, fotografia, tratamento de imagem,
+3. Definir a cor-base a partir de pesquisa ou preferência declarada, nunca por
+   gosto do agente: usar cor de referência pesquisada na categoria, cultura ou
+   concorrência, ou a cor preferida registrada em `preferences` na entrevista
+   (`.brandfy/interview.json`, ver `$brandfy-entrevista`). Quando nenhuma das
+   duas existir, perguntar ao responsável pela marca antes de prosseguir.
+4. Ajustar essa cor-base tecnicamente pelo círculo cromático: escolher um
+   esquema de harmonia com `$brandfy-design-tokens`
+   (`references/circulo-cromatico.md`) e registrar origem, esquema e decisão
+   em `CHROMATIC.md`.
+5. Definir paleta funcional com combinações de fundo, texto, acento, estado e
+   superfície, a partir das famílias derivadas do círculo cromático.
+6. Definir tipografia, escala, espaçamento, fotografia, tratamento de imagem,
    ilustração, iconografia, grafismos, grid e motion.
-5. Prototipar as rotas em página web, avatar, peça social e documento.
-6. Selecionar uma rota e registrar os princípios em
+7. Prototipar as rotas em página web, avatar, peça social e documento.
+8. Selecionar uma rota e registrar os princípios em
    `.brandfy/visual-direction.md`.
-7. Encaminhar cores e tipografia para `$brandfy-design-tokens` e
+9. Encaminhar cores e tipografia para `$brandfy-design-tokens` e
    `$brandfy-tipografia-web`.
 
 O sistema visual precisa continuar reconhecível sem o logo. Não depender

@@ -71,6 +71,79 @@ test("gerador produz CSS, JSON, Tailwind e relatório", async () => {
   }
 });
 
+test("gerador cromático deriva families.primary e families.accent do círculo cromático", async () => {
+  const project = await mkdtemp(path.join(os.tmpdir(), "brandfy-wheel-test-"));
+  try {
+    const result = run(
+      "skills/brandfy-design-tokens/scripts/gerar-paleta-cromatica.mjs",
+      [
+        "--hue",
+        "200",
+        "--scheme",
+        "complementar",
+        "--output",
+        path.join(project, "palette.json"),
+      ],
+      process.cwd(),
+    );
+    assert.equal(result.status, 0, result.stderr);
+    const palette = JSON.parse(
+      await readFile(path.join(project, "palette.json"), "utf8"),
+    );
+    assert.equal(palette.harmony.scheme, "complementar");
+    assert.equal(palette.harmony.baseHue, 200);
+    assert.equal(palette.harmony.accentHue, 20);
+    assert.ok(palette.families.primary["500"]);
+    assert.ok(palette.families.accent["500"]);
+    assert.ok(/^#[0-9A-F]{6}$/.test(palette.families.primary["50"]));
+  } finally {
+    await rm(project, { recursive: true, force: true });
+  }
+});
+
+test("gerador de tokens reprova paleta cuja relação de matiz não bate com o esquema declarado", async () => {
+  const project = await mkdtemp(path.join(os.tmpdir(), "brandfy-harmony-test-"));
+  try {
+    const palette = {
+      name: "Teste",
+      harmony: { scheme: "complementar", baseHue: 200, accentHue: 210 },
+      families: {
+        primary: { 500: "#1D4ED8" },
+        accent: { 500: "#2563EB" },
+        neutral: { 50: "#F8FAFC", 950: "#020617" },
+      },
+      light: {
+        background: "#FFFFFF",
+        surface: "#F8FAFC",
+        text: "#020617",
+        textMuted: "#334155",
+        border: "#CBD5E1",
+        accent: "#1D4ED8",
+        focus: "#2563EB",
+      },
+      dark: {
+        background: "#020617",
+        surface: "#172554",
+        text: "#F8FAFC",
+        textMuted: "#E2E8F0",
+        border: "#475569",
+        accent: "#93C5FD",
+        focus: "#93C5FD",
+      },
+    };
+    await writeFile(path.join(project, "palette.json"), JSON.stringify(palette));
+    const result = run(
+      "skills/brandfy-design-tokens/scripts/generate-tokens.mjs",
+      ["--input", "palette.json", "--output", "brand"],
+      project,
+    );
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /complementar/);
+  } finally {
+    await rm(project, { recursive: true, force: true });
+  }
+});
+
 test("instalador copia os templates sem substituir alterações", async () => {
   const project = await mkdtemp(path.join(os.tmpdir(), "brandfy-template-test-"));
   try {

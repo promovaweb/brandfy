@@ -23,7 +23,8 @@ interno e explique o que mudou no projeto.
   estado após cada marco e informar a próxima ação.
 - **Fontes de verdade:** ler `.brandfy/config.yaml`, `MVP.md` na raiz quando
   existir, `.brandfy/mvp-context.json`, `.brandfy/brief.md`, `BRAND.md`,
-  `brand/README.md`, os assets existentes e os contratos das especialistas.
+  `CHROMATIC.md`, `brand/README.md`, os assets existentes e os contratos das
+  especialistas.
 - **Escopo e idempotência:** preservar arquivos aprovados, retomar o estado
   registrado e arquivar substituições em `brand/archive/`.
 - **Interação:** conduzir a pessoa somente pelas perguntas que ainda não têm
@@ -54,7 +55,10 @@ interno e explique o que mudou no projeto.
 7. Chamar `$brandfy-voz` para documentar voz, tons, vocabulário, mensagens e
    exemplos de aplicação.
 8. Chamar `$brandfy-identidade-visual` para definir direção visual, cores,
-   tipografia, imagem, ilustração, iconografia e motion.
+   tipografia, imagem, ilustração, iconografia e motion. A cor-base vem de
+   pesquisa ou de preferência declarada na entrevista, nunca de escolha livre
+   do agente, e é ajustada pelo círculo cromático. Registrar origem, esquema
+   e decisão em `CHROMATIC.md`.
 9. Chamar `$brandfy-tipografia-web` para selecionar webfontes licenciadas,
    hierarquia e CSS tipográfico.
 10. Chamar `$brandfy-logo` para criar ou revisar o conceito e o sistema de
@@ -81,7 +85,10 @@ Ao terminar, o projeto deve ter `BRAND.md` na raiz. Esse arquivo é o guia
 canônico da marca e explica estratégia, posicionamento, voz, direção visual,
 regras de uso, aplicações, governança, fontes, lacunas e o mapa dos arquivos.
 `brand/README.md` é somente um índice curto: aponta para `BRAND.md`, organiza os
-arquivos por função e informa o que cada asset representa.
+arquivos por função e informa o que cada asset representa. `CHROMATIC.md`, na
+raiz, é o guia de cores: registra a origem da cor-base, o esquema do círculo
+cromático e a decisão final, sem repetir o método técnico já documentado na
+skill `brandfy-design-tokens`.
 
 O estado intermediário permanece em `.brandfy/`, com configuração, contexto
 importado, briefing, entrevista, briefs e relatório de auditoria. O diretório
@@ -91,5 +98,6 @@ importado, briefing, entrevista, briefs e relatório de auditoria. O diretório
 
 Não declarar a marca pronta quando houver campos centrais sem confirmação,
 assets prometidos ausentes, links quebrados, licença desconhecida, divergência
-entre `BRAND.md` e `brand/README.md` ou auditoria reprovada. Registrar cada
-pendência com pergunta, responsável e próximo passo.
+entre `BRAND.md` e `brand/README.md`, `CHROMATIC.md` com campos "Pendente" ou
+auditoria reprovada. Registrar cada pendência com pergunta, responsável e
+próximo passo.

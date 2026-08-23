@@ -78,6 +78,7 @@ O mapa evita que um agente trate uma exportação como fonte. Em geral:
 | Caminho | Papel | Fonte de atualização |
 | --- | --- | --- |
 | `BRAND.md` | Guia completo da marca | `brandfy-manual` e escolhas confirmadas |
+| `CHROMATIC.md` | Guia de cores: origem, esquema do círculo cromático e decisão | `brandfy-identidade-visual` |
 | `brand/README.md` | Índice dos assets | `brandfy-manual` |
 | `brand/strategy.md` | Estratégia detalhada | `brandfy-estrategia` |
 | `brand/voice.md` | Voz, tons e exemplos | `brandfy-voz` |

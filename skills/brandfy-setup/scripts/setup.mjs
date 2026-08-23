@@ -35,6 +35,7 @@ interview_source: .brandfy/interview.json
 interview_summary: .brandfy/interview-summary.md
 brand_document: BRAND.md
 manual_source: BRAND.md
+chromatic_guide: CHROMATIC.md
 legacy_index: brand/README.md
 mvp_source: MVP.md
 manual_pdf: brand/brand-guide.pdf
@@ -221,6 +222,8 @@ Pendente. Documente versões principal, light, dark, monocromática, compacta,
 ## Cores e design tokens
 
 Pendente. Vincule \`global.css\`, \`tokens.json\` e \`tailwind-theme.js\`.
+A origem da cor, o esquema do círculo cromático e a decisão final estão em
+[CHROMATIC.md](CHROMATIC.md).
 
 ## Tipografia e webfonts
 
@@ -244,6 +247,52 @@ Pendente.
 Pendente. Vincule \`manifest.json\`, responsáveis, versão e revisão prevista.
 `;
 
+const DEFAULT_CHROMATIC = `# CHROMATIC.md
+
+Este arquivo é o guia de cores da marca. Ele registra a origem da cor,
+o esquema do círculo cromático usado para relacionar as famílias e a decisão
+final, para que qualquer pessoa ou agente entenda por que a paleta é essa e
+não outra. O raciocínio técnico completo do círculo cromático está em
+\`.codex/skills\` ou na skill instalada \`$brandfy-design-tokens\`
+(\`references/circulo-cromatico.md\`); este arquivo guarda o resultado
+aplicado a esta marca, não o método.
+
+## Origem da cor
+
+Pendente. Registre uma das duas origens:
+
+- cor de referência pesquisada (concorrência, categoria, cultura, símbolo já
+  associado à marca), com a fonte da pesquisa;
+- cor preferida declarada pelo responsável na entrevista
+  (\`.brandfy/interview.json\`, grupo \`preferences\`), com a citação literal.
+
+Nunca escolha a cor-base só por gosto do agente. Uma cor sem pesquisa nem
+preferência declarada é uma lacuna a registrar, não uma decisão a inventar.
+
+## Ajuste técnico pelo círculo cromático
+
+Pendente. Preencha depois de rodar
+\`gerar-paleta-cromatica.mjs\`:
+
+| Campo | Valor |
+| --- | --- |
+| Matiz-base (primary) | |
+| Esquema de harmonia | monocromática / análoga / complementar / split-complementar / tríade / tetrádica |
+| Matiz do acento (accent) | |
+| Distância angular obtida | |
+| Motivo do esquema | |
+
+## Escala aplicada
+
+Pendente. Liste \`families.primary\` e \`families.accent\` gerados (50 a 950) e
+aponte para \`.brandfy/palette.json\` como fonte editável.
+
+## Decisão
+
+Pendente. Registre quem aprovou, a data e alternativas de esquema
+descartadas, com o motivo da rejeição.
+`;
+
 const DEFAULT_INDEX = `# Índice dos arquivos da marca
 
 Este arquivo orienta a leitura dos arquivos dentro de \`brand/\`. O guia
@@ -252,6 +301,7 @@ completo da marca fica em [BRAND.md](../BRAND.md), na raiz do projeto.
 | Arquivo ou pasta | Representação |
 | --- | --- |
 | [../BRAND.md](../BRAND.md) | Guia completo da marca, suas regras, fontes e lacunas. |
+| [../CHROMATIC.md](../CHROMATIC.md) | Guia de cores: origem, esquema do círculo cromático e decisão. |
 | \`strategy.md\` | Estratégia, posicionamento, públicos e personalidade. |
 | \`voice.md\` | Voz, tons, mensagens, vocabulário e exemplos. |
 | \`legal.md\` | Origem, licenças, naming, consentimentos e restrições. |
@@ -417,6 +467,7 @@ async function expectedChanges(projectRoot, block) {
     [".brandfy/palette.json", DEFAULT_PALETTE],
     [".brandfy/fonts.json", DEFAULT_FONTS],
     ["BRAND.md", DEFAULT_BRAND],
+    ["CHROMATIC.md", DEFAULT_CHROMATIC],
     ["brand/README.md", DEFAULT_INDEX],
     ["brand/strategy.md", DEFAULT_STRATEGY],
     ["brand/voice.md", DEFAULT_VOICE],

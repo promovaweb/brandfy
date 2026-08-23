@@ -32,6 +32,13 @@ com quantidade e acabamento equivalentes.
 
 ## Sistema funcional
 
+A cor-base nasce de pesquisa de referência ou de preferência declarada pelo
+responsável pela marca, registrada em `CHROMATIC.md`. A relação entre
+`primary` e `accent` nasce do círculo cromático (esquema monocromático,
+análogo, complementar, split-complementar, tríade ou tetrádico), não de
+tentativa isolada. Consulte `references/circulo-cromatico.md` na skill
+`$brandfy-design-tokens`.
+
 A paleta precisa separar cores de origem de funções semânticas. Teste texto,
 links, foco, controles e estados segundo as
 [WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum).

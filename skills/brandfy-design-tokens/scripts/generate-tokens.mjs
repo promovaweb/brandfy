@@ -52,6 +52,76 @@ function kebab(value) {
   return value.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 }
 
+const ESQUEMAS_TOLERANCIA = {
+  monocromatica: { alvo: 0, tolerancia: 8 },
+  analoga: { alvo: 30, tolerancia: 8 },
+  complementar: { alvo: 180, tolerancia: 15 },
+  "split-complementar": { alvo: 150, tolerancia: 15 },
+  triade: { alvo: 120, tolerancia: 8 },
+  tetradica: { alvo: 60, tolerancia: 8 },
+};
+
+function hexToHue(hex) {
+  const [r, g, b] = rgb(hex).map((value) => value / 255);
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const delta = max - min;
+  if (delta === 0) return 0;
+  let hue;
+  if (max === r) hue = ((g - b) / delta) % 6;
+  else if (max === g) hue = (b - r) / delta + 2;
+  else hue = (r - g) / delta + 4;
+  hue *= 60;
+  return hue < 0 ? hue + 360 : hue;
+}
+
+function hueDelta(a, b) {
+  const raw = Math.abs(a - b) % 360;
+  return raw > 180 ? 360 - raw : raw;
+}
+
+function buildHarmonyCheck(palette) {
+  const harmony = palette.harmony;
+  if (!harmony || !palette.families?.primary?.["500"] || !palette.families?.accent?.["500"]) {
+    return null;
+  }
+  const regra = ESQUEMAS_TOLERANCIA[harmony.scheme];
+  if (!regra) {
+    throw new Error(
+      `Esquema de harmonia desconhecido: ${harmony.scheme}. Use um valor de circulo-cromatico.md.`,
+    );
+  }
+  const primaryHue = hexToHue(palette.families.primary["500"]);
+  const accentHue = hexToHue(palette.families.accent["500"]);
+  const delta = hueDelta(primaryHue, accentHue);
+  const desvio = Math.abs(delta - regra.alvo);
+  return {
+    scheme: harmony.scheme,
+    primaryHue,
+    accentHue,
+    delta,
+    alvo: regra.alvo,
+    tolerancia: regra.tolerancia,
+    passed: desvio <= regra.tolerancia,
+  };
+}
+
+function renderHarmony(check, sourceLabel) {
+  const status = check.passed ? "Aprovado" : "Reprovado";
+  return `# Harmonia cromática
+
+Este relatório foi calculado pelo Brandfy a partir de \`${sourceLabel}\`,
+segundo o círculo cromático descrito em circulo-cromatico.md.
+
+| Esquema | Matiz primary.500 | Matiz accent.500 | Distância angular | Alvo | Tolerância | Resultado |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| ${check.scheme} | ${check.primaryHue.toFixed(1)}° | ${check.accentHue.toFixed(1)}° | ${check.delta.toFixed(1)}° | ${check.alvo}° | ±${check.tolerancia}° | ${status} |
+
+Uma aprovação angular não substitui o teste visual das rotas nem o contraste
+de acessibilidade em \`accessibility.md\`.
+`;
+}
+
 function renderCss(palette, sourceLabel) {
   const familyLines = Object.entries(palette.families)
     .flatMap(([family, scale]) =>
@@ -217,6 +287,13 @@ async function main() {
     );
   }
 
+  const harmonyCheck = buildHarmonyCheck(source);
+  if (harmonyCheck && !harmonyCheck.passed) {
+    throw new Error(
+      `A relação de matiz entre primary e accent (${harmonyCheck.delta.toFixed(1)}°) não corresponde ao esquema "${harmonyCheck.scheme}" (alvo ${harmonyCheck.alvo}° ± ${harmonyCheck.tolerancia}°).`,
+    );
+  }
+
   await mkdir(output, { recursive: true });
   await Promise.all([
     writeFile(
@@ -239,6 +316,15 @@ async function main() {
       renderAccessibility(checks, sourceLabel),
       "utf8",
     ),
+    ...(harmonyCheck
+      ? [
+          writeFile(
+            path.join(output, "color-harmony.md"),
+            renderHarmony(harmonyCheck, sourceLabel),
+            "utf8",
+          ),
+        ]
+      : []),
   ]);
 
   console.log(`Tokens gerados em ${output}.`);

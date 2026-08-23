@@ -71,16 +71,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-  --color-background: #000A0E;
-  --color-surface: #001117;
-  --color-text: #F2F8F9;
-  --color-text-muted: #B2C6CE;
-  --color-border: #2D4C58;
-  --color-accent: #FDA4B7;
-  --color-focus: #5EEDE1;
-  --color-success: #6EE7B7;
-  --color-warning: #FCD34D;
-  --color-error: #FCA5A5;
-  --color-info: #93C5FD;
+    --color-background: #000A0E;
+    --color-surface: #001117;
+    --color-text: #F2F8F9;
+    --color-text-muted: #B2C6CE;
+    --color-border: #2D4C58;
+    --color-accent: #FDA4B7;
+    --color-focus: #5EEDE1;
+    --color-success: #6EE7B7;
+    --color-warning: #FCD34D;
+    --color-error: #FCA5A5;
+    --color-info: #93C5FD;
   }
 }

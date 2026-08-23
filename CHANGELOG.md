@@ -5,6 +5,33 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.3.0] - 2026-08-22
+
+### Adicionado
+
+- Ciência de cor baseada no círculo cromático em `brandfy-design-tokens`:
+  `references/circulo-cromatico.md` documenta os esquemas de harmonia
+  (monocromática, análoga, complementar, split-complementar, tríade,
+  tetrádica) e `scripts/gerar-paleta-cromatica.mjs` deriva `families.primary`
+  e `families.accent` de uma cor-base e de um esquema, em vez de tons
+  escolhidos manualmente.
+- `generate-tokens.mjs` valida a relação angular de matiz entre `primary` e
+  `accent` quando `palette.json` declara `harmony`, e gera
+  `brand/color-harmony.md` com o resultado.
+- `CHROMATIC.md`, novo arquivo canônico na raiz de todo projeto Brandfy: guia
+  de cores com a origem da cor-base (pesquisa ou preferência declarada na
+  entrevista), o esquema do círculo cromático aplicado e a decisão final.
+  Criado por `brandfy-setup`, preenchido por `brandfy-identidade-visual` e
+  conferido por `brandfy-auditoria`.
+
+### Alterado
+
+- `brandfy-identidade-visual` exige cor-base pesquisada ou declarada pelo
+  responsável pela marca antes de definir a paleta, nunca escolhida por
+  preferência do agente.
+- `brandfy` (orquestradora) registra `CHROMATIC.md` nas fontes de verdade, no
+  percurso e no gate de saída.
+
 ## [1.2.0] - 2026-08-21
 
 ### Adicionado
