@@ -5,6 +5,19 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.3.2] - 2026-08-30
+
+### Corrigido
+
+- Substitui quatro ocorrências de vocabulário proibido nas instruções das
+  skills de orquestração, auditoria e identidade visual.
+
+### Validação
+
+- `npm test`
+- `npm --prefix .. run validar:skills-prohibited`
+- `quick_validate.py` nas três skills alteradas
+
 ## [1.3.1] - 2026-08-22
 
 ### Corrigido

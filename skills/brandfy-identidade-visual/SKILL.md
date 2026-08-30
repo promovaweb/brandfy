@@ -32,7 +32,7 @@ description: Define o sistema visual da marca além do logo. Use para criar dire
    duas existir, perguntar ao responsável pela marca antes de prosseguir.
 4. Ajustar essa cor-base tecnicamente pelo círculo cromático: escolher um
    esquema de harmonia com `$brandfy-design-tokens`
-   (`references/circulo-cromatico.md`) e registrar origem, esquema e decisão
+   (`references/circulo-cromatico.md`) e registrar origem, esquema e escolha
    em `CHROMATIC.md`.
 5. Definir paleta funcional com combinações de fundo, texto, acento, estado e
    superfície, a partir das famílias derivadas do círculo cromático.

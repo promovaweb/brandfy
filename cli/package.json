@@ -1,6 +1,6 @@
 {
   "name": "@promovaweb/brandfy",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "CLI do Brandfy para instalar skills e manter sistemas de marca em projetos com agentes.",
   "type": "module",
   "bin": {

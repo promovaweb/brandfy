@@ -1,16 +1,22 @@
 {
   "schema_version": 1,
-  "version": "1.3.1",
-  "edition": "v1.3.1",
-  "generated_at": "2026-08-23T00:09:00.718361Z",
-  "source_sha256": "92eeeb47362d79e970af05bd835f7e1612d4224641c43c67a8747c2672f8153b",
+  "version": "1.3.2",
+  "edition": "v1.3.2",
+  "generated_at": "2026-08-30T22:01:04.990772Z",
+  "source_sha256": "545e55e07baa2368c7103c6ab4f39244db6210d61cce256c9a647e2dbcafa860",
   "sources": [
+    ".ebook/build-ebook.sh",
+    ".ebook/epub.css",
+    ".ebook/external-links.lua",
+    ".ebook/metadata.yaml",
+    ".ebook/pdf.css",
     "brand/logo/icon.png",
-    "brand/pdf/fonts/inter-latin.woff2",
-    "brand/pdf/fonts/manrope-latin.woff2",
     "brand/pdf/fonts/OFL-Inter.txt",
     "brand/pdf/fonts/OFL-Manrope.txt",
+    "brand/pdf/fonts/inter-latin.woff2",
+    "brand/pdf/fonts/manrope-latin.woff2",
     "brand/pdf/template.html",
+    "docs/user/README.md",
     "docs/user/agentes.md",
     "docs/user/ativos-digitais.md",
     "docs/user/auditoria.md",
@@ -21,25 +27,19 @@
     "docs/user/manual-e-pdf.md",
     "docs/user/primeira-marca.md",
     "docs/user/reading-order.txt",
-    "docs/user/README.md",
     "docs/user/sistema-de-marca.md",
     "docs/user/skills.md",
     "docs/user/solucao-de-problemas.md",
-    ".ebook/build-ebook.sh",
-    ".ebook/epub.css",
-    ".ebook/external-links.lua",
-    ".ebook/metadata.yaml",
-    ".ebook/pdf.css",
     "ebooks/VERSION"
   ],
   "artifacts": {
     "pdf": {
-      "file": "Brandfy-Guia-do-Usuario-v1.3.1.pdf",
-      "sha256": "5d8a668fcbf4600c022e153f27b30d8be17bbf6cedd7a253c5ed5e470a4a7016"
+      "file": "Brandfy-Guia-do-Usuario-v1.3.2.pdf",
+      "sha256": "01316b884017cc9e02d72a96475fb6ba96b3a5d5bd0100cc818bfa434dd7f058"
     },
     "epub": {
-      "file": "Brandfy-Guia-do-Usuario-v1.3.1.epub",
-      "sha256": "de1e950f1938d834074114870126afe900d3006826760701d57b51bbff6d6548"
+      "file": "Brandfy-Guia-do-Usuario-v1.3.2.epub",
+      "sha256": "69408765573aa00c9b0c89281851a231a117ad032033508b498469e82b6a324e"
     }
   }
 }

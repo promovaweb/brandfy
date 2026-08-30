@@ -31,7 +31,7 @@ description: Audita a integridade e a consistência de uma marca. Use para revis
    ativos.
 3. Comparar o manual com logos, cores, fontes, fotografias, templates e CSS.
    Conferir se `CHROMATIC.md` tem origem da cor, esquema do círculo cromático
-   e decisão registrados, sem campos "Pendente".
+   e escolha registrados, sem campos "Pendente".
 4. Testar variantes light/dark, redução, monocromia, contraste, foco, estados e
    impressão.
 5. Conferir origem, licença, consentimento, disponibilidade indicativa do nome

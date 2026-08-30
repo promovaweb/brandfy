@@ -58,7 +58,7 @@ interno e explique o que mudou no projeto.
    tipografia, imagem, ilustração, iconografia e motion. A cor-base vem de
    pesquisa ou de preferência declarada na entrevista, nunca de escolha livre
    do agente, e é ajustada pelo círculo cromático. Registrar origem, esquema
-   e decisão em `CHROMATIC.md`.
+   e escolha em `CHROMATIC.md`.
 9. Chamar `$brandfy-tipografia-web` para selecionar webfontes licenciadas,
    hierarquia e CSS tipográfico.
 10. Chamar `$brandfy-logo` para criar ou revisar o conceito e o sistema de
@@ -87,7 +87,7 @@ regras de uso, aplicações, governança, fontes, lacunas e o mapa dos arquivos.
 `brand/README.md` é somente um índice curto: aponta para `BRAND.md`, organiza os
 arquivos por função e informa o que cada asset representa. `CHROMATIC.md`, na
 raiz, é o guia de cores: registra a origem da cor-base, o esquema do círculo
-cromático e a decisão final, sem repetir o método técnico já documentado na
+cromático e a escolha final, sem repetir o método técnico já documentado na
 skill `brandfy-design-tokens`.
 
 O estado intermediário permanece em `.brandfy/`, com configuração, contexto
