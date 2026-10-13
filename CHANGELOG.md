@@ -5,6 +5,21 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.3.3] - 2026-10-13
+
+### Alterado
+
+- `brandfy-entrevista` passa a fazer uma pergunta por vez, aguardando a
+  resposta antes de formular a próxima, em vez de agrupar três a cinco
+  perguntas por etapa.
+- Sempre que uma pergunta aceitar alternativas identificáveis, a skill agora
+  apresenta opções nomeadas, com a recomendada primeiro, mantendo espaço para
+  resposta livre.
+
+### Validação
+
+- `npm test`
+
 ## [1.3.2] - 2026-08-30
 
 ### Corrigido

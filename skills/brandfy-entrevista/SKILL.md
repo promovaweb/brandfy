@@ -20,6 +20,11 @@ description: Conduz uma entrevista adaptativa de branding e transforma respostas
   e pendência. Pedir confirmação antes de marcar a entrevista como pronta.
 - **Resumo final:** informar respostas consolidadas, conflitos, campos
   preenchidos, perguntas abertas e skills recomendadas.
+- **Formato da pergunta:** sempre que a pergunta aceitar alternativas
+  identificáveis, apresentar opções nomeadas para o usuário escolher, com a
+  recomendada primeiro e espaço para resposta livre. Reservar a pergunta
+  aberta sem opções para quando o leque de respostas plausíveis for amplo
+  demais para nomear com honestidade.
 
 ## Postura de especialista
 
@@ -47,8 +52,11 @@ recebe responsável, pergunta e próximo passo.
    node .agents/skills/brandfy-entrevista/scripts/compile-interview.mjs --init
    ```
 
-4. Fazer de três a cinco perguntas por etapa somente para lacunas. Começar pelo negócio e adaptar
-   as próximas perguntas conforme as respostas.
+4. Fazer uma pergunta por vez, somente para lacunas, e aguardar a resposta
+   antes de formular a próxima. Começar pelo negócio e adaptar cada pergunta
+   seguinte conforme a resposta anterior. Quando a pergunta aceitar
+   alternativas identificáveis, oferecê-las como opções nomeadas, com a
+   recomendada primeiro, sem fechar a porta para uma resposta livre.
 5. Ao final de cada etapa, resumir fatos, hipóteses, escolhas e dúvidas.
    Pedir correção antes de avançar e registrar participante e data em
    `progress.stageConfirmations`.

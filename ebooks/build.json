@@ -1,22 +1,16 @@
 {
   "schema_version": 1,
-  "version": "1.3.2",
-  "edition": "v1.3.2",
-  "generated_at": "2026-08-30T22:01:04.990772Z",
-  "source_sha256": "545e55e07baa2368c7103c6ab4f39244db6210d61cce256c9a647e2dbcafa860",
+  "version": "1.3.3",
+  "edition": "v1.3.3",
+  "generated_at": "2026-10-13T16:55:44.158681Z",
+  "source_sha256": "e8937bf2c636a02146004c6634285929984367703d32671fb4cd9e230f3d08eb",
   "sources": [
-    ".ebook/build-ebook.sh",
-    ".ebook/epub.css",
-    ".ebook/external-links.lua",
-    ".ebook/metadata.yaml",
-    ".ebook/pdf.css",
     "brand/logo/icon.png",
-    "brand/pdf/fonts/OFL-Inter.txt",
-    "brand/pdf/fonts/OFL-Manrope.txt",
     "brand/pdf/fonts/inter-latin.woff2",
     "brand/pdf/fonts/manrope-latin.woff2",
+    "brand/pdf/fonts/OFL-Inter.txt",
+    "brand/pdf/fonts/OFL-Manrope.txt",
     "brand/pdf/template.html",
-    "docs/user/README.md",
     "docs/user/agentes.md",
     "docs/user/ativos-digitais.md",
     "docs/user/auditoria.md",
@@ -27,19 +21,25 @@
     "docs/user/manual-e-pdf.md",
     "docs/user/primeira-marca.md",
     "docs/user/reading-order.txt",
+    "docs/user/README.md",
     "docs/user/sistema-de-marca.md",
     "docs/user/skills.md",
     "docs/user/solucao-de-problemas.md",
+    ".ebook/build-ebook.sh",
+    ".ebook/epub.css",
+    ".ebook/external-links.lua",
+    ".ebook/metadata.yaml",
+    ".ebook/pdf.css",
     "ebooks/VERSION"
   ],
   "artifacts": {
     "pdf": {
-      "file": "Brandfy-Guia-do-Usuario-v1.3.2.pdf",
-      "sha256": "01316b884017cc9e02d72a96475fb6ba96b3a5d5bd0100cc818bfa434dd7f058"
+      "file": "Brandfy-Guia-do-Usuario-v1.3.3.pdf",
+      "sha256": "2a1f310de86018d740059d173385754482590b45ea057277261f0e47861bd332"
     },
     "epub": {
-      "file": "Brandfy-Guia-do-Usuario-v1.3.2.epub",
-      "sha256": "69408765573aa00c9b0c89281851a231a117ad032033508b498469e82b6a324e"
+      "file": "Brandfy-Guia-do-Usuario-v1.3.3.epub",
+      "sha256": "00ce3dcb06780a3ae0bf487d11c49d063cd755997f6906efe5a124049afbd03f"
     }
   }
 }

@@ -67,10 +67,16 @@ Usar estes estados:
 Cada etapa segue cinco movimentos:
 
 1. explicar o objetivo da etapa;
-2. fazer de três a cinco perguntas;
+2. fazer uma pergunta por vez e aguardar a resposta antes da próxima, repetindo
+   esse movimento até reduzir as lacunas da etapa;
 3. aprofundar exemplos e contradições;
 4. devolver uma síntese curta;
 5. pedir confirmação e registrar pendências.
+
+Sempre que a pergunta aceitar alternativas identificáveis, apresentá-las como
+opções nomeadas, com a recomendada primeiro, mantendo espaço para resposta
+livre. Reservar a pergunta aberta sem opções para quando o leque de respostas
+plausíveis for amplo demais para nomear com honestidade.
 
 Registrar cada confirmação em `progress.stageConfirmations`, com identificador
 da etapa, participante, data e observações. `progress.currentStage` permite
