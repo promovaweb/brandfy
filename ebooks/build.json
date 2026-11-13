@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "version": "1.3.4",
-  "edition": "v1.3.4",
-  "generated_at": "2026-11-13T20:39:33.611991Z",
-  "source_sha256": "6e35ebd4f4038ecd2cbdd0a51cf65ee710c1e5446d35a10710a1fd7afff63706",
+  "version": "1.4.0",
+  "edition": "v1.4.0",
+  "generated_at": "2026-11-13T21:30:14.642109Z",
+  "source_sha256": "d52987b4854adb66ea8200598cd0a8e5d62c57fe356af6f16da87a2b9adb09a7",
   "sources": [
     "brand/logo/icon.png",
     "brand/pdf/fonts/inter-latin.woff2",
@@ -34,12 +34,12 @@
   ],
   "artifacts": {
     "pdf": {
-      "file": "Brandfy-Guia-do-Usuario-v1.3.4.pdf",
-      "sha256": "58993b541411bca067097b5147e5f3694beff7ed4f5098f57d4c56f319e6deac"
+      "file": "Brandfy-Guia-do-Usuario-v1.4.0.pdf",
+      "sha256": "3477666d7e940070704f1ad3ef0f8ee0f28567df0f771557a4060bafa65be579"
     },
     "epub": {
-      "file": "Brandfy-Guia-do-Usuario-v1.3.4.epub",
-      "sha256": "b92395500586c5aefc808e7245f0e77d0ebcbb9edd461f3589e140f210997e20"
+      "file": "Brandfy-Guia-do-Usuario-v1.4.0.epub",
+      "sha256": "370f03cefd3506fa3d9d6dac6d3b6901c8a0b6012172c28438ed5b70be4cbc91"
     }
   }
 }

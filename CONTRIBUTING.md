@@ -208,5 +208,5 @@ existe. O passo a passo está em [RELEASING.md](RELEASING.md).
 
 ## Licença
 
-O Brandfy é distribuído sob a licença [MIT](LICENSE). Ao contribuir, você
-concorda que a sua alteração entra sob os mesmos termos.
+O Brandfy é distribuído sob a [GNU AGPL 3.0](LICENSE). Ao contribuir, você
+concorda que a sua alteração entra sob a mesma licença do projeto.

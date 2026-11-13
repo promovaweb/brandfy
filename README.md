@@ -214,4 +214,5 @@ Quer usar o Brandfy em projetos de verdade, com acompanhamento? Conheça os
 
 ## Licença
 
-[MIT](LICENSE).
+Distribuído sob a [GNU AGPL 3.0](LICENSE). A licença não concede o uso do
+nome e do logo do Brandfy nem da marca Promovaweb (AGPL 3.0, seção 7, item e).

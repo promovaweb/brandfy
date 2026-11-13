@@ -1,8 +1,9 @@
 {
   "name": "@promovaweb/brandfy",
-  "version": "1.3.4",
+  "version": "1.4.0",
   "private": true,
   "type": "module",
+  "license": "AGPL-3.0-only",
   "engines": {
     "node": ">=22"
   },

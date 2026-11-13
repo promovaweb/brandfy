@@ -5,6 +5,27 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.4.0] - 2026-11-13
+
+### Alterado
+
+- A partir desta versão, o projeto é distribuído sob a GNU AGPL 3.0; versões
+  anteriores continuam sob a licença com que foram publicadas. O `LICENSE` da
+  raiz e o do pacote npm trazem o texto oficial e integral da AGPL 3.0. O
+  campo `license` de `package.json`, `cli/package.json` e
+  `cli/package-lock.json` passa a `AGPL-3.0-only`.
+- `README.md` e `cli/README.md` ganham a seção Licença com a AGPL 3.0 e a
+  ressalva sobre o nome, o logo e a marca. O `CONTRIBUTING.md` registra que
+  as contribuições entram sob a mesma licença do projeto.
+
+### Validação
+
+- `npm test`
+- `npm run ebook:verify`
+- `npm run release:check`
+- `npm run cli:pack`
+- `markdownlint-cli2` em `README.md`, `CONTRIBUTING.md` e `cli/README.md`
+
 ## [1.3.4] - 2026-11-13
 
 ### Alterado

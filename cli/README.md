@@ -60,3 +60,8 @@ npm run release:check
 
 Consulte [`RELEASING.md`](../RELEASING.md) para atualizar a versão, gerar a
 documentação, publicar no npm e criar a tag e a GitHub Release.
+
+## Licença
+
+Distribuído sob a [GNU AGPL 3.0](LICENSE). A licença não concede o uso do
+nome e do logo do Brandfy nem da marca Promovaweb (AGPL 3.0, seção 7, item e).
