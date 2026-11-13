@@ -5,6 +5,32 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.3.4] - 2026-11-13
+
+### Alterado
+
+- `README.md` reorganizado para quem usa o Brandfy: cabeçalho com o logo do
+  projeto, a assinatura da Promovaweb, badges, banner do Discord e links para
+  a documentação, os planos e o changelog. O arquivo também ganhou as seções
+  Feito com, Comunidade e suporte, Contribuir e Promovaweb.
+- Novo `CONTRIBUTING.md` para quem contribui, com ambiente, organização do
+  código, fluxo de trabalho, regras, validação, documentação, commits e
+  releases.
+- `.markdownlint.json` libera os elementos HTML do cabeçalho do README.
+
+### Corrigido
+
+- Os links do PDF e do EPUB em `docs/user/README.md` apontam para a edição
+  atual do guia, o que devolve `npm test` ao verde.
+
+### Validação
+
+- `npm test`
+- `npm run ebook:verify`
+- `npm run release:check`
+- `npm run cli:pack`
+- `markdownlint-cli2` em `README.md` e `CONTRIBUTING.md`
+
 ## [1.3.3] - 2026-10-13
 
 ### Alterado
