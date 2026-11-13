@@ -1,192 +1,217 @@
-# Brandfy
+<p align="center">
+  <a href="https://github.com/promovaweb/brandfy">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/promovaweb/brandfy/main/brand/logo/logo-dark.png">
+      <img alt="Brandfy" src="https://raw.githubusercontent.com/promovaweb/brandfy/main/brand/logo/logo-light.png" width="320">
+    </picture>
+  </a>
+</p>
 
-O Brandfy é uma biblioteca de skills para construir uma marca ou organizar uma
-identidade existente. O trabalho produz um manual que designers, redatores,
-desenvolvedores e agentes conseguem consultar para criar novos arquivos e
-conferir se eles continuam fiéis à marca.
+<h1 align="center">Brandfy</h1>
+
+<p align="center">
+  Biblioteca de skills que constrói, documenta e revisa o sistema de marca de um projeto com agentes de código.
+</p>
+
+<p align="center">Um projeto da <a href="https://promovaweb.com">Promovaweb</a></p>
+
+<p align="center">
+  <a href="https://github.com/promovaweb/brandfy/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/promovaweb/brandfy"></a>
+  <a href="https://www.npmjs.com/package/@promovaweb/brandfy"><img alt="npm" src="https://img.shields.io/npm/v/@promovaweb/brandfy"></a>
+  <a href="LICENSE"><img alt="Licença" src="https://img.shields.io/github/license/promovaweb/brandfy"></a>
+</p>
+
+<p align="center">
+  <a href="https://promovaweb.com/discord"><img alt="Discord: obter ajuda e conversar com a Comunidade" src="https://img.shields.io/badge/Discord-Obter%20ajuda%20e%20conversar%20com%20a%20Comunidade-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
+</p>
+
+<p align="center">
+  <a href="https://promovaweb.com/docs/brandfy/">Documentação</a> ·
+  <a href="https://promovaweb.com/discord">Discord</a> ·
+  <a href="https://promovaweb.com/planos?utm_source=github&utm_medium=readme&utm_campaign=brandfy">Planos da Promovaweb</a> ·
+  <a href="CHANGELOG.md">Changelog</a>
+</p>
+
+## O que é
+
+O Brandfy reúne o material solto de uma marca e conduz as definições que ainda
+faltam: propósito, posicionamento, voz, cores, tipografia, logo e aplicações.
+O resultado é um manual consultável por pessoas e por agentes antes de criar
+qualquer peça nova.
+
+O projeto atende quem está criando uma marca do zero e quem precisa organizar
+uma identidade existente. A conversa acontece em linguagem natural com a skill
+`$brandfy`. Ela chama as especialistas na ordem certa, sem exigir que você
+conheça scripts ou comandos internos.
+
+| Parte | Para quê |
+| --- | --- |
+| CLI `brandfy` | instala, atualiza e diagnostica as skills no seu projeto |
+| Skills `brandfy-*` | conduzem o percurso de marca, do diagnóstico ao manual e à auditoria |
+| `BRAND.md` e `brand/` | guardam o sistema de marca e os ativos finais |
 
 ## Instalação
 
-Instale o CLI e prepare o projeto atual:
+O CLI e as skills usam Node.js 22.20 ou posterior.
 
 ```bash
 npm install --global @promovaweb/brandfy
 brandfy install .
 ```
 
-O comando usa o `skills` por baixo, cria a configuração em `.brandfy/`, prepara
-o diretório `brand/` e integra um bloco idempotente ao `AGENTS.md`.
+O comando instala as 19 skills pelo gerenciador `skills`, cria `.brandfy/` e
+prepara `BRAND.md` e `brand/`. Também adiciona um bloco gerenciado ao
+`AGENTS.md`. Arquivos seus fora desse bloco continuam intactos.
 
-Depois da instalação, converse somente com `$brandfy`. A execução sem
-instalação global também está disponível:
+Sem instalação global:
 
 ```bash
 npx @promovaweb/brandfy install .
 ```
 
-Não é necessário executar o gerenciador `skills` diretamente.
+Um projeto que já usa o Brandfy atualiza assim:
 
-## Fluxos principais
+```bash
+npm install --global @promovaweb/brandfy@latest
+brandfy update
+```
 
-`$brandfy` coordena a construção completa. Quando existe um `MVP.md` na raiz,
-ela chama `brandfy-mvp`, responde as perguntas já cobertas e registra somente
-as lacunas antes do diagnóstico. Depois chama as especialistas necessárias em
-ordem, sem exigir que a pessoa usuária conheça scripts ou comandos internos.
+## Primeiros passos
+
+1. Execute `brandfy install .` na raiz do projeto que vai receber a marca.
+2. Abra o projeto no seu agente de código.
+3. Converse com `$brandfy` e responda as perguntas sobre o negócio, o público,
+   a oferta e a personalidade da marca.
+
+```text
+Use $brandfy para criar a marca do meu projeto. Comece pelo diagnóstico,
+mostre o que já existe e faça uma pergunta por vez.
+```
+
+Se houver um `MVP.md` na raiz, a skill `brandfy-mvp` importa o que o
+[MVPFy](https://github.com/promovaweb/mvpfy) já respondeu e lista somente as
+lacunas restantes. Sem esse arquivo, a entrevista começa do zero.
+
+Ao final de cada etapa, confira o estado do projeto:
+
+```bash
+brandfy doctor
+```
+
+O diagnóstico verifica Node.js, as skills instaladas, o lock, a configuração,
+`BRAND.md`, `brand/README.md` e o bloco do `AGENTS.md`. Ele sai com código
+diferente de zero quando encontra algo faltando.
+
+## Uso
+
+| Comando | Resultado |
+| --- | --- |
+| `brandfy install .` | instala as skills e prepara o projeto atual |
+| `brandfy install ../outro-projeto` | prepara outro diretório |
+| `brandfy update` | atualiza as skills e reaplica a estrutura gerenciada |
+| `brandfy doctor` | diagnostica skills, configuração e arquivos da marca |
+| `brandfy doctor --json` | devolve o diagnóstico em JSON para scripts |
+| `brandfy --version` | mostra a versão do CLI |
+| `brandfy --help` | mostra a ajuda |
+
+### Com os agentes
+
+Depois da instalação, use `$brandfy` como única porta de entrada. Ela chama
+`brandfy-setup`, `brandfy-mvp` e as demais especialistas conforme o estado do
+projeto.
+
+Para uma peça específica, informe a entrada, o canal e a saída:
+
+```text
+Use $brandfy para preparar um carrossel de Instagram a partir do template
+aprovado. Leia BRAND.md, brand/README.md e brand/templates/README.md,
+preserve a zona segura e salve o SVG editável e o PNG em 1080 × 1350.
+```
+
+O agente deve relatar quais arquivos leu, quais criou e quais conferências
+executou. Uma resposta que apenas afirma fidelidade à marca não basta. O guia
+[Uso da marca por agentes](docs/user/agentes.md) detalha o contrato.
+
+### Skills incluídas
 
 | Skill | Responsabilidade |
 | --- | --- |
-| `brandfy` | Orquestra todo o percurso e é a única skill chamada pela pessoa usuária. |
-| `brandfy-setup` | Valida a consistência da raiz, prepara `.brandfy/`, `brand/`, `BRAND.md` e as instruções do projeto. |
-| `brandfy-mvp` | Importa `MVP.md`, deriva a base da marca e prepara os briefs de assets. |
-| `brandfy-entrevista` | Entrevista responsáveis e compila briefing, estratégia, voz e pendências. |
-| `brandfy-diagnostico` | Inventaria materiais, procedência, lacunas e prioridades. |
-| `brandfy-estrategia` | Define propósito, missão, visão, valores, princípios e personalidade. |
-| `brandfy-naming` | Pesquisa nomes, disponibilidade indicativa e possíveis conflitos. |
-| `brandfy-slogan` | Desenvolve slogans e testa entendimento, sonoridade e uso. |
-| `brandfy-voz` | Documenta voz, tons, vocabulário, mensagens e exemplos. |
-| `brandfy-identidade-visual` | Define direção visual, cores, tipografia, imagens e iconografia. |
-| `brandfy-logo` | Conduz conceitos originais e a criação do sistema de logo. |
-| `brandfy-ativos-logo` | Exporta SVG, PNG, favicons, avatares e manifestos. |
-| `brandfy-design-tokens` | Deriva a paleta pelo círculo cromático e produz tokens CSS e JSON com combinações acessíveis. |
-| `brandfy-tipografia-web` | Documenta a hierarquia, baixa webfontes licenciadas e gera o CSS. |
-| `brandfy-aplicacoes` | Planeja e cria peças digitais, sociais, impressas e institucionais. |
-| `brandfy-templates-canais` | Fornece modelos editáveis para Instagram, LinkedIn, email e YouTube. |
-| `brandfy-manual` | Compila o manual verbal, visual, técnico e de governança. |
-| `brandfy-guia-pdf` | Compila o manual editável em Markdown para PDF. |
-| `brandfy-auditoria` | Confere estrutura, arquivos, acessibilidade e coerência. |
+| `brandfy` | orquestra todo o percurso e é a única skill chamada por você |
+| `brandfy-setup` | valida a raiz, prepara `.brandfy/`, `brand/`, `BRAND.md` e as instruções do projeto |
+| `brandfy-mvp` | importa `MVP.md`, deriva a base da marca e prepara os briefs de assets |
+| `brandfy-entrevista` | entrevista os responsáveis e compila briefing, estratégia, voz e pendências |
+| `brandfy-diagnostico` | levanta materiais, procedência, lacunas e prioridades |
+| `brandfy-estrategia` | define propósito, missão, visão, valores, princípios e personalidade |
+| `brandfy-naming` | pesquisa nomes, disponibilidade indicativa e possíveis conflitos |
+| `brandfy-slogan` | desenvolve slogans e testa entendimento, sonoridade e uso |
+| `brandfy-voz` | documenta voz, tons, vocabulário, mensagens e exemplos |
+| `brandfy-identidade-visual` | define direção visual, cores, tipografia, imagens e iconografia |
+| `brandfy-logo` | conduz conceitos originais e a criação do sistema de logo |
+| `brandfy-ativos-logo` | exporta SVG, PNG, favicons, avatares e manifestos |
+| `brandfy-design-tokens` | deriva a paleta pelo círculo cromático e gera tokens CSS e JSON com combinações acessíveis |
+| `brandfy-tipografia-web` | documenta a hierarquia, baixa webfontes licenciadas e gera o CSS |
+| `brandfy-aplicacoes` | planeja e cria peças digitais, sociais, impressas e institucionais |
+| `brandfy-templates-canais` | fornece modelos editáveis para Instagram, LinkedIn, email e YouTube |
+| `brandfy-manual` | compila o manual verbal, visual, técnico e de governança |
+| `brandfy-guia-pdf` | compila o manual em Markdown para PDF |
+| `brandfy-auditoria` | confere estrutura, arquivos, acessibilidade e coerência da marca |
 
-## Identidade do projeto
-
-A própria marca Brandfy é documentada em [`BRAND.md`](BRAND.md). A origem da
-cor, o esquema do círculo cromático e a decisão estão em
-[`CHROMATIC.md`](CHROMATIC.md). A pasta
-[`brand/`](brand/) contém o logo
-modular, as variantes light/dark, a paleta derivada da Promovaweb, webfontes
-locais, tokens CSS/JSON/Tailwind, manual recompilável e templates de canais.
-Ela também funciona como implementação de referência para as skills.
-
-## Artefatos
-
-O Brandfy usa `brand/` como destino padrão. O conjunto mínimo reproduz a
-organização encontrada em marcas operadas pela Promovaweb e acrescenta os
-arquivos necessários para outros canais:
-
-```text
-.brandfy/
-├── interview.json
-├── interview-summary.md
-├── brief.md
-└── evidence/
-
-BRAND.md
-CHROMATIC.md
-
-brand/
-├── README.md
-├── global.css
-├── tokens.json
-├── manifest.json
-├── accessibility.md
-├── color-harmony.md
-├── legal.md
-├── voice.md
-├── strategy.md
-├── logo/
-│   ├── svg/
-│   ├── png/
-│   └── source/
-├── favicon/
-├── photography/
-├── social/
-├── print/
-├── templates/
-└── archive/
-```
-
-`BRAND.md` reúne a estratégia e a linguagem em seções próprias. `CHROMATIC.md`
-guarda a origem da cor-base, o esquema do círculo cromático e a decisão, sem
-repetir o método técnico já documentado na skill `brandfy-design-tokens`.
-`brand/README.md` é somente o índice dos arquivos operacionais. A parte visual
-explica logo, cores, tipografia, fotografia, ilustração, iconografia e motion,
-com exemplos de aplicações permitidas e inadequadas. Os diretórios de ativos
-guardam as variantes vetoriais e raster, os favicons, os templates e as peças
-criadas para cada canal.
-
-Fotografia institucional precisa vir de arquivo fornecido ou autorizado pelo
-titular. Quando o agente preparar um recorte sem fundo, ele preserva o original
-e abre a exportação para conferir rosto, proporção e bordas. Uma imagem gerada
-não substitui o retrato oficial de uma pessoa.
+A referência de cada skill, com entrada, saída e momento de atuação, está em
+[docs/user/skills.md](docs/user/skills.md).
 
 ## Documentação
 
-A documentação oficial separa o uso da biblioteca e a manutenção do
+O manual publicado fica em <https://promovaweb.com/docs/brandfy/>. No
 repositório:
 
-- [`docs/user/`](docs/user/) acompanha instalação, descoberta, construção,
-  ativos, manual, auditoria e uso por agentes. Este percurso alimenta o PDF e
-  o EPUB do guia do usuário.
-- [`docs/develop/`](docs/develop/) descreve arquitetura, contratos, geradores,
-  testes e contribuição. Ele permanece como referência online e não entra nos
-  artefatos portáteis.
+- [Guia do usuário](docs/user/README.md): instalação, descoberta, construção,
+  ativos, manual, auditoria e uso por agentes. Este percurso gera o PDF e o
+  EPUB do guia.
+- [Guia técnico](docs/develop/README.md): arquitetura, contratos, geradores,
+  testes e contribuição.
+- [BRAND.md](BRAND.md) e [CHROMATIC.md](CHROMATIC.md): a marca do próprio
+  Brandfy e a origem da cor, usadas como implementação de referência.
+- [brand/](brand/): logo, variantes light e dark, paleta, webfontes e tokens
+  do Brandfy.
 
-O manual de uma marca cliente continua separado: sua fonte vive em `BRAND.md`
-no projeto consumidor e a saída fica em
-`brand/brand-guide.pdf`.
+## Feito com
 
-Gere e confira a edição portátil do Brandfy:
+| Projeto | Para quê |
+| --- | --- |
+| [Node.js](https://github.com/nodejs/node) | runtime do CLI e das skills |
+| [skills](https://github.com/vercel-labs/skills) | gerenciador que instala e atualiza as skills no projeto |
+| [ImageMagick](https://github.com/ImageMagick/ImageMagick) | exportação de PNG, favicons e avatares |
+| [Pandoc](https://github.com/jgm/pandoc) | conversão do manual em Markdown para HTML antes do PDF |
+| [WeasyPrint](https://github.com/Kozea/WeasyPrint) | geração do PDF do manual |
 
-```bash
-npm run ebook
-npm run ebook:verify
-```
+ImageMagick, Pandoc e WeasyPrint só são necessários quando o percurso chega a
+exportações raster ou ao manual em PDF. Sem eles, o script da etapa para com
+uma mensagem de erro.
 
-## Método de trabalho
+## Comunidade e suporte
 
-As skills atuam como especialistas de branding. Cada etapa separa fato,
-comprovação, interpretação, hipótese, preferência, escolha e pendência. As
-recomendações precisam apresentar parâmetros, tensões e alternativas, em vez de
-usar gosto pessoal ou uma lista de adjetivos como justificativa.
+- **Discord:** [obter ajuda e conversar com a Comunidade](https://promovaweb.com/discord).
+- **Bugs e pedidos:** abra uma [issue](https://github.com/promovaweb/brandfy/issues)
+  com a versão, o sistema operacional e o passo a passo para reproduzir.
+- **Novidades:** acompanhe o [CHANGELOG](CHANGELOG.md) e as
+  [releases](https://github.com/promovaweb/brandfy/releases).
 
-O fluxo percorre descoberta, definição, desenvolvimento e entrega. Os gates
-conferem relevância, distinção, credibilidade, coerência, viabilidade,
-proteção e acessibilidade antes de avançar. Uma aprovação registra responsável
-e motivo; uma lacuna continua aberta com pergunta e próximo passo.
+## Contribuir
 
-## Especialistas internas
+Leia o [CONTRIBUTING.md](CONTRIBUTING.md) antes de abrir um pull request. Ele
+traz o ambiente, a organização do código, os comandos de validação e o fluxo
+de release.
 
-As especialistas instaladas em `.agents/skills/` são chamadas internamente por
-`$brandfy`. A documentação do usuário explica a responsabilidade, a entrada,
-a saída e o momento de atuação de cada uma. Não as chame diretamente, porque a
-orquestradora precisa preservar a ordem, o estado e as dependências entre elas.
+## Promovaweb
 
-## Pesquisa e responsabilidade
+O Brandfy é mantido pela [Promovaweb](https://promovaweb.com), comunidade de
+co-working digital onde profissionais aprendem a construir, automatizar e
+gerir negócios de tecnologia e IA com aulas ao vivo, Co-works e revisão de
+projetos reais.
 
-O fluxo de naming registra a consulta ao INPI, a classe relacionada à atividade
-e a conferência de domínio e perfis sociais. Um nome semelhante encontrado na
-mesma atividade exige análise profissional, pois essas pesquisas não permitem
-prever o resultado do exame oficial.
+Quer usar o Brandfy em projetos de verdade, com acompanhamento? Conheça os
+[planos da Promovaweb](https://promovaweb.com/planos?utm_source=github&utm_medium=readme&utm_campaign=brandfy).
 
-As combinações de cores para texto e componentes seguem as WCAG. O texto que
-faz parte do logo possui uma exceção normativa, mas as aplicações da marca,
-botões, links, ícones informativos e conteúdo editorial continuam sujeitos aos
-requisitos aplicáveis de contraste.
+## Licença
 
-## Desenvolvimento
-
-Use Node.js 22.20 ou posterior. O comando abaixo executa os testes do setup e
-dos geradores, os testes do CLI e as validações das skills e da documentação:
-
-```bash
-npm --prefix cli ci
-npm test
-npm run release:check
-```
-
-O exportador de PNG usa ImageMagick. A validação estrutural informa quando o
-comando `magick` não está disponível, sem modificar os arquivos do projeto.
-
-O framework, o pacote `@promovaweb/brandfy` e a documentação portátil usam a
-mesma SemVer. Toda versão publicada precisa aparecer no
-[`CHANGELOG.md`](CHANGELOG.md), na tag Git e na GitHub Release correspondente,
-além de estar disponível no npm. O processo completo de publicação está em
-[`RELEASING.md`](RELEASING.md).
+[MIT](LICENSE).
