@@ -62,5 +62,6 @@ registro no `CHANGELOG.md`, publicação npm e GitHub Release está em
 
 A release só pode ser considerada completa quando o mesmo número aparece no
 changelog, na tag `v<versão>`, na GitHub Release e no pacote
-`@promovaweb/brandfy@<versão>`. A criação da GitHub Release aciona o workflow
-que valida a tag e publica o pacote npm quando necessário.
+`@promovaweb/brandfy@<versão>`. A GitHub Release é criada manualmente.
+Depois dela, o pacote npm é publicado somente pela máquina local, com o
+tarball gerado no commit da tag.

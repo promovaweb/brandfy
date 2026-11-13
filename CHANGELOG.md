@@ -5,6 +5,25 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.4.1] - 2026-11-13
+
+### Alterado
+
+- A publicação no npm passa a ser feita só pela máquina local; o workflow de
+  release não publica mais no npm. O arquivo `.github/workflows/release.yml`,
+  que só publicava o CLI, foi removido. O segredo `NPM_TOKEN` saiu do
+  repositório.
+- `RELEASING.md`, `CONTRIBUTING.md` e `docs/develop/contribuicao.md`
+  descrevem o fluxo novo: GitHub Release manual, tarball gerado no commit da
+  tag e `npm publish` local.
+
+### Validação
+
+- `npm test`
+- `npm run ebook:verify`
+- `npm run release:check`
+- `npm run cli:pack`
+
 ## [1.4.0] - 2026-11-13
 
 ### Alterado

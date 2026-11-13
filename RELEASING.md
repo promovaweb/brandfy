@@ -47,27 +47,39 @@ comandos anteriores:
 ```bash
 git commit -am "release: Brandfy v1.2.0"
 git tag -a v1.2.0 -m "Brandfy v1.2.0"
-git push origin main
-git push origin v1.2.0
+git push --atomic origin HEAD:main v1.2.0
 ```
 
-Crie a GitHub Release usando a mesma tag. Essa publicação dispara o workflow
-`.github/workflows/release.yml`, que executa `npm run release:check`, confere a
-tag da GitHub Release e publica o CLI no npm quando aquela versão ainda não
-existe:
+Crie a GitHub Release manualmente, usando a mesma tag. Nenhum workflow é
+disparado por essa publicação:
 
 ```bash
 gh release create v1.2.0 --verify-tag --title "Brandfy v1.2.0" \
   --notes-file <arquivo-de-notas>
 ```
 
-Depois do workflow, confira as duas publicações remotas:
+O pacote npm é publicado somente pela máquina local, nunca pelo GitHub
+Actions. O repositório não guarda `NPM_TOKEN`. Depois que a GitHub Release
+existir, gere o tarball do CLI no commit da tag e publique esse arquivo,
+logado no npm como `contatopromovaweb`:
 
 ```bash
-npm view @promovaweb/brandfy@1.2.0 version
+git checkout v1.2.0
+npm --prefix cli ci
+npm run release:check
+npm pack ./cli --pack-destination /tmp
+sha256sum /tmp/promovaweb-brandfy-1.2.0.tgz
+npm publish /tmp/promovaweb-brandfy-1.2.0.tgz --access public
+git checkout main
+```
+
+A release não anexa tarball nem `SHA256SUMS`. Por isso, o tarball publicado
+é sempre o gerado no commit da tag. Confira as duas publicações remotas. O npm
+pode levar alguns minutos para mostrar a versão nova:
+
+```bash
+npm view @promovaweb/brandfy@1.2.0 version license
 gh release view v1.2.0 --json tagName,isDraft,isPrerelease
 ```
 
-O workflow usa provenance no npm. Se o pacote já existir, ele não tenta uma
-segunda publicação. Ainda assim, a GitHub Release precisa existir e usar a
-mesma tag da versão publicada.
+A release só está completa quando o npm mostra a mesma versão da tag.

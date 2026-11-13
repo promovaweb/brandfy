@@ -201,10 +201,10 @@ npm run release:check
 npm run cli:pack
 ```
 
-Depois do commit, crie a tag anotada e a GitHub Release com a mesma versão. A
-publicação da release dispara `.github/workflows/release.yml`, que valida a
-tag e publica o pacote no npm com provenance quando aquela versão ainda não
-existe. O passo a passo está em [RELEASING.md](RELEASING.md).
+Depois do commit, crie a tag anotada e a GitHub Release com a mesma versão.
+O pacote npm é publicado somente pela máquina local, com o tarball gerado no
+commit da tag. Nenhum workflow publica no npm. O passo a passo está em
+[RELEASING.md](RELEASING.md).
 
 ## Licença
 
