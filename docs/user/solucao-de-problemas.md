@@ -22,12 +22,12 @@ conteúdo autoral fora dos marcadores.
 ## A entrevista não passa no check
 
 Abra `.brandfy/interview.json` e leia as mensagens do compilador. Uma
-entrevista pronta exige confirmação, data, participantes, etapas concluídas e
-campos mínimos. Uma resposta ainda desconhecida deve aparecer na coleção de
+entrevista pronta exige confirmação com data e participantes, além das etapas
+concluídas e dos campos mínimos. Uma resposta ainda desconhecida deve aparecer na coleção de
 pendências com pergunta e responsável.
 
-Não altere `status` para `ready` apenas para satisfazer o validador. Complete a
-conversa ou registre honestamente o que falta.
+Não altere `status` para `ready` apenas para satisfazer o validador: complete a
+conversa ou registre com franqueza o que falta.
 
 ## O PNG não foi gerado
 
@@ -67,16 +67,16 @@ weasyprint --version
 ```
 
 Depois da correção, apague somente arquivos temporários declarados pelo
-compilador e gere o PDF outra vez. Nunca edite o PDF como fonte.
+compilador e gere o PDF outra vez. Faça as correções no `BRAND.md`, não no PDF.
 
 ## A auditoria ainda apresenta avisos
 
 Abra `.brandfy/audit.md` e relacione cada aviso ao arquivo observado. Alguns
 itens exigem inspeção humana, como legibilidade no feed, procedência de uma
-foto ou coerência do tom. Registre a evidência da conferência e execute a
+foto ou coerência do tom. Registre o resultado da conferência e execute a
 auditoria novamente quando houver alteração técnica.
 
-## Dados para um relato de falha
+## O que incluir num relato de falha
 
 Inclua a versão do Node.js, o sistema operacional, o caminho da skill, o
 comando executado, a mensagem completa e a lista dos arquivos esperados.

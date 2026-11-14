@@ -3,22 +3,23 @@
 ## O manual editável
 
 `brandfy-manual` consolida as definições confirmadas em `BRAND.md` e atualiza
-`brand/README.md` como índice. O manual reúne estratégia, posicionamento, voz,
-direção visual, aplicações, governança, lacunas e mapa dos arquivos.
+`brand/README.md` como índice. O manual reúne a estratégia, o posicionamento e
+a voz, a direção visual e as aplicações, além da governança, das lacunas e da
+relação dos arquivos.
 
-`BRAND.md` é a fonte editorial. O PDF não deve ser corrigido diretamente, e o
-índice não deve repetir o manual inteiro.
+`BRAND.md` é a fonte editorial: corrija o texto nele, não no PDF. O índice
+também não deve repetir o manual inteiro.
 
 ## O PDF do projeto consumidor
 
 Quando o manual e os assets estiverem prontos, `$brandfy` chama
 `brandfy-guia-pdf`. A especialista instala ou confere o kit de PDF em
-`brand/pdf/`, sem substituir personalizações existentes, e compila
+`brand/pdf/`, sem substituir personalizações existentes. Depois compila
 `brand/brand-guide.pdf` a partir de `BRAND.md`.
 
-O PDF usa A4, capa clara, Manrope nos títulos, Inter no corpo, sumário, tabelas,
-blocos de código, paginação e links internos. O design system global fica em
-`brand/pdf/` e inclui as licenças das fontes.
+O PDF usa A4 com capa clara, Manrope nos títulos e Inter no corpo. Ele traz
+sumário, tabelas e blocos de código, com paginação e links internos. O design
+system global fica em `brand/pdf/` e inclui as licenças das fontes.
 
 ## O que conferir na leitura
 

@@ -24,10 +24,13 @@ Depois, na raiz do projeto que receberá a marca:
 brandfy install .
 ```
 
-O `install` instala todas as 19 skills, prepara `.brandfy/`, cria ou confere
-`BRAND.md`, deixa `brand/README.md` como índice, cria os diretórios esperados e
-atualiza o bloco do `AGENTS.md`. A conversa de marca começa depois disso com a
-skill `$brandfy`.
+O `install` instala as 19 skills e prepara a estrutura do projeto:
+
+- prepara `.brandfy/` e cria ou confere `BRAND.md`;
+- deixa `brand/README.md` como índice e cria os diretórios esperados;
+- atualiza o bloco do `AGENTS.md`.
+
+A conversa de marca começa depois disso com a skill `$brandfy`.
 
 Quando uma nova versão do Brandfy for publicada, use:
 
@@ -44,10 +47,10 @@ Para conferir a instalação e os arquivos:
 brandfy doctor
 ```
 
-O diagnóstico confere Node.js, as 19 skills, `skills-lock.json`,
-`.brandfy/config.yaml`, `BRAND.md`, `brand/README.md` e o bloco do `AGENTS.md`.
-Ele também informa se `MVP.md` foi encontrado na raiz. A ausência do MVP é
-aceita porque a entrada é opcional.
+O diagnóstico confere o Node.js, as 19 skills e o `skills-lock.json`. Depois
+verifica `.brandfy/config.yaml`, `BRAND.md`, `brand/README.md` e o bloco do
+`AGENTS.md`. Ele também informa se `MVP.md` foi encontrado na raiz, sem
+reprovar a ausência, porque essa entrada é opcional.
 
 ## Depois da instalação
 

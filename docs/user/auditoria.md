@@ -13,9 +13,9 @@ Durante o fluxo, `$brandfy` chama `brandfy-auditoria` e grava o relatório no
 caminho configurado. O usuário não precisa executar o script interno da
 especialista.
 
-O relatório padrão fica em `.brandfy/audit.md`. Ele separa reprovações, avisos,
-evidências encontradas e itens que dependem de inspeção humana. A skill não
-corrige silenciosamente um arquivo aprovado.
+O relatório padrão fica em `.brandfy/audit.md`. Ele separa reprovações e avisos
+das comprovações encontradas e dos itens que dependem de inspeção humana. A
+skill não corrige em silêncio um arquivo aprovado.
 
 ## Confronte definição, fonte e aplicação
 
@@ -41,8 +41,8 @@ domínio continua sendo indicativa.
 
 Uma reprovação impede a publicação do conjunto afetado. Um aviso registra uma
 correção necessária ou uma melhoria cuja consequência precisa ser avaliada. A
-inspeção humana deve acrescentar evidência ao relatório em vez de apenas marcar
-um item como concluído.
+inspeção humana deve acrescentar ao relatório o que foi conferido, em vez de
+apenas marcar um item como concluído.
 
 Depois de corrigir um arquivo, atualize o manifesto quando necessário,
 recompile o PDF e execute a auditoria outra vez. O resultado está pronto quando

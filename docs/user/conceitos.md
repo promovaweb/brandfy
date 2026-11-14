@@ -2,9 +2,9 @@
 
 ## O papel de cada diretório
 
-O Brandfy separa o material de pesquisa dos arquivos aprovados. Essa separação
-permite que uma entrevista registre uma hipótese sem apresentá-la no manual
-como definição final.
+O Brandfy separa o material de pesquisa dos arquivos aprovados. Com essa
+separação, a entrevista registra uma suposição ainda não testada sem
+apresentá-la no manual como definição final.
 
 | Caminho | Conteúdo | Pode ser publicado |
 | --- | --- | --- |
@@ -18,7 +18,7 @@ precisa ser refletida nos comandos, links e relatórios.
 
 ## As camadas da informação
 
-Uma entrevista de marca mistura lembranças, preferências e afirmações
+Uma entrevista de marca mistura memórias, preferências e afirmações
 comprovadas. O Brandfy registra cada uma na camada adequada:
 
 - **Fato:** afirmação confirmada por uma fonte identificada.
@@ -37,8 +37,8 @@ sem pesquisa.
 
 ## As quatro fases
 
-O fluxo completo percorre descoberta, definição, desenvolvimento e publicação.
-Cada fase produz uma fonte que a próxima consegue ler.
+O fluxo completo percorre descoberta, definição, desenvolvimento e publicação,
+com cada fase produzindo uma fonte que a próxima consegue ler.
 
 Na descoberta, a entrevista e o diagnóstico registram o que existe, o que foi
 dito e onde há conflito. Na definição, estratégia, naming, slogan e voz
@@ -50,10 +50,9 @@ os arquivos com a auditoria.
 
 `$brandfy` é a única skill que o usuário precisa chamar. Ela coordena o
 percurso, escolhe as especialistas internas conforme o estado do projeto e
-retoma o trabalho depois que cada etapa produz os arquivos esperados. Entre
-essas especialistas estão `brandfy-setup`, `brandfy-mvp`, `brandfy-entrevista`,
-`brandfy-estrategia`, `brandfy-identidade-visual`, `brandfy-design-tokens`,
-`brandfy-manual` e `brandfy-auditoria`.
+retoma o trabalho depois que cada etapa produz os arquivos esperados. A lista
+completa das especialistas, da `brandfy-setup` à `brandfy-auditoria`, está em
+[skills](skills.md).
 
 As demais skills não formam uma segunda interface pública. Elas são partes do
 fluxo orquestrado e podem ser atualizadas pelo CLI sem exigir que o usuário

@@ -22,13 +22,13 @@ será acionada internamente:
 ```text
 Use $brandfy para preparar um carrossel de Instagram a partir do template
 aprovado. Leia BRAND.md, brand/README.md e brand/templates/README.md, preserve a
-zona segura, salve o SVG editável e abra o PNG final em 1080 × 1350.
+zona segura, grave o SVG editável e abra o PNG final em 1080 × 1350.
 ```
 
 O agente precisa relatar quais arquivos leu, quais arquivos criou, que
 conferências executou e o que permaneceu pendente. Uma resposta que apenas
-afirma fidelidade à marca sem apontar o manual e o arquivo resultante não
-oferece evidência suficiente.
+afirma fidelidade à marca, sem apontar o manual e o arquivo resultante, não
+comprova o trabalho.
 
 ## Preserve ativos aprovados
 
@@ -38,7 +38,7 @@ limitação do sistema, registre o achado e encaminhe a revisão à skill
 especialista.
 
 Fotografias institucionais dependem de arquivo autorizado. Uma imagem gerada
-não substitui o retrato oficial de uma pessoa. Toda fonte, ilustração ou
+não substitui o retrato oficial de um sócio ou colaborador. Toda fonte, ilustração ou
 elemento externo precisa manter autoria, licença e procedência.
 
 ## Confira a exportação

@@ -1,15 +1,15 @@
 # Guia completo do usuário
 
-Uma marca costuma começar com material espalhado: um logo usado no site, cores
+No começo de uma marca, o material fica espalhado: um logo usado no site, cores
 copiadas de apresentações, fontes escolhidas por hábito e explicações que
 somente uma parte da empresa conhece. O Brandfy reúne esse material, conduz as
-definições que ainda faltam e grava um sistema que pessoas e agentes conseguem
-consultar antes de criar uma nova peça.
+definições que ainda faltam e grava um sistema que você, os redatores, os
+designers e os agentes consultam antes de criar uma nova peça.
 
 O Brandfy é uma biblioteca de skills para agentes. Ele não substitui a
 conversa com os responsáveis pela marca, a pesquisa jurídica nem a revisão de
-um designer. As skills ajudam a registrar evidências, comparar alternativas,
-produzir arquivos repetíveis e mostrar o que ainda precisa de aprovação
+um designer. As skills registram comprovações e comparam alternativas. Elas
+também produzem arquivos repetíveis e mostram o que ainda precisa de aprovação
 humana.
 
 ## Leia online ou como parte do guia portátil
@@ -32,8 +32,9 @@ hashes dos artefatos.
 
 Comece pela [instalação](instalacao.md) e confirme o estado com `brandfy
 doctor`. Depois, leia [como o Brandfy organiza os arquivos](conceitos.md),
-[o guia de `BRAND.md`](brand.md) e [o papel de cada skill](skills.md). Essa
-ordem ajuda a separar `.brandfy/`, `BRAND.md` e a pasta pública `brand/`.
+[o guia de `BRAND.md`](brand.md) e [o papel de cada skill](skills.md). Nessa
+ordem, fica evidente a função de `.brandfy/`, de `BRAND.md` e da pasta pública
+`brand/`.
 
 O trabalho completo segue esta sequência:
 
@@ -50,17 +51,19 @@ O trabalho completo segue esta sequência:
 11. [Investigue falhas conhecidas](solucao-de-problemas.md).
 
 Uma marca existente pode começar pelo diagnóstico e preservar tudo o que já
-possui evidência de uso e aprovação. Uma marca nova precisa de entrevista antes
+possui registro de uso e aprovação. Uma marca nova precisa de entrevista antes
 da direção verbal e visual, pois o agente não deve completar uma lacuna com uma
 resposta apenas plausível.
 
 ## O resultado no repositório
 
 Ao final, o projeto consumidor mantém a origem do trabalho em `.brandfy/` e os
-arquivos utilizáveis em `brand/`. Um conjunto completo pode conter estratégia,
-voz, logos vetoriais e raster, favicons, paleta, tokens CSS e JSON, tema
-Tailwind, webfontes, templates, regras de acessibilidade, licenças, manifesto e
-manual em PDF.
+arquivos utilizáveis em `brand/`. Um conjunto completo pode conter:
+
+- estratégia, voz e manual em PDF;
+- logos vetoriais e raster, favicons, paleta e webfontes;
+- tokens CSS e JSON, tema Tailwind e templates;
+- orientações de acessibilidade, licenças e manifesto.
 
 O relatório `.brandfy/audit.md` fecha o percurso ao confrontar o manual com os
 arquivos produzidos. A aprovação automática não dispensa a abertura do PDF,
