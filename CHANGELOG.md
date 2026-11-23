@@ -5,6 +5,10 @@ e a documentação portátil compartilham a mesma versão em cada release.
 Toda versão publicada também precisa ter uma seção neste arquivo, uma GitHub
 Release com a tag correspondente e um pacote `@promovaweb/brandfy` no npm.
 
+## [1.4.4] - 2026-11-22
+
+- Atualiza a identidade visual do projeto e sua apresentação no README.
+
 ## [1.4.3] - 2026-11-22
 
 - Documenta a atualização das tarefas do ClickUp para pronto após o commit e publicado após o push.

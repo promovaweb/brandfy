@@ -1,6 +1,5 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
-  <title id="title">Ícone do Brandfy para fundos claros</title>
-  <desc id="description">Letra B modular em coral escuro, enquadrada por cantos em petróleo esverdeado.</desc>
-  <path d="M80 68H152V92H92V152H68V80C68 73.373 73.373 68 80 68ZM360 68H432C438.627 68 444 73.373 444 80V152H420V92H360V68ZM68 360H92V420H152V444H80C73.373 444 68 438.627 68 432V360ZM420 360H444V432C444 438.627 438.627 444 432 444H360V420H420V360Z" fill="#15626A"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M144 104H272C330 104 368 136 368 184C368 220 348 244 320 256C356 268 384 300 384 344C384 384 352 408 288 408H144V104ZM208 160V232H264C292 232 308 218 308 196C308 174 292 160 264 160H208ZM208 288V352H280C308 352 324 340 324 320C324 300 308 288 280 288H208Z" fill="#9F1E41"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" role="img" aria-label="Brandfy">
+  <title>Brandfy</title>
+  <desc>Monograma B em negrito com curva coral e alça turquesa de edição vetorial.</desc>
+  <g><path fill="#103742" fill-rule="evenodd" d="M11 7h19c10.8 0 17 4.6 17 12.3 0 7.6-6.1 13.7-17 13.7H17.5V55H11zM17.5 12v16.2h12.2c7.1 0 11-3.3 11-8.4 0-5-3.9-7.8-11-7.8z"/><path fill="#FC5C7A" d="M17.5 28.2H31c13.9 0 21 5 21 14.3S44.2 57 31 57H11v-5h20c9.3 0 14.2-3.5 14.2-9.5S40.3 33 31 33H17.5z"/><path fill="none" stroke="#087B72" stroke-width="1.5" d="M52 42.5V27"/><circle cx="52" cy="27" r="1.6" fill="#087B72"/><rect x="50.1" y="40.6" width="3.8" height="3.8" rx=".5" fill="#087B72"/></g>
 </svg>

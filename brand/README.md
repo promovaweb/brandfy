@@ -25,3 +25,6 @@ Este arquivo aponta para fontes editáveis, exports e documentos de suporte.
 
 O `BRAND.md` é a fonte da leitura da marca. Este índice não substitui suas
 regras nem deve receber a documentação completa.
+
+
+Um B com curva coral e alça turquesa de edição vetorial identifica a marca. O coral usa `#FC5C7A`.

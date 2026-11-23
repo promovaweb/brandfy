@@ -1,4 +1,9 @@
 {
+  "projectColor": {
+    "name": "Coral goiaba",
+    "hex": "#FC5C7A",
+    "meaning": "A curva coral é o traço que o designer edita no B. A alça turquesa identifica a ferramenta de edição."
+  },
   "name": "Brandfy",
   "harmony": {
     "scheme": "complementar",
